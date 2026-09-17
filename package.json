@@ -1,0 +1,24 @@
+{
+  "name": "leading-edge-vision",
+  "version": "1.0.0",
+  "description": "Leading Edge Vision - Japan STEM & Robotics Tour",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "npm run build:css",
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css",
+    "dev:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
+  },
+  "keywords": [
+    "japan-tour",
+    "stem-tour",
+    "leading-edge-vision"
+  ],
+  "author": "Leading Edge Vision",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

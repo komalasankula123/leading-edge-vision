@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-yellow: #D8BF0B;
+  --color-brand-yellow-dark: #B39E08;
+  --color-brand-yellow-hover: #E8CF1E;
+  --color-brand-yellow-light: #FAF5C5;
+  --color-brand-yellow-bg: #FEFCE8;
+  --color-japan-crimson: #E60012;
+  --color-dark-bg: #0b0f17;
+  --color-dark-surface: #111827;
+  --color-dark-border: rgba(255, 255, 255, 0.12);
+}
