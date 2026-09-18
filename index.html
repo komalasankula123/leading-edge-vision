@@ -22,6 +22,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/style.css">
@@ -34,10 +37,13 @@
   <section class="hero-portal-wrapper" id="home">
     <div class="hero-portal-canvas">
 
-      <!-- Static Hero Background Landscape -->
+      <!-- Static Hero Background Landscape: Leading Edge Vision Logo Theme -->
       <div class="hero-backdrop-deck">
-        <div class="hero-backdrop-image active" style="background-image: url('assets/images/japan-hero.jpg');"></div>
+        <div class="hero-backdrop-image active" style="background-image: url('assets/images/hero-logo-theme.jpg');"></div>
       </div>
+
+      <!-- Interactive Golden Circuit Network & Neural Nodes Canvas -->
+      <canvas id="bg-canvas"></canvas>
 
       <!-- Scrim Overlay for Crystal-Clear Text Legibility -->
       <div class="hero-scrim-overlay"></div>
@@ -56,7 +62,7 @@
           <li><a href="#ambassador" class="portal-nav-link">Mentorship</a></li>
           <li><a href="#gallery" class="portal-nav-link">Destination</a></li>
           <li><a href="#safety" class="portal-nav-link">Safety</a></li>
-          <li><a href="#contact" class="portal-nav-link">Contact</a></li>
+          <li><a href="#faq" class="portal-nav-link">FAQ</a></li>
         </ul>
 
         <!-- Right Action Pill -->
@@ -125,37 +131,14 @@
       <div class="about-grid-split">
         
         <!-- Left Visual Side: Theme-Based Japan STEM Workshop Image -->
-        <div class="about-visual-column">
+        <div class="about-visual-column reveal-on-scroll">
           <div class="about-visual-frame">
             <img src="assets/images/about-stem-theme.jpg" alt="Indian high school students engaged in Tokyo STEM robotics delegation with Tokyo Tower view" class="about-primary-img">
-            
-            <!-- Experience Floating Badge -->
-            <div class="about-floating-badge">
-              <div class="badge-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="badge-metric">10+ Years</div>
-                <div class="badge-sub">Japan STEM Immersion</div>
-              </div>
-            </div>
-
-            <!-- Overlapping Secondary Card -->
-            <div class="about-secondary-card">
-              <div class="sec-card-header">
-                <span class="flag-indicator">🇮🇳 ✈ 🇯🇵</span>
-                <span class="sec-card-tag">Official Delegation</span>
-              </div>
-              <div class="sec-card-title">Tokyo STEM &amp; Space Delegation</div>
-              <div class="sec-card-desc">Partnered with Premier Japanese Research Labs</div>
-            </div>
           </div>
         </div>
 
         <!-- Right Content Side: Reduced Punchy Corporate Overview -->
-        <div class="about-content-column">
+        <div class="about-content-column reveal-on-scroll delay-1">
           <div class="section-tag" style="margin-bottom: 10px;">About Leading Edge Vision</div>
           
           <h2 class="about-main-headline">
@@ -212,33 +195,33 @@
       </div>
 
       <div class="inclusions-grid">
-        <div class="inclusion-card">
+        <div class="inclusion-card reveal-on-scroll delay-1">
           <div class="inclusion-icon">
-            <img src="assets/images/icon-flight.png" alt="Airfare & Visa Icon">
+            <i class="ti ti-plane-departure"></i>
           </div>
           <h3 class="inclusion-title">Airfare &amp; Visa</h3>
           <p class="inclusion-desc">Round-trip international flights from India to Tokyo with complete fast-track visa processing.</p>
         </div>
 
-        <div class="inclusion-card">
+        <div class="inclusion-card reveal-on-scroll delay-2">
           <div class="inclusion-icon">
-            <img src="assets/images/icon-hotel.png" alt="Food & 4-Star Stay Icon">
+            <i class="ti ti-bed"></i>
           </div>
           <h3 class="inclusion-title">Food &amp; 4-Star Stay</h3>
           <p class="inclusion-desc">Nutritious meals (Indian &amp; Japanese cuisine) in safe, premium student-friendly 4-star hotels.</p>
         </div>
 
-        <div class="inclusion-card">
+        <div class="inclusion-card reveal-on-scroll delay-3">
           <div class="inclusion-icon">
-            <img src="assets/images/icon-transfers.png" alt="All Local Transfers Icon">
+            <i class="ti ti-train"></i>
           </div>
           <h3 class="inclusion-title">All Local Transfers</h3>
           <p class="inclusion-desc">Private luxury AC motorcoaches &amp; iconic 300 km/h Shinkansen High-Speed Bullet Train tickets.</p>
         </div>
 
-        <div class="inclusion-card">
+        <div class="inclusion-card reveal-on-scroll delay-4">
           <div class="inclusion-icon">
-            <img src="assets/images/icon-tickets.png" alt="VIP Entry Tickets Icon">
+            <i class="ti ti-ticket"></i>
           </div>
           <h3 class="inclusion-title">VIP Entry Tickets</h3>
           <p class="inclusion-desc">All-access passes to JAXA, Miraikan, Robot Museum, Tokyo Tower, &amp; Tokyo Disneyland with bilingual guides.</p>
@@ -313,7 +296,7 @@
         </p>
       </div>
 
-      <div class="mentor-glass-spotlight">
+      <div class="mentor-glass-spotlight reveal-on-scroll">
         <div class="mentor-visual-wrap">
           <img src="assets/images/hero-vision.jpg" alt="Padma Shri Anand Kumar Super 30 Mentorship" class="mentor-visual-img">
           <div class="mentor-badge-overlay">
@@ -367,54 +350,173 @@
         </p>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="assets/images/jaxa-space.jpg" alt="JAXA Tsukuba Space Center Rockets">
-          <div class="gallery-card-overlay">
-            <div class="gallery-card-tag">Aerospace Exploration</div>
-            <div class="gallery-card-title">JAXA Space Agency &bull; Tsukuba</div>
+      <!-- Carousel Container with Header Navigation Controls (2 Rows x 4 Columns per View) -->
+      <div class="gallery-carousel-wrapper reveal-on-scroll">
+        <div class="gallery-carousel-toolbar">
+          <div class="carousel-counter-tag">
+            <i class="ti ti-photo"></i>
+            <span id="gallery-counter">Showing 1–8 of 16 (Page 1 of 2)</span>
+          </div>
+          <div class="gallery-nav-buttons">
+            <button class="gallery-nav-btn" id="gallery-prev" aria-label="Previous Destinations">
+              <i class="ti ti-chevron-left"></i>
+            </button>
+            <button class="gallery-nav-btn" id="gallery-next" aria-label="Next Destinations">
+              <i class="ti ti-chevron-right"></i>
+            </button>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/images/miraikan-robotics.jpg" alt="Miraikan National Museum of Emerging Science">
-          <div class="gallery-card-overlay">
-            <div class="gallery-card-tag">Humanoid AI &amp; Robotics</div>
-            <div class="gallery-card-title">Miraikan Museum &bull; Geo-Cosmos</div>
+        <div class="gallery-carousel-viewport" id="gallery-viewport">
+          <div class="gallery-carousel-track" id="gallery-track">
+            
+            <!-- Slide / Page 1: 2 Rows x 4 Columns (8 Cards) -->
+            <div class="gallery-carousel-page">
+              <div class="gallery-page-grid">
+                
+                <div class="gallery-card">
+                  <img src="assets/images/jaxa-space.jpg" alt="JAXA Tsukuba Space Center Rockets" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Aerospace Exploration</div>
+                    <div class="gallery-card-title">JAXA Space Agency &bull; Tsukuba</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/miraikan-robotics.jpg" alt="Miraikan National Museum of Emerging Science" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Humanoid AI &amp; Robotics</div>
+                    <div class="gallery-card-title">Miraikan Museum &bull; Geo-Cosmos</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/japan-hero.jpg" alt="Shinkansen Bullet Train and Mount Fuji" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">High-Speed Rail Transit</div>
+                    <div class="gallery-card-title">Shinkansen Bullet Train &bull; Mt. Fuji</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/tokyo-disneyland.jpg" alt="Tokyo Disneyland Cinderella Castle" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Celebration &amp; Wonder</div>
+                    <div class="gallery-card-title">Tokyo Disneyland &bull; Full Day Pass</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/robotics-spatial.jpg" alt="Kawasaki duAro Collaborative Robotics" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Industry 4.0 Robotics</div>
+                    <div class="gallery-card-title">Kawasaki Robot Museum &bull; duAro</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/stem-students.jpg" alt="Indian STEM Students Building Robots" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Cross-Cultural Peer Dialogue</div>
+                    <div class="gallery-card-title">Tokyo School Cultural Exchange</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/about-stem-theme.jpg" alt="Tokyo High School Robotics Lab with Tokyo Tower View" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Frontier Innovation Labs</div>
+                    <div class="gallery-card-title">Tsukuba Smart City Research</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/hero-brain-theme.jpg" alt="Tokyo Metropolis Cybernetic Innovation Hub" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Future AI Hub</div>
+                    <div class="gallery-card-title">Tokyo AI &amp; Quantum Computing</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Slide / Page 2: 2 Rows x 4 Columns (8 Cards) -->
+            <div class="gallery-carousel-page">
+              <div class="gallery-page-grid">
+                
+                <div class="gallery-card">
+                  <img src="assets/images/pcb-inspection.jpg" alt="Advanced Electronics Quality & Machine Vision" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Semiconductor Tech</div>
+                    <div class="gallery-card-title">Nanotech &amp; Micro-Inspection</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/thermal-inspection.jpg" alt="Thermal Engineering Science Showcase" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Applied Physics</div>
+                    <div class="gallery-card-title">High-Temp Propulsion Dynamics</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/jaxa-space.jpg" alt="Kibo ISS Japanese Experiment Module" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Orbital Science</div>
+                    <div class="gallery-card-title">Kibo ISS Space Experiment Module</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/japan-hero.jpg" alt="Hakone Lake Ashi & Fuji Five Lakes" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Volcanic Geology</div>
+                    <div class="gallery-card-title">Lake Ashi &amp; Mount Fuji Eco-Lab</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/miraikan-robotics.jpg" alt="Humanoid AI Robotics Interaction" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Cognitive AI</div>
+                    <div class="gallery-card-title">ASIMO &amp; Humanoid Androids</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/robotics-spatial.jpg" alt="Autonomous AMR Factory Automation" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Smart Logistics</div>
+                    <div class="gallery-card-title">Autonomous Factory AMRs</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/stem-students.jpg" alt="Tokyo University Collaboration" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Global Fellowship</div>
+                    <div class="gallery-card-title">Tokyo University Youth Conclave</div>
+                  </div>
+                </div>
+
+                <div class="gallery-card">
+                  <img src="assets/images/tokyo-disneyland.jpg" alt="Disney Optical Lighting Spectacle" loading="lazy">
+                  <div class="gallery-card-overlay">
+                    <div class="gallery-card-tag">Laser &amp; Optics</div>
+                    <div class="gallery-card-title">Theme Park Lighting &amp; Sound FX</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="assets/images/japan-hero.jpg" alt="Shinkansen Bullet Train and Mount Fuji">
-          <div class="gallery-card-overlay">
-            <div class="gallery-card-tag">High-Speed Rail Transit</div>
-            <div class="gallery-card-title">Shinkansen Bullet Train &bull; Mt. Fuji</div>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="assets/images/tokyo-disneyland.jpg" alt="Tokyo Disneyland Cinderella Castle">
-          <div class="gallery-card-overlay">
-            <div class="gallery-card-tag">Celebration &amp; Wonder</div>
-            <div class="gallery-card-title">Tokyo Disneyland &bull; Full Day Pass</div>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="assets/images/robotics-spatial.jpg" alt="Kawasaki duAro Collaborative Robotics">
-          <div class="gallery-card-overlay">
-            <div class="gallery-card-tag">Industry 4.0 Robotics</div>
-            <div class="gallery-card-title">Kawasaki Robot Museum &bull; duAro</div>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="assets/images/stem-students.jpg" alt="Indian STEM Students Building Robots">
-          <div class="gallery-card-overlay">
-            <div class="gallery-card-tag">Cross-Cultural Peer Dialogue</div>
-            <div class="gallery-card-title">Tokyo School Cultural Exchange</div>
-          </div>
-        </div>
+        <!-- Pagination Dots -->
+        <div class="gallery-carousel-dots" id="gallery-dots"></div>
       </div>
     </div>
   </section>
@@ -433,26 +535,26 @@
       </div>
 
       <div class="safety-grid">
-        <div class="safety-card">
-          <div class="safety-icon">🛡</div>
+        <div class="safety-card reveal-on-scroll delay-1">
+          <div class="safety-icon"><i class="ti ti-shield-check"></i></div>
           <h4>1:10 Chaperone Ratio</h4>
           <p>Strict educator supervision with 1 dedicated faculty or professional chaperone for every 10 registered students.</p>
         </div>
 
-        <div class="safety-card">
-          <div class="safety-icon">🏥</div>
+        <div class="safety-card reveal-on-scroll delay-2">
+          <div class="safety-icon"><i class="ti ti-first-aid-kit"></i></div>
           <h4>Medical &amp; Travel Insurance</h4>
           <p>Comprehensive international medical insurance coverage provided for every participating student throughout Japan.</p>
         </div>
 
-        <div class="safety-card">
-          <div class="safety-icon">📲</div>
+        <div class="safety-card reveal-on-scroll delay-3">
+          <div class="safety-icon"><i class="ti ti-brand-whatsapp"></i></div>
           <h4>Daily Parent Broadcasts</h4>
           <p>Dedicated real-time WhatsApp groups broadcasting daily activity photos, video recaps, and departure/arrival notices.</p>
         </div>
 
-        <div class="safety-card">
-          <div class="safety-icon">🍱</div>
+        <div class="safety-card reveal-on-scroll delay-4">
+          <div class="safety-icon"><i class="ti ti-soup"></i></div>
           <h4>Strict Dietary Supervision</h4>
           <p>Fresh, hygienic Indian vegetarian, Jain, and customized dietary meals catered at reputable certified establishments.</p>
         </div>
@@ -509,58 +611,215 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SECTION 9: TESTIMONIALS
+  <!-- ===================================================================  <!-- ==========================================================================
+       SECTION 9: TESTIMONIALS (WITH IMAGES & CAROUSEL)
        ========================================================================== -->
   <section class="section section-white" id="testimonials">
     <div class="container">
       <div class="section-head">
         <div class="section-tag">Voices of Experience</div>
-        <h2 class="section-title">What Educators &amp; Parents Say</h2>
+        <h2 class="section-title">What Educators, Parents &amp; Students Say</h2>
         <p class="section-desc">
-          Feedback from school principals, science coordinators, and parents whose students embarked on our Japan STEM expedition.
+          Verified feedback from school principals, STEM coordinators, parents, and students who experienced our Japan STEM &amp; Robotics delegation.
         </p>
       </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">
-            &ldquo;Visiting JAXA and interacting with Japanese students opened our students' eyes to what is possible. The personal mentorship by Anand Kumar Sir was life-changing for our IIT aspirants.&rdquo;
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">RP</div>
-            <div>
-              <div class="author-name">Dr. Radhika Prasad</div>
-              <div class="author-role">Principal, Senior Secondary School &bull; Hyderabad</div>
+      <!-- Testimonial Carousel Wrapper -->
+      <div class="testimonial-carousel-wrapper">
+        <!-- Toolbar with Score Badge and Navigation Buttons -->
+        <div class="testimonial-carousel-toolbar">
+          <div class="testimonial-rating-badge">
+            <div class="rating-stars-cluster">
+              <i class="ti ti-star-filled"></i>
+              <i class="ti ti-star-filled"></i>
+              <i class="ti ti-star-filled"></i>
+              <i class="ti ti-star-filled"></i>
+              <i class="ti ti-star-filled"></i>
             </div>
+            <span class="rating-score-text"><strong>4.9 / 5.0</strong> &bull; 30+ Partner Schools &amp; 500+ Students</span>
+          </div>
+
+          <div class="testimonial-nav-buttons">
+            <button class="testimonial-nav-btn" id="testimonialPrevBtn" aria-label="Previous Testimonials">
+              <i class="ti ti-chevron-left"></i>
+            </button>
+            <button class="testimonial-nav-btn" id="testimonialNextBtn" aria-label="Next Testimonials">
+              <i class="ti ti-chevron-right"></i>
+            </button>
           </div>
         </div>
 
-        <div class="testimonial-card">
-          <p class="testimonial-quote">
-            &ldquo;As a parent, safety was my primary concern. Leading Edge Vision's 24/7 updates, vegetarian meals, and professional care made this trip an absolute blessing for my daughter.&rdquo;
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SK</div>
-            <div>
-              <div class="author-name">Suresh Kumar Agarwal</div>
-              <div class="author-role">Parent of Grade 10 Student &bull; Bengaluru</div>
+        <!-- Carousel Viewport & Track -->
+        <div class="testimonial-carousel-viewport" id="testimonialViewport">
+          <div class="testimonial-carousel-track" id="testimonialTrack">
+            
+            <!-- Page 1: 3 Cards -->
+            <div class="testimonial-carousel-page">
+              <div class="testimonial-page-grid">
+                
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                  <div class="testimonial-card-top">
+                    <div class="card-stars">
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                    </div>
+                    <span class="card-badge-verified"><i class="ti ti-circle-check-filled"></i> Principal Chaperone</span>
+                  </div>
+                  <p class="testimonial-quote">
+                    &ldquo;Visiting JAXA Space Center and collaborating with Japanese robotics labs opened our students' horizons. The exclusive mentorship session with Anand Kumar Sir gave our science students unparalleled inspiration for engineering careers.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/images/testimonial-radhika.jpg" alt="Dr. Radhika Prasad" class="author-avatar-img">
+                    <div>
+                      <div class="author-name">Dr. Radhika Prasad</div>
+                      <div class="author-role">Principal, Senior Secondary School &bull; Hyderabad</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                  <div class="testimonial-card-top">
+                    <div class="card-stars">
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                    </div>
+                    <span class="card-badge-verified"><i class="ti ti-circle-check-filled"></i> Parent Delegation</span>
+                  </div>
+                  <p class="testimonial-quote">
+                    &ldquo;As parents, student safety in a foreign country was our topmost priority. Leading Edge Vision's 24/7 dedicated chaperones, pure vegetarian meals, and hourly WhatsApp updates made this tour completely stress-free.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/images/testimonial-suresh.jpg" alt="Suresh Kumar Agarwal" class="author-avatar-img">
+                    <div>
+                      <div class="author-name">Suresh Kumar Agarwal</div>
+                      <div class="author-role">Parent of Grade 10 Student &bull; Bengaluru</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                  <div class="testimonial-card-top">
+                    <div class="card-stars">
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                    </div>
+                    <span class="card-badge-verified"><i class="ti ti-circle-check-filled"></i> Student Batch 2025</span>
+                  </div>
+                  <p class="testimonial-quote">
+                    &ldquo;Riding the 300 km/h Shinkansen bullet train, programming humanoid AI robots at Miraikan, and visiting Tokyo Disneyland with my classmates was the most unforgettable experience of my school life!&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/images/testimonial-aarav.jpg" alt="Aarav Mehta" class="author-avatar-img">
+                    <div>
+                      <div class="author-name">Aarav Mehta</div>
+                      <div class="author-role">Grade 11 Student Participant &bull; Mumbai</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+
+            <!-- Page 2: 3 Cards -->
+            <div class="testimonial-carousel-page">
+              <div class="testimonial-page-grid">
+                
+                <!-- Card 4 -->
+                <div class="testimonial-card">
+                  <div class="testimonial-card-top">
+                    <div class="card-stars">
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                    </div>
+                    <span class="card-badge-verified"><i class="ti ti-circle-check-filled"></i> STEM Coordinator</span>
+                  </div>
+                  <p class="testimonial-quote">
+                    &ldquo;The curriculum integration was flawless. Our students weren't just tourists; they conducted real-time sensors experiments at Haneda Smart City and presented their projects to Japanese engineers. Truly transformative!&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/images/testimonial-sunita.jpg" alt="Sunita Deshmukh" class="author-avatar-img">
+                    <div>
+                      <div class="author-name">Sunita Deshmukh</div>
+                      <div class="author-role">STEM &amp; Innovation Lead, DPS &bull; New Delhi</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="testimonial-card">
+                  <div class="testimonial-card-top">
+                    <div class="card-stars">
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                    </div>
+                    <span class="card-badge-verified"><i class="ti ti-circle-check-filled"></i> Academic Director</span>
+                  </div>
+                  <p class="testimonial-quote">
+                    &ldquo;Leading Edge Vision handled international visas, flight logistics, 4-star stays, and bullet train ticketing flawlessly. We have officially made this Japan tour an annual flagship program for our senior school.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/images/testimonial-vikram.jpg" alt="Dr. Vikramaditya Rao" class="author-avatar-img">
+                    <div>
+                      <div class="author-name">Dr. Vikramaditya Rao</div>
+                      <div class="author-role">Vice Principal &amp; Academic Director &bull; Chennai</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="testimonial-card">
+                  <div class="testimonial-card-top">
+                    <div class="card-stars">
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                      <i class="ti ti-star-filled"></i>
+                    </div>
+                    <span class="card-badge-verified"><i class="ti ti-circle-check-filled"></i> Future Innovator</span>
+                  </div>
+                  <p class="testimonial-quote">
+                    &ldquo;Standing inside the JAXA Tsukuba Space Center next to actual astronaut flight modules was surreal! This tour solidified my dream to pursue aerospace engineering. Thank you for this once-in-a-lifetime opportunity!&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="assets/images/testimonial-ananya.jpg" alt="Ananya Sharma" class="author-avatar-img">
+                    <div>
+                      <div class="author-name">Ananya Sharma</div>
+                      <div class="author-role">Grade 12 Space Science Enthusiast &bull; Pune</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="testimonial-card">
-          <p class="testimonial-quote">
-            &ldquo;Riding the Shinkansen, programming collaborative robots at Kawasaki, and enjoying Disneyland with my friends — this was truly the best educational journey of my school life!&rdquo;
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AM</div>
-            <div>
-              <div class="author-name">Aarav Mehta</div>
-              <div class="author-role">Grade 11 Student Participant &bull; Mumbai</div>
-            </div>
-          </div>
+        <!-- Carousel Dots -->
+        <div class="testimonial-carousel-dots" id="testimonialDots">
+          <button class="testimonial-dot active" data-page="0" aria-label="Testimonial Page 1"></button>
+          <button class="testimonial-dot" data-page="1" aria-label="Testimonial Page 2"></button>
         </div>
+
       </div>
     </div>
   </section>
@@ -605,8 +864,8 @@
           </div>
 
           <div style="background: rgba(216, 191, 11, 0.08); border: 1px solid rgba(216, 191, 11, 0.3); padding: 18px; border-radius: var(--radius-sm);">
-            <div style="font-weight: 700; color: var(--brand-yellow); font-size: 0.95rem; margin-bottom: 4px;">
-              🎁 Faculty Chaperone Guarantee:
+            <div style="font-weight: 700; color: var(--brand-yellow); font-size: 0.95rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+              <i class="ti ti-gift" style="font-size: 1.2rem;"></i> Faculty Chaperone Guarantee:
             </div>
             <p style="font-size: 0.85rem; color: #78350F; margin: 0;">
               Schools receive <strong>1 Complimentary Faculty Chaperone Seat</strong> for every 10 registered students, including all flights, 4-star lodging, meals, and tickets.
@@ -707,97 +966,7 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SECTION 12: CONTACT & INQUIRY FORM
-       ========================================================================== -->
-  <section class="section section-brand-light" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        
-        <!-- Left Contact Info Card -->
-        <div class="contact-info-card">
-          <div>
-            <div class="section-tag" style="margin-bottom: 12px;">Get in Touch</div>
-            <h2 style="font-size: 2.4rem; line-height: 1.15; margin-bottom: 14px; color: #FFFFFF;">
-              Ready to Innovate?<br>
-              <span style="color: var(--brand-yellow);">See You In Tokyo ✈</span>
-            </h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
-              Reach out directly to schedule an institutional presentation or receive the complete delegation brochure.
-            </p>
-          </div>
 
-          <div class="contact-channels">
-            <div class="channel-item">
-              <div class="channel-icon">📞</div>
-              <div class="channel-details">
-                <h5>Helpline &amp; WhatsApp</h5>
-                <a href="tel:+919849278500">+91 9849278500</a>
-              </div>
-            </div>
-
-            <div class="channel-item">
-              <div class="channel-icon">🌐</div>
-              <div class="channel-details">
-                <h5>Official Expedition Portal</h5>
-                <a href="https://www.stemtourjapan.com" target="_blank" rel="noopener">www.stemtourjapan.com</a>
-              </div>
-            </div>
-          </div>
-
-          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">
-            Leading Edge Vision Private Limited &bull; Redefine Technology
-          </div>
-        </div>
-
-        <!-- Right In-Page Inquiry Form -->
-        <div class="inquiry-form-card">
-          <h3 style="font-size: 1.6rem; margin-bottom: 8px; color: var(--text-primary);">Schedule a School Presentation</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
-            Our academic coordinators will arrange an in-person or virtual presentation for your leadership.
-          </p>
-
-          <form id="onpage-inquiry-form">
-            <div class="form-two-cols">
-              <div class="form-field">
-                <label for="f-name">Coordinator Name *</label>
-                <input type="text" id="f-name" class="form-input-text" placeholder="e.g. Dr. Rajesh Sharma" required>
-              </div>
-              <div class="form-field">
-                <label for="f-school">School / Institution *</label>
-                <input type="text" id="f-school" class="form-input-text" placeholder="e.g. Hyderabad Public School" required>
-              </div>
-            </div>
-
-            <div class="form-two-cols">
-              <div class="form-field">
-                <label for="f-email">Work Email *</label>
-                <input type="email" id="f-email" class="form-input-text" placeholder="coordinator@school.edu.in" required>
-              </div>
-              <div class="form-field">
-                <label for="f-phone">Mobile / WhatsApp *</label>
-                <input type="tel" id="f-phone" class="form-input-text" placeholder="+91 98492 XXXXX" required>
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="f-students">Estimated Student Delegation Size</label>
-              <select id="f-students" class="form-input-select">
-                <option>15 - 25 Students</option>
-                <option>25 - 40 Students</option>
-                <option>40+ Students (Multi-Batch)</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn-pill-gold" style="width: 100%; margin-top: 10px;">
-              Schedule Presentation
-            </button>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================================================
        MODAL 1: REGISTRATION MODAL
@@ -927,22 +1096,23 @@
         <div class="footer-col">
           <h5>Offices &amp; Contact</h5>
           <ul class="footer-nav-list">
-            <li><a href="tel:+919849278500">India: +91 9849278500</a></li>
-            <li><a href="tel:+819083085085">Japan: +81 9083085085</a></li>
-            <li><a href="https://www.stemtourjapan.com" target="_blank" rel="noopener">www.stemtourjapan.com</a></li>
-            <li><span style="color: var(--text-muted);">Banjara Hills, Hyderabad, India</span></li>
+            <li><a href="tel:+919849278500"><i class="ti ti-phone" style="color: var(--brand-yellow); font-size: 1.15rem;"></i> India: +91 98492 78500</a></li>
+            <li><a href="tel:+819083085085"><i class="ti ti-phone-call" style="color: var(--brand-yellow); font-size: 1.15rem;"></i> Japan: +81 90830 85085</a></li>
+            <li><a href="https://www.stemtourjapan.com" target="_blank" rel="noopener"><i class="ti ti-world" style="color: var(--brand-yellow); font-size: 1.15rem;"></i> www.stemtourjapan.com</a></li>
+            <li style="display: flex; align-items: center; gap: 8px; color: #CBD5E1;"><i class="ti ti-map-pin" style="color: var(--brand-yellow); font-size: 1.15rem; flex-shrink: 0;"></i> Banjara Hills, Hyderabad, India</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
         <div>&copy; 2026 Leading Edge Vision Private Limited. All rights reserved. Redefine Technology.</div>
-        <div style="color: var(--brand-yellow);">www.stemtourjapan.com &bull; India to Japan Tour</div>
+        <div style="color: var(--brand-yellow); font-weight: 600;">www.stemtourjapan.com &bull; India to Japan STEM Delegation</div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <script src="js/canvas-bg.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

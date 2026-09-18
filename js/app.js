@@ -154,20 +154,22 @@ function showToast(message) {
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Sticky Navbar & Active Tracking
-  const header = document.querySelector('.site-header');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const header = document.querySelector('.portal-navbar') || document.querySelector('.site-header');
+  const navLinks = document.querySelectorAll('.portal-nav-link, .nav-link');
   const sections = document.querySelectorAll('section[id]');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    if (header) {
+      if (window.scrollY > 25) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
     }
 
     let current = '';
     sections.forEach(section => {
-      const top = section.offsetTop - 120;
+      const top = section.offsetTop - 140;
       const height = section.offsetHeight;
       if (window.scrollY >= top && window.scrollY < top + height) {
         current = section.getAttribute('id');
@@ -324,14 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (onPageForm) {
-    onPageForm.addEventListener('submit', e => {
-      e.preventDefault();
-      showToast('🎉 School Inquiry Submitted! Our Hyderabad Headquarters will reach out with the complete itinerary brochure.');
-      onPageForm.reset();
-    });
-  }
-
   // 5. FAQ Accordion Toggles
   const faqQuestions = document.querySelectorAll('.faq-question');
   faqQuestions.forEach(btn => {
@@ -403,6 +397,273 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+  }
+
+  // 9. Destination Experience Gallery Carousel (2 Rows x 4 Columns per Slide)
+  const galleryTrack = document.getElementById('gallery-track');
+  const galleryPrev = document.getElementById('gallery-prev');
+  const galleryNext = document.getElementById('gallery-next');
+  const galleryCounter = document.getElementById('gallery-counter');
+  const galleryDotsContainer = document.getElementById('gallery-dots');
+  const galleryViewport = document.getElementById('gallery-viewport');
+
+  if (galleryTrack) {
+    const pages = galleryTrack.querySelectorAll('.gallery-carousel-page');
+    const totalPages = pages.length || 2;
+    let currentPage = 0;
+    let autoplayTimer = null;
+
+    function createDots() {
+      if (!galleryDotsContainer) return;
+      galleryDotsContainer.innerHTML = '';
+      for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement('button');
+        dot.className = `gallery-dot ${i === currentPage ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Destination Page ${i + 1}`);
+        dot.addEventListener('click', () => {
+          goToPage(i);
+        });
+        galleryDotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateCarousel() {
+      if (currentPage >= totalPages) currentPage = totalPages - 1;
+      if (currentPage < 0) currentPage = 0;
+
+      // Slide track horizontally by 100% per page
+      galleryTrack.style.transform = `translateX(-${currentPage * 100}%)`;
+
+      // Update counter text
+      if (galleryCounter) {
+        if (currentPage === 0) {
+          galleryCounter.textContent = 'Showing 1–8 of 16 (Page 1 of 2)';
+        } else {
+          galleryCounter.textContent = 'Showing 9–16 of 16 (Page 2 of 2)';
+        }
+      }
+
+      // Update dot active state
+      if (galleryDotsContainer) {
+        const dots = galleryDotsContainer.querySelectorAll('.gallery-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentPage);
+        });
+      }
+    }
+
+    function goToPage(pageIndex) {
+      currentPage = (pageIndex + totalPages) % totalPages;
+      updateCarousel();
+    }
+
+    if (galleryPrev) {
+      galleryPrev.addEventListener('click', () => {
+        goToPage(currentPage - 1);
+      });
+    }
+
+    if (galleryNext) {
+      galleryNext.addEventListener('click', () => {
+        goToPage(currentPage + 1);
+      });
+    }
+
+    // Touch and swipe gesture handling
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (galleryViewport) {
+      galleryViewport.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoplay();
+      }, { passive: true });
+
+      galleryViewport.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            goToPage(currentPage + 1);
+          } else {
+            goToPage(currentPage - 1);
+          }
+        }
+        startAutoplay();
+      }, { passive: true });
+
+      galleryViewport.addEventListener('mouseenter', stopAutoplay);
+      galleryViewport.addEventListener('mouseleave', startAutoplay);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => {
+        goToPage(currentPage + 1);
+      }, 5500);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) clearInterval(autoplayTimer);
+    }
+
+    createDots();
+    updateCarousel();
+    startAutoplay();
+  }
+
+  // 10. Scroll-Triggered Reveal Animations & Live Number Counters
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Animated Stats Counter (500+, 30+, 100%)
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if ('IntersectionObserver' in window && statNumbers.length > 0) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const targetStr = el.textContent.trim();
+          const targetNum = parseInt(targetStr, 10);
+          const suffix = targetStr.replace(/^[0-9]+/, '');
+          if (!isNaN(targetNum)) {
+            let startTime = performance.now();
+            const duration = 1600;
+            function step(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+              el.textContent = Math.floor(easeOutQuart * targetNum) + suffix;
+              if (progress < 1) {
+                requestAnimationFrame(step);
+              } else {
+                el.textContent = targetStr;
+              }
+            }
+            requestAnimationFrame(step);
+          }
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(stat => counterObserver.observe(stat));
+  }
+
+  // 11. Testimonials Carousel Navigation & Autoplay
+  const testimonialTrack = document.getElementById('testimonialTrack');
+  const testimonialPrev = document.getElementById('testimonialPrevBtn');
+  const testimonialNext = document.getElementById('testimonialNextBtn');
+  const testimonialDotsContainer = document.getElementById('testimonialDots');
+  const testimonialViewport = document.getElementById('testimonialViewport');
+
+  if (testimonialTrack) {
+    const tPages = testimonialTrack.querySelectorAll('.testimonial-carousel-page');
+    const totalTPages = tPages.length || 2;
+    let currentTPage = 0;
+    let tAutoplayTimer = null;
+
+    function updateTestimonials() {
+      if (currentTPage >= totalTPages) currentTPage = totalTPages - 1;
+      if (currentTPage < 0) currentTPage = 0;
+
+      testimonialTrack.style.transform = `translateX(-${currentTPage * 100}%)`;
+
+      if (testimonialDotsContainer) {
+        const dots = testimonialDotsContainer.querySelectorAll('.testimonial-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentTPage);
+        });
+      }
+    }
+
+    function goToTPage(pageIdx) {
+      currentTPage = (pageIdx + totalTPages) % totalTPages;
+      updateTestimonials();
+    }
+
+    if (testimonialPrev) {
+      testimonialPrev.addEventListener('click', () => {
+        goToTPage(currentTPage - 1);
+        resetTAutoplay();
+      });
+    }
+
+    if (testimonialNext) {
+      testimonialNext.addEventListener('click', () => {
+        goToTPage(currentTPage + 1);
+        resetTAutoplay();
+      });
+    }
+
+    if (testimonialDotsContainer) {
+      const dots = testimonialDotsContainer.querySelectorAll('.testimonial-dot');
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          goToTPage(idx);
+          resetTAutoplay();
+        });
+      });
+    }
+
+    // Touch Swipe Support
+    if (testimonialViewport) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      testimonialViewport.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopTAutoplay();
+      }, { passive: true });
+
+      testimonialViewport.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 45) {
+          if (diff > 0) {
+            goToTPage(currentTPage + 1);
+          } else {
+            goToTPage(currentTPage - 1);
+          }
+        }
+        startTAutoplay();
+      }, { passive: true });
+
+      testimonialViewport.addEventListener('mouseenter', stopTAutoplay);
+      testimonialViewport.addEventListener('mouseleave', startTAutoplay);
+    }
+
+    function startTAutoplay() {
+      stopTAutoplay();
+      tAutoplayTimer = setInterval(() => {
+        goToTPage(currentTPage + 1);
+      }, 6000);
+    }
+
+    function stopTAutoplay() {
+      if (tAutoplayTimer) clearInterval(tAutoplayTimer);
+    }
+
+    function resetTAutoplay() {
+      stopTAutoplay();
+      startTAutoplay();
+    }
+
+    updateTestimonials();
+    startTAutoplay();
   }
 });
 
