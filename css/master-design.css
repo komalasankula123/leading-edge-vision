@@ -1,0 +1,962 @@
+/* ==========================================================================
+   MASTER DESIGN SYSTEM: STEM & ROBOTICS TOURS (JAPAN & GLOBAL EXPOSURE)
+   Reference Design Exact Match: Blue / White / Yellow Visual Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-script: 'Caveat', cursive, sans-serif;
+
+  /* Master Color Palette */
+  --c-navy-deep: #061524;
+  --c-navy-dark: #0A1C2A;
+  --c-navy-surface: #0E253A;
+  --c-navy-accent: #13334F;
+  --c-cyan-vibrant: #0284C7;
+  --c-cyan-light: #38BDF8;
+  --c-yellow-electric: #FFD700;
+  --c-yellow-amber: #F59E0B;
+  --c-yellow-light: #FEF08A;
+  --c-crimson-japan: #DC2626;
+  --c-crimson-stamp: #E11D48;
+  
+  /* Section Colors */
+  --c-bg-light: #F8FAFC;
+  --c-bg-ice: #F0F7FA;
+  --c-text-primary: #0F172A;
+  --c-text-secondary: #475569;
+  --c-text-muted: #64748B;
+  
+  /* Card Theme Accents */
+  --card-mobility: #0284C7;
+  --card-healthcare: #16A34A;
+  --card-surgery: #8B5CF6;
+  --card-agriculture: #D97706;
+  --card-logistics: #0D9488;
+  --card-ai: #2563EB;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scoped font variables and typography */
+.poster-container {
+  font-family: var(--font-sans);
+  color: var(--c-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Master Layout Container matching reference poster layout */
+.poster-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45);
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Typography Helpers */
+.font-display { font-family: var(--font-display); }
+.font-script { font-family: var(--font-script); }
+.font-sans { font-family: var(--font-sans); }
+
+/* Top Branding Bar */
+.top-meta-bar {
+  background: #030D17;
+  color: #94A3B8;
+  font-size: 0.78rem;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.audience-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  color: #E2E8F0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+.audience-pill:hover {
+  background: rgba(255, 215, 0, 0.18);
+  color: var(--c-yellow-electric);
+}
+
+/* ==========================================================================
+   SECTION 1: HERO (Robotics - From Innovation to Real-World Learning)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 480px;
+  background: #081B2C;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Left navy gradient backdrop */
+.hero-backdrop-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #051320 0%, #081B2C 38%, rgba(8, 27, 44, 0.85) 60%, rgba(8, 27, 44, 0.2) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Right scenic visual with Ken Burns zoom */
+.hero-bg-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  transform: scale(1);
+  transition: transform 12s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.hero-section:hover .hero-bg-img {
+  transform: scale(1.05);
+}
+
+/* Hero Content Grid */
+.hero-grid {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 48px 48px 40px 48px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-title-main {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 0.95;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle-line1 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.15;
+}
+
+.hero-subtitle-highlight {
+  font-family: var(--font-sans);
+  font-size: clamp(1.85rem, 3.4vw, 2.85rem);
+  font-weight: 800;
+  color: var(--c-yellow-electric);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  display: block;
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.45);
+  animation: subtlePulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes subtlePulse {
+  0% { text-shadow: 0 0 16px rgba(255, 215, 0, 0.35); }
+  100% { text-shadow: 0 0 28px rgba(255, 215, 0, 0.7); }
+}
+
+.hero-desc {
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  color: #E2E8F0;
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+.hero-desc .hl-text {
+  color: #38BDF8;
+  font-weight: 600;
+}
+
+.hero-desc .hl-yellow {
+  color: #FEF08A;
+  font-weight: 600;
+}
+
+/* Floating Handwritten Callout on Top Right */
+.hero-statement-callout {
+  position: absolute;
+  top: 36px;
+  right: 48px;
+  z-index: 4;
+  text-align: center;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.hero-statement-text {
+  font-family: var(--font-script);
+  font-size: clamp(1.65rem, 2.4vw, 2.25rem);
+  font-weight: 700;
+  color: #0369A1;
+  line-height: 1.08;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8), 0 0 1px #FFFFFF;
+  white-space: pre-line;
+}
+
+.hero-statement-swoosh {
+  width: 140px;
+  height: 16px;
+  margin: -2px auto 0 auto;
+}
+
+/* ==========================================================================
+   SECTION 2: ROBOTICS IN ACTION (6 Cards)
+   ========================================================================== */
+.action-section {
+  background: #FFFFFF;
+  padding: 36px 36px 32px 36px;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.action-header {
+  margin-bottom: 24px;
+}
+
+.action-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 2.1vw, 1.95rem);
+  font-weight: 800;
+  color: var(--c-navy-dark);
+  line-height: 1.2;
+}
+
+.action-title-sep {
+  color: #CBD5E1;
+  font-weight: 300;
+  margin: 0 8px;
+}
+
+.action-title-sub {
+  color: #0284C7;
+  font-weight: 700;
+}
+
+.action-subtitle {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* 6-Column Grid */
+.cards-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.action-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+  border-color: #CBD5E1;
+}
+
+.card-media {
+  width: 100%;
+  height: 110px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  overflow: hidden;
+  position: relative;
+  background: #F1F5F9;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.action-card:hover .card-media img {
+  transform: scale(1.06);
+}
+
+/* Centered Overlapping Circular Icon Badge */
+.card-icon-wrap {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--card-color, #0284C7);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover .card-icon-wrap {
+  transform: translateX(-50%) scale(1.1) rotate(6deg);
+}
+
+.card-icon-wrap svg {
+  width: 20px;
+  height: 20px;
+}
+
+.card-body {
+  padding: 30px 10px 16px 10px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--card-color, #0284C7);
+  margin-bottom: 8px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.card-text {
+  font-size: 0.72rem;
+  color: #475569;
+  line-height: 1.45;
+  margin-top: auto;
+}
+
+/* Theme accent variables for each card */
+.card--mobility { --card-color: var(--card-mobility); }
+.card--healthcare { --card-color: var(--card-healthcare); }
+.card--surgery { --card-color: var(--card-surgery); }
+.card--agriculture { --card-color: var(--card-agriculture); }
+.card--logistics { --card-color: var(--card-logistics); }
+.card--ai { --card-color: var(--card-ai); }
+
+/* ==========================================================================
+   SECTION 3: HUMAN + TECHNOLOGY (Dark Navy Banner)
+   ========================================================================== */
+.collab-section {
+  background: #091C30;
+  position: relative;
+  overflow: hidden;
+  padding: 28px 36px;
+  color: #FFFFFF;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Subtle glowing cyber background */
+.collab-bg-cyber {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.15) 0%, rgba(9, 28, 48, 0.95) 75%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.collab-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Left Column */
+.collab-left {
+  padding-right: 12px;
+}
+
+.collab-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #E2E8F0;
+  letter-spacing: 0.02em;
+  margin-bottom: 2px;
+}
+
+.collab-headline-yellow {
+  font-family: var(--font-sans);
+  font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+  font-weight: 800;
+  color: var(--c-yellow-electric);
+  line-height: 1.1;
+  text-shadow: 0 0 16px rgba(255, 215, 0, 0.3);
+}
+
+.collab-headline-white {
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Center Column: Handshake Visual */
+.collab-center-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.collab-handshake-img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.35));
+  transition: transform 0.6s ease;
+}
+
+.collab-section:hover .collab-handshake-img {
+  transform: scale(1.03);
+}
+
+/* Right Column */
+.collab-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 24px;
+}
+
+.collab-right-intro {
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  margin-bottom: 2px;
+}
+
+.collab-right-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-weight: 800;
+  color: var(--c-yellow-electric);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.collab-right-desc {
+  font-size: 0.78rem;
+  color: #E2E8F0;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECTION 4: MAIN TOUR CONNECTION (Japan STEM Tour, Fuji, 4 Icons)
+   ========================================================================== */
+.tour-section {
+  background: #FFFFFF;
+  padding: 40px 36px 36px 36px;
+  position: relative;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 36px;
+  align-items: center;
+}
+
+/* Left: Students + Mount Fuji Visual with Stamp */
+.tour-visual-wrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: visible;
+}
+
+.tour-photo-box {
+  width: 100%;
+  height: 340px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14);
+  position: relative;
+}
+
+.tour-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.8s ease;
+}
+
+.tour-visual-wrapper:hover .tour-photo-img {
+  transform: scale(1.04);
+}
+
+/* Red Circular Stamp Badge */
+.stamp-badge {
+  position: absolute;
+  top: -16px;
+  right: -12px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #EF4444, #B91C1C 80%);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-10deg);
+  box-shadow: 0 8px 20px rgba(185, 28, 28, 0.4);
+  border: 2px dashed rgba(255, 255, 255, 0.75);
+  z-index: 5;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.stamp-badge:hover {
+  transform: rotate(-5deg) scale(1.08);
+}
+
+.stamp-badge-stem {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.stamp-badge-tour {
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #FEF08A;
+}
+
+.stamp-badge-japan {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+/* Floating Japan Flag Sticker */
+.flag-sticker {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  width: 44px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E2E8F0;
+  z-index: 6;
+  transform: rotate(5deg);
+}
+
+.flag-sun {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #DC2626;
+}
+
+/* Right Content */
+.tour-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-weight: 800;
+  color: var(--c-navy-dark);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.tour-desc {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Four Horizontal Experience Points with Dividers */
+.four-points-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.point-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 6px;
+  position: relative;
+}
+
+.point-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: #E2E8F0;
+}
+
+.point-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.point-item:hover .point-icon-circle {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.point-icon-circle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.point-lead {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--c-navy-dark);
+  line-height: 1.2;
+}
+
+.point-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #475569;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+/* Bottom Information Box */
+.info-callout-box {
+  background: #E0F2FE;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #BAE6FD;
+}
+
+.info-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0369A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-icon-badge svg {
+  width: 24px;
+  height: 24px;
+}
+
+.info-callout-text {
+  font-size: 0.78rem;
+  color: #0F172A;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   SECTION 5: SCHOOLS + COLLEGES + GLOBAL EXPOSURE (Footer Banner)
+   ========================================================================== */
+.footer-banner {
+  background: #081B2C;
+  padding: 28px 36px;
+  color: #FFFFFF;
+  position: relative;
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1.15fr;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Left */
+.fb-left-intro {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.fb-left-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+  font-weight: 900;
+  color: var(--c-yellow-electric);
+  line-height: 1.1;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Center */
+.fb-center {
+  padding: 0 8px;
+}
+
+.fb-center-desc {
+  font-size: 0.78rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+.fb-center-highlight {
+  font-family: var(--font-script);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-weight: 700;
+  color: var(--c-yellow-electric);
+  line-height: 1.2;
+}
+
+/* Right */
+.fb-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fb-right-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.fb-right-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.fb-right-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--c-yellow-electric);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* ==========================================================================
+   INTERACTIVE AUDIENCE MODAL & FLOATING ACTION
+   ========================================================================== */
+.floating-contact-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  background: var(--c-yellow-electric);
+  color: #061524;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 2px solid #FFFFFF;
+}
+
+.floating-contact-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.45);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .cards-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  
+  .collab-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .collab-right {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 0;
+    padding-top: 16px;
+  }
+  
+  .tour-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .footer-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .fb-right {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 0;
+    padding-top: 16px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+  }
+  
+  .hero-bg-media {
+    width: 100%;
+    opacity: 0.35;
+  }
+  
+  .hero-statement-callout {
+    position: static;
+    margin-bottom: 20px;
+    text-align: left;
+    transform: none;
+  }
+  
+  .cards-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .four-points-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .point-item:not(:last-child)::after {
+    display: none;
+  }
+  
+  .action-section, .tour-section, .collab-section, .footer-banner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid-6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
