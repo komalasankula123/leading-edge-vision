@@ -1,6 +1,7 @@
 /* ==========================================================================
    MASTER DESIGN SYSTEM: STEM & ROBOTICS TOURS (JAPAN & GLOBAL EXPOSURE)
-   Reference Design Exact Match: Blue / White / Yellow Visual Theme
+   Theme: LEADING EDGE VISION OFFICIAL LOGO PALETTE (Gold, Deep Navy, White)
+   BORDERLESS MODERN ULTRA-CLEAN PRESENTATION - EXACT 1:1 REPLICA
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap');
@@ -10,18 +11,15 @@
   --font-display: 'Space Grotesk', -apple-system, sans-serif;
   --font-script: 'Caveat', cursive, sans-serif;
 
-  /* Master Color Palette */
-  --c-navy-deep: #061524;
+  /* Official Logo Color Palette */
+  --c-navy-deep: #050E18;
   --c-navy-dark: #0A1C2A;
   --c-navy-surface: #0E253A;
   --c-navy-accent: #13334F;
-  --c-cyan-vibrant: #0284C7;
-  --c-cyan-light: #38BDF8;
-  --c-yellow-electric: #FFD700;
-  --c-yellow-amber: #F59E0B;
+  --c-yellow-electric: #D8BF0B;
+  --c-yellow-gold: #FFD700;
+  --c-yellow-amber: #FACC15;
   --c-yellow-light: #FEF08A;
-  --c-crimson-japan: #DC2626;
-  --c-crimson-stamp: #E11D48;
   
   /* Section Colors */
   --c-bg-light: #F8FAFC;
@@ -30,19 +28,33 @@
   --c-text-secondary: #475569;
   --c-text-muted: #64748B;
   
-  /* Card Theme Accents */
-  --card-mobility: #0284C7;
-  --card-healthcare: #16A34A;
-  --card-surgery: #8B5CF6;
-  --card-agriculture: #D97706;
-  --card-logistics: #0D9488;
-  --card-ai: #2563EB;
+  /* Card Theme Accents - Unified Logo Theme */
+  --card-mobility: #D8BF0B;
+  --card-healthcare: #D8BF0B;
+  --card-surgery: #D8BF0B;
+  --card-agriculture: #D8BF0B;
+  --card-logistics: #D8BF0B;
+  --card-ai: #D8BF0B;
+  --card-warfare: #D8BF0B;
 }
 
-*, *::before, *::after {
+/* 100% Zero Border Policy across entire design */
+*, *::before, *::after,
+body, html, main, section, div, header, footer, article, nav, a, button, input, select, textarea, img, svg, span, p, h1, h2, h3, h4, h5, h6, ul, li {
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  outline: none !important;
   box-sizing: border-box;
+}
+
+body.home-v2 {
+  background: #050E18 !important;
+  color: #FFFFFF;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Scoped font variables and typography */
@@ -54,16 +66,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* Master Layout Container matching reference poster layout */
+/* Master Layout Container - 100% Full Width Edge-to-Edge */
 .poster-container {
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: none !important;
   background-color: #FFFFFF;
   position: relative;
   overflow: hidden;
+  border-radius: 0 !important;
+  border: none !important;
 }
 
 /* Typography Helpers */
@@ -76,11 +90,11 @@
   background: #030D17;
   color: #94A3B8;
   font-size: 0.78rem;
-  padding: 8px 24px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border: none !important;
 }
 
 .audience-pill {
@@ -88,63 +102,143 @@
   align-items: center;
   gap: 5px;
   background: rgba(255, 255, 255, 0.08);
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 9999px;
   color: #E2E8F0;
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   transition: all 0.2s ease;
+  border: none !important;
 }
 .audience-pill:hover {
-  background: rgba(255, 215, 0, 0.18);
-  color: var(--c-yellow-electric);
+  background: rgba(216, 191, 11, 0.25);
+  color: var(--c-yellow-gold);
 }
 
 /* ==========================================================================
-   SECTION 1: HERO (Robotics - From Innovation to Real-World Learning)
+   TRANSPARENT NAVIGATION BAR (V2NAV)
+   ========================================================================== */
+.v2nav {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 90px;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.v2nav.is-scrolled {
+  position: fixed !important;
+  background: rgba(5, 14, 24, 0.88) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: 74px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.v2nav__logo-img {
+  height: 72px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  transition: height 0.3s ease;
+}
+
+.v2nav.is-scrolled .v2nav__logo-img {
+  height: 58px;
+}
+
+.v2nav__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.v2nav__links a {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.9);
+  transition: color 0.2s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.v2nav__links a:hover,
+.v2nav__links a.is-active {
+  color: #FFD700 !important;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.v2nav__links a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: #FFD700 !important;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8) !important;
+  border-radius: 2px;
+}
+
+.v2nav__burger span {
+  background: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   SECTION 1: HERO (Robotics - Panoramic Full Width Background, No Dark Overlay)
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 480px;
-  background: #081B2C;
+  min-height: 560px;
+  padding-top: 80px;
+  background: #050E18;
   overflow: hidden;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  border: none !important;
 }
 
-/* Left navy gradient backdrop */
+/* No dark overlay washing out the panoramic scene */
 .hero-backdrop-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #051320 0%, #081B2C 38%, rgba(8, 27, 44, 0.85) 60%, rgba(8, 27, 44, 0.2) 100%);
-  z-index: 2;
-  pointer-events: none;
+  display: none !important;
 }
 
-/* Right scenic visual with Ken Burns zoom */
+/* Full Width Panoramic Media Visual */
 .hero-bg-media {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 65%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  border: none !important;
 }
 
 .hero-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center right;
+  object-position: center;
   transform: scale(1);
   transition: transform 12s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
 }
 
 .hero-section:hover .hero-bg-img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Hero Content Grid */
@@ -152,7 +246,9 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  padding: 48px 48px 40px 48px;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 56px 48px 48px 48px;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
@@ -161,53 +257,56 @@
 
 .hero-content {
   max-width: 580px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 .hero-title-main {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 5.2vw, 4.4rem);
+  font-size: clamp(3.2rem, 5.4vw, 4.6rem);
   font-weight: 800;
   line-height: 0.95;
   color: #FFFFFF;
   letter-spacing: -0.02em;
-  margin-bottom: 6px;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.95), 0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
 .hero-subtitle-line1 {
   font-family: var(--font-sans);
-  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.3rem, 2.3vw, 1.9rem);
   font-weight: 600;
   color: #FFFFFF;
   line-height: 1.15;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .hero-subtitle-highlight {
   font-family: var(--font-sans);
-  font-size: clamp(1.85rem, 3.4vw, 2.85rem);
+  font-size: clamp(2rem, 3.6vw, 3rem);
   font-weight: 800;
-  color: var(--c-yellow-electric);
+  color: #FFD700;
   line-height: 1.05;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   display: block;
-  text-shadow: 0 0 25px rgba(255, 215, 0, 0.45);
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.7), 0 4px 16px rgba(0, 0, 0, 0.95);
   animation: subtlePulse 3s ease-in-out infinite alternate;
 }
 
 @keyframes subtlePulse {
-  0% { text-shadow: 0 0 16px rgba(255, 215, 0, 0.35); }
-  100% { text-shadow: 0 0 28px rgba(255, 215, 0, 0.7); }
+  0% { text-shadow: 0 0 16px rgba(255, 215, 0, 0.5), 0 4px 14px rgba(0, 0, 0, 0.9); }
+  100% { text-shadow: 0 0 30px rgba(255, 215, 0, 0.85), 0 4px 16px rgba(0, 0, 0, 0.95); }
 }
 
 .hero-desc {
-  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
-  color: #E2E8F0;
-  line-height: 1.65;
-  max-width: 520px;
+  font-size: clamp(0.9rem, 1.15vw, 1rem);
+  color: #FFFFFF;
+  line-height: 1.68;
+  max-width: 540px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.95);
 }
 
 .hero-desc .hl-text {
-  color: #38BDF8;
+  color: #FFD700;
   font-weight: 600;
 }
 
@@ -231,9 +330,9 @@
   font-family: var(--font-script);
   font-size: clamp(1.65rem, 2.4vw, 2.25rem);
   font-weight: 700;
-  color: #0369A1;
+  color: #FFD700;
   line-height: 1.08;
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8), 0 0 1px #FFFFFF;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.95);
   white-space: pre-line;
 }
 
@@ -248,13 +347,14 @@
    ========================================================================== */
 .action-section {
   background: #FFFFFF;
-  padding: 36px 36px 32px 36px;
-  border-bottom: 1px solid #E2E8F0;
+  padding: 40px 36px 36px 36px;
   position: relative;
+  border: none !important;
 }
 
 .action-header {
-  margin-bottom: 24px;
+  max-width: 1360px;
+  margin: 0 auto 24px auto;
 }
 
 .action-title {
@@ -272,7 +372,7 @@
 }
 
 .action-title-sub {
-  color: #0284C7;
+  color: #D8BF0B;
   font-weight: 700;
 }
 
@@ -285,6 +385,8 @@
 
 /* 6-Column Grid */
 .cards-grid-6 {
+  max-width: 1360px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
@@ -294,29 +396,30 @@
 .action-card {
   background: #FFFFFF;
   border-radius: 14px;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
+  overflow: hidden;
+  border: none !important;
 }
 
 .action-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
-  border-color: #CBD5E1;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
 }
 
 .card-media {
   width: 100%;
   height: 110px;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
   overflow: hidden;
   position: relative;
   background: #F1F5F9;
+  border: none !important;
 }
 
 .card-media img {
@@ -327,7 +430,7 @@
 }
 
 .action-card:hover .card-media img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 /* Centered Overlapping Circular Icon Badge */
@@ -339,24 +442,26 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--card-color, #0284C7);
-  border: 3px solid #FFFFFF;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: #D8BF0B !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   z-index: 2;
   transition: transform 0.3s ease;
+  border: none !important;
 }
 
 .action-card:hover .card-icon-wrap {
-  transform: translateX(-50%) scale(1.1) rotate(6deg);
+  transform: translateX(-50%) scale(1.12) rotate(6deg);
 }
 
 .card-icon-wrap svg {
   width: 20px;
   height: 20px;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
 }
 
 .card-body {
@@ -373,7 +478,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: var(--card-color, #0284C7);
+  color: #D8BF0B !important;
   margin-bottom: 8px;
   min-height: 32px;
   display: flex;
@@ -390,31 +495,34 @@
 }
 
 /* Theme accent variables for each card */
-.card--mobility { --card-color: var(--card-mobility); }
-.card--healthcare { --card-color: var(--card-healthcare); }
-.card--surgery { --card-color: var(--card-surgery); }
-.card--agriculture { --card-color: var(--card-agriculture); }
-.card--logistics { --card-color: var(--card-logistics); }
-.card--ai { --card-color: var(--card-ai); }
+.card--mobility { --card-color: #D8BF0B; }
+.card--healthcare { --card-color: #D8BF0B; }
+.card--surgery { --card-color: #D8BF0B; }
+.card--agriculture { --card-color: #D8BF0B; }
+.card--logistics { --card-color: #D8BF0B; }
+.card--ai { --card-color: #D8BF0B; }
+.card--warfare { --card-color: #D8BF0B; }
 
 /* ==========================================================================
    SECTION 3: HUMAN + TECHNOLOGY (Dark Navy Banner)
    ========================================================================== */
 .collab-section {
-  background: #091C30;
+  background: #050E18;
   position: relative;
   overflow: hidden;
-  padding: 28px 36px;
+  padding: 0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
   color: #FFFFFF;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border: none !important;
 }
 
 /* Subtle glowing cyber background */
 .collab-bg-cyber {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.15) 0%, rgba(9, 28, 48, 0.95) 75%);
+  background: radial-gradient(circle at 60% 50%, rgba(216, 191, 11, 0.08) 0%, rgba(5, 14, 24, 0.98) 80%);
   pointer-events: none;
   z-index: 1;
 }
@@ -422,19 +530,24 @@
 .collab-grid {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr 1fr;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 24px 36px;
+  display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: flex-start;
+  gap: 36px;
 }
 
 /* Left Column */
 .collab-left {
-  padding-right: 12px;
+  flex: 0 0 auto;
+  min-width: 270px;
 }
 
 .collab-eyebrow {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: #E2E8F0;
   letter-spacing: 0.02em;
@@ -443,68 +556,86 @@
 
 .collab-headline-yellow {
   font-family: var(--font-sans);
-  font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+  font-size: clamp(1.55rem, 2.3vw, 2.2rem);
   font-weight: 800;
-  color: var(--c-yellow-electric);
+  color: #FFD700;
   line-height: 1.1;
-  text-shadow: 0 0 16px rgba(255, 215, 0, 0.3);
+  text-shadow: 0 0 18px rgba(255, 215, 0, 0.4);
 }
 
 .collab-headline-white {
   font-family: var(--font-sans);
-  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.65rem);
   font-weight: 800;
   color: #FFFFFF;
   line-height: 1.2;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* Center Column: Handshake Visual */
-.collab-center-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+/* Vertical Divider */
+.collab-divider {
+  width: 1.5px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
 }
 
-.collab-handshake-img {
-  width: 100%;
-  max-height: 160px;
-  object-fit: contain;
-  border-radius: 12px;
-  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.35));
-  transition: transform 0.6s ease;
+/* Middle Column */
+.collab-middle {
+  flex: 0 0 auto;
+  max-width: 290px;
 }
 
-.collab-section:hover .collab-handshake-img {
-  transform: scale(1.03);
-}
-
-/* Right Column */
-.collab-right {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-  padding-left: 24px;
-}
-
-.collab-right-intro {
-  font-size: 0.85rem;
+.collab-middle-intro {
+  font-size: 0.88rem;
   color: #CBD5E1;
   margin-bottom: 2px;
 }
 
-.collab-right-title {
+.collab-middle-title {
   font-family: var(--font-sans);
-  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-size: clamp(1.3rem, 1.85vw, 1.65rem);
   font-weight: 800;
-  color: var(--c-yellow-electric);
-  line-height: 1.2;
-  margin-bottom: 8px;
+  color: #FFD700;
+  line-height: 1.15;
+  margin-bottom: 6px;
+  text-shadow: 0 0 16px rgba(255, 215, 0, 0.35);
 }
 
-.collab-right-desc {
-  font-size: 0.78rem;
+.collab-middle-desc {
+  font-size: 0.8rem;
   color: #E2E8F0;
-  line-height: 1.55;
+  line-height: 1.5;
+}
+
+/* Right Media Handshake Visual - Full Height Edge-to-Edge with Seamless Dissolve */
+.collab-right-media {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.85) 15%, #000000 30%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.85) 15%, #000000 30%);
+}
+
+.collab-handshake-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: 0 !important;
+  transition: transform 10s ease;
+}
+
+.collab-section:hover .collab-handshake-img {
+  transform: scale(1.03);
 }
 
 /* ==========================================================================
@@ -512,14 +643,17 @@
    ========================================================================== */
 .tour-section {
   background: #FFFFFF;
-  padding: 40px 36px 36px 36px;
+  padding: 44px 36px 40px 36px;
   position: relative;
+  border: none !important;
 }
 
 .tour-grid {
+  max-width: 1360px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  gap: 36px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -528,15 +662,17 @@
   position: relative;
   border-radius: 18px;
   overflow: visible;
+  border: none !important;
 }
 
 .tour-photo-box {
   width: 100%;
-  height: 340px;
+  height: 350px;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
   position: relative;
+  border: none !important;
 }
 
 .tour-photo-img {
@@ -551,27 +687,27 @@
   transform: scale(1.04);
 }
 
-/* Red Circular Stamp Badge */
+/* Logo Theme Circular Stamp Badge */
 .stamp-badge {
   position: absolute;
   top: -16px;
   right: -12px;
-  width: 120px;
-  height: 120px;
+  width: 124px;
+  height: 124px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #EF4444, #B91C1C 80%);
-  color: #FFFFFF;
+  background: radial-gradient(circle at 35% 35%, #FACC15, #D8BF0B 80%) !important;
+  color: #050E18 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   transform: rotate(-10deg);
-  box-shadow: 0 8px 20px rgba(185, 28, 28, 0.4);
-  border: 2px dashed rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 24px rgba(216, 191, 11, 0.45);
   z-index: 5;
   transition: transform 0.3s ease;
   pointer-events: auto;
+  border: none !important;
 }
 
 .stamp-badge:hover {
@@ -580,26 +716,28 @@
 
 .stamp-badge-stem {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   line-height: 1;
+  color: #050E18 !important;
 }
 
 .stamp-badge-tour {
   font-family: var(--font-script);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1;
-  color: #FEF08A;
+  color: #050E18 !important;
 }
 
 .stamp-badge-japan {
   font-family: var(--font-sans);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: 0.02em;
+  color: #050E18 !important;
 }
 
 /* Floating Japan Flag Sticker */
@@ -611,13 +749,13 @@
   height: 30px;
   background: #FFFFFF;
   border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #E2E8F0;
   z-index: 6;
   transform: rotate(5deg);
+  border: none !important;
 }
 
 .flag-sun {
@@ -635,7 +773,7 @@
 
 .tour-heading {
   font-family: var(--font-sans);
-  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
   font-weight: 800;
   color: var(--c-navy-dark);
   line-height: 1.2;
@@ -643,7 +781,7 @@
 }
 
 .tour-desc {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: #475569;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -656,6 +794,7 @@
   gap: 8px;
   margin-bottom: 24px;
   position: relative;
+  border: none !important;
 }
 
 .point-item {
@@ -665,29 +804,34 @@
   text-align: center;
   padding: 0 6px;
   position: relative;
+  border: none !important;
 }
 
 .point-item:not(:last-child)::after {
   content: '';
   position: absolute;
   right: 0;
-  top: 15%;
-  height: 70%;
+  top: 10%;
+  height: 80%;
   width: 1px;
-  background: #E2E8F0;
+  background: #CBD5E1;
 }
 
+/* Explicit Logo Gold Badge for 4 Point Icons */
 .point-icon-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: #D8BF0B !important;
+  background-color: #D8BF0B !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #FFFFFF !important;
   margin-bottom: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 14px rgba(216, 191, 11, 0.35) !important;
   transition: transform 0.3s ease;
+  border: none !important;
 }
 
 .point-item:hover .point-icon-circle {
@@ -695,19 +839,21 @@
 }
 
 .point-icon-circle svg {
-  width: 22px;
-  height: 22px;
+  width: 26px !important;
+  height: 26px !important;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
 }
 
 .point-lead {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: var(--c-navy-dark);
   line-height: 1.2;
 }
 
 .point-label {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: #475569;
   line-height: 1.25;
@@ -716,34 +862,38 @@
 
 /* Bottom Information Box */
 .info-callout-box {
-  background: #E0F2FE;
+  background: #FEF9C3 !important;
   border-radius: 14px;
   padding: 14px 18px;
   display: flex;
   align-items: center;
   gap: 16px;
-  border: 1px solid #BAE6FD;
+  box-shadow: 0 4px 12px rgba(216, 191, 11, 0.2);
+  border: none !important;
 }
 
 .info-icon-badge {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  background: #0369A1;
-  color: #FFFFFF;
+  background: #D8BF0B !important;
+  color: #FFFFFF !important;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border: none !important;
 }
 
 .info-icon-badge svg {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
 }
 
 .info-callout-text {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: #0F172A;
   line-height: 1.5;
   font-weight: 500;
@@ -753,14 +903,16 @@
    SECTION 5: SCHOOLS + COLLEGES + GLOBAL EXPOSURE (Footer Banner)
    ========================================================================== */
 .footer-banner {
-  background: #081B2C;
-  padding: 28px 36px;
+  background: #050E18;
+  padding: 34px 36px;
   color: #FFFFFF;
   position: relative;
-  border-top: 2px solid rgba(255, 255, 255, 0.08);
+  border: none !important;
 }
 
 .footer-banner-grid {
+  max-width: 1360px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.35fr 1.15fr;
   align-items: center;
@@ -779,9 +931,9 @@
   font-family: var(--font-sans);
   font-size: clamp(1.6rem, 2.5vw, 2.3rem);
   font-weight: 900;
-  color: var(--c-yellow-electric);
+  color: #FFD700;
   line-height: 1.1;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.45);
 }
 
 /* Center */
@@ -790,7 +942,7 @@
 }
 
 .fb-center-desc {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: #CBD5E1;
   line-height: 1.55;
   margin-bottom: 6px;
@@ -798,40 +950,40 @@
 
 .fb-center-highlight {
   font-family: var(--font-script);
-  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
   font-weight: 700;
-  color: var(--c-yellow-electric);
+  color: #FFD700;
   line-height: 1.2;
 }
 
 /* Right */
 .fb-right {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
   padding-left: 24px;
   display: flex;
   align-items: center;
   gap: 16px;
+  border: none !important;
 }
 
 .fb-right-icon {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-  color: #FFFFFF;
+  color: #FFD700 !important;
 }
 
 .fb-right-title {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 800;
   color: #FFFFFF;
   line-height: 1.3;
 }
 
 .fb-right-sub {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  color: var(--c-yellow-electric);
+  color: #FFD700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 3px;
@@ -845,25 +997,25 @@
   bottom: 24px;
   right: 24px;
   z-index: 100;
-  background: var(--c-yellow-electric);
-  color: #061524;
+  background: #FFD700;
+  color: #050E18;
   font-family: var(--font-sans);
   font-weight: 800;
   font-size: 0.85rem;
   padding: 12px 22px;
   border-radius: 9999px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
   transition: all 0.25s ease;
-  border: 2px solid #FFFFFF;
+  border: none !important;
 }
 
 .floating-contact-btn:hover {
   transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.45);
+  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.5);
 }
 
 /* ==========================================================================
@@ -876,16 +1028,12 @@
   }
   
   .collab-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    flex-direction: column;
     text-align: center;
   }
-  
-  .collab-right {
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-left: 0;
-    padding-top: 16px;
+
+  .collab-divider {
+    display: none;
   }
   
   .tour-grid {
@@ -900,11 +1048,10 @@
   }
   
   .fb-right {
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-left: 0;
     padding-top: 16px;
     justify-content: center;
+    border: none !important;
   }
 }
 
@@ -912,11 +1059,6 @@
   .hero-grid {
     grid-template-columns: 1fr;
     padding: 32px 20px;
-  }
-  
-  .hero-bg-media {
-    width: 100%;
-    opacity: 0.35;
   }
   
   .hero-statement-callout {
@@ -934,7 +1076,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
-  
+
   .point-item:not(:last-child)::after {
     display: none;
   }
