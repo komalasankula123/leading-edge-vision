@@ -570,11 +570,12 @@ body.home-v2 {
    SECTION 3: HUMAN + TECHNOLOGY (Augmented Intelligence Banner)
    ========================================================================== */
 .collab-section {
-  background: linear-gradient(90deg, #002d62 0%, #003875 35%, #00448d 65%, #00509e 100%) !important;
+  background: #003875 !important;
   position: relative;
   overflow: hidden;
-  padding: 0;
-  min-height: 250px;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 240px;
   display: flex;
   align-items: center;
   color: #FFFFFF;
@@ -585,7 +586,7 @@ body.home-v2 {
 .collab-bg-cyber {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 65% 50%, rgba(0, 180, 255, 0.2) 0%, rgba(0, 45, 98, 0.4) 75%);
+  background: radial-gradient(circle at 65% 50%, rgba(0, 180, 255, 0.22) 0%, rgba(0, 45, 98, 0.4) 75%);
   pointer-events: none;
   z-index: 1;
 }
@@ -596,11 +597,11 @@ body.home-v2 {
   width: 100%;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 38px 48px;
+  padding: 34px 48px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 36px;
 }
 
 /* Left Column */
@@ -672,7 +673,7 @@ body.home-v2 {
   line-height: 1.5;
 }
 
-/* Right Media Handshake Visual - Seamless Blend and Perfect Framing */
+/* Right Media Handshake Visual - 100% Height Edge-to-Edge with 0 Gaps */
 .collab-right-media {
   position: absolute;
   top: 0;
@@ -682,9 +683,9 @@ body.home-v2 {
   height: 100%;
   z-index: 1;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 12%, #000000 28%);
   mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 12%, #000000 28%);
 }
@@ -694,7 +695,11 @@ body.home-v2 {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
   border-radius: 0 !important;
+  border: none !important;
   transition: transform 8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
