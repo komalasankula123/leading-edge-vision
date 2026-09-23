@@ -240,23 +240,31 @@ body.home-v2 {
   min-height: 480px;
   max-height: 580px;
   aspect-ratio: 16 / 5.4;
-  background: #020b18 !important;
+  background: #020a17 !important;
   overflow: hidden;
   display: flex;
   align-items: center;
   border: none !important;
 }
 
-/* Deep Dark Navy into Rich Royal Cobalt Blue Gradient Overlay */
+/* Deep Dark Navy to Royal Blue Gradient that smoothly fades to pure black for crystal clear image preservation */
 .hero-backdrop-gradient {
   display: block !important;
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background: 
-    radial-gradient(circle at 26% 40%, rgba(3, 102, 214, 0.6) 0%, rgba(2, 54, 130, 0.45) 30%, transparent 60%),
-    linear-gradient(98deg, #020a17 0%, #03142e 14%, #062854 26%, #0a4488 38%, #0d62bc 48%, rgba(13, 98, 188, 0.45) 55%, transparent 64%);
+  background: linear-gradient(
+    95deg,
+    #020a17 0%,
+    #031633 14%,
+    #06285a 26%,
+    #0a478f 38%,
+    #0c5cae 46%,
+    #000000 56%,
+    #000000 100%
+  );
+  mix-blend-mode: screen;
 }
 
 /* Subtle Constellation / Neural Nodes Network matching reference image */
