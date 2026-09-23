@@ -423,39 +423,53 @@ body.home-v2 {
   font-weight: 500;
 }
 
-/* 6-Column Grid */
+/* 3-Column Grid (3 Cards Per Row) */
 .cards-grid-6 {
   max-width: 1360px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
   align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .cards-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid-6 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
 
 .action-card {
   background: #FFFFFF;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
   overflow: hidden;
   border: none !important;
 }
 
 .action-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 38px rgba(15, 23, 42, 0.16);
 }
 
 .card-media {
   width: 100%;
-  height: 110px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
+  height: 180px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   overflow: hidden;
   position: relative;
   background: #F1F5F9;
@@ -476,14 +490,14 @@ body.home-v2 {
 /* Centered Overlapping Circular Icon Badge */
 .card-icon-wrap {
   position: absolute;
-  top: 90px;
+  top: 154px;
   left: 50%;
   transform: translateX(-50%);
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: #0284C7;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,14 +512,14 @@ body.home-v2 {
 }
 
 .card-icon-wrap svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   color: #FFFFFF !important;
   stroke: #FFFFFF !important;
 }
 
 .card-body {
-  padding: 30px 10px 16px 10px;
+  padding: 36px 22px 22px 22px;
   text-align: center;
   flex-grow: 1;
   display: flex;
@@ -514,13 +528,13 @@ body.home-v2 {
 
 .card-title {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 1.05rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   color: #0284C7;
-  margin-bottom: 8px;
-  min-height: 32px;
+  margin-bottom: 10px;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -528,9 +542,9 @@ body.home-v2 {
 }
 
 .card-text {
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   color: #475569;
-  line-height: 1.45;
+  line-height: 1.55;
   margin-top: auto;
 }
 
