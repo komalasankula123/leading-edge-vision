@@ -287,6 +287,8 @@ body.home-v2 {
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
   border: none !important;
 }
 
@@ -295,6 +297,10 @@ body.home-v2 {
   height: 100%;
   object-fit: cover;
   object-position: 45% 38%;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
   transform: scale(1);
   transition: transform 12s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
