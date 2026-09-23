@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8-Day Japan STEM &amp; Robotics Tour Itinerary | Leading Edge Vision</title>
+  <meta name="description" content="Official 8-Day Japan STEM &amp; Robotics Educational Tour Itinerary by Leading Edge Vision. Day-by-day expedition schedule covering JAXA Space Center, Miraikan Museum, Shinkansen Bullet Train, and Tokyo Disneyland.">
+  <meta name="keywords" content="Japan STEM Tour 8 Days, Japan Robotics Itinerary, Leading Edge Vision, JAXA Space, Miraikan, Shinkansen, Tokyo Disneyland">
+  <meta name="theme-color" content="#D8BF0B">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="8-Day Japan STEM &amp; Robotics Tour Itinerary | Leading Edge Vision">
+  <meta property="og:description" content="Day-by-Day Learning Roadmap: 8 Days / 7 Nights Educational Delegation to Japan.">
+  <meta property="og:image" content="assets/images/japan-hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/official-logo-transparent.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/master-design.css">
+
+  <style>
+    /* Clean, focused itinerary presentation styles */
+    .tour-days-page {
+      background: #050E18 !important;
+      color: #FFFFFF;
+      min-height: 100vh;
+      font-family: var(--font-sans);
+    }
+
+    .tour-hero-compact {
+      position: relative;
+      background: radial-gradient(circle at 50% 30%, #003366 0%, #050E18 75%);
+      padding: 100px 24px 50px 24px;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(216, 191, 11, 0.15) !important;
+    }
+
+    .tour-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(216, 191, 11, 0.15);
+      border: 1px solid rgba(216, 191, 11, 0.4) !important;
+      color: #FFD700;
+      padding: 6px 18px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .tour-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .tour-hero-subtitle {
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      color: #94A3B8;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .tour-hero-subtitle strong {
+      color: #FFD700;
+    }
+
+    /* 8-Day Cards Grid */
+    .itinerary-section-main {
+      padding: 60px 24px 100px 24px;
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+
+    .itinerary-grid-8 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .day-itinerary-card {
+      background: #0E253A;
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+      border: 1px solid rgba(216, 191, 11, 0.22) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .day-itinerary-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(216, 191, 11, 0.2);
+      border-color: rgba(216, 191, 11, 0.65) !important;
+    }
+
+    .day-card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #D8BF0B;
+      color: #050E18;
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      z-index: 5;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    }
+
+    .day-card-special-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #DC2626;
+      color: #FFFFFF;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .day-card-image {
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .day-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .day-itinerary-card:hover .day-card-image img {
+      transform: scale(1.06);
+    }
+
+    .day-card-body-content {
+      padding: 24px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .day-card-header-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 700;
+      color: #FFD700;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .day-card-activities {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 13.5px;
+      color: #CBD5E1;
+      line-height: 1.55;
+    }
+
+    .day-card-activity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .day-card-dot {
+      color: #D8BF0B;
+      font-size: 14px;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .day-card-activity-item strong {
+      color: #FFFFFF;
+    }
+
+    /* Bottom Back Navigation Bar */
+    .tour-bottom-nav {
+      background: #0A1C2A;
+      border-top: 1px solid rgba(216, 191, 11, 0.2) !important;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .tour-bottom-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .tour-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .tour-back-btn:hover {
+      background: #FFD700;
+      color: #050E18;
+      border-color: #FFD700 !important;
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body class="tour-days-page">
+
+  <!-- ==========================================================================
+       SECTION 1: NAVBAR
+       ========================================================================== -->
+  <header class="v2nav" id="mainNav" style="position: sticky !important; background: rgba(5, 14, 24, 0.95) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(216, 191, 11, 0.2) !important;">
+    <a href="index.html" class="v2nav__logo" aria-label="Leading Edge Vision Home">
+      <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision" class="v2nav__logo-img">
+    </a>
+    
+    <nav class="v2nav__links" aria-label="Primary Navigation">
+      <a href="index.html" style="color: #FFD700 !important;">&larr; Robotics Home</a>
+      <a href="tourdetails.html" class="is-active">8-Day Schedule (Days 1 to 8)</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+    <div class="v2nav__right">
+      <a href="tel:+919849278500" class="v2btn v2btn--gold hidden sm:inline-flex" style="padding: 9px 20px; font-size: 13px; border: none;">
+        <span>Call: +91 9849278500</span>
+      </a>
+      <button type="button" class="v2nav__burger" aria-label="Open menu" id="burgerToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO: 8-DAY EXPEDITION SCHEDULE HEADER
+       ========================================================================== -->
+  <section class="tour-hero-compact">
+    <div class="tour-hero-badge">
+      <span>🇯🇵 Educational Delegation &bull; 8 Days / 7 Nights</span>
+    </div>
+    <h1 class="tour-hero-title">
+      8-Day Japan STEM &amp; Robotics Schedule
+    </h1>
+    <p class="tour-hero-subtitle">
+      Comprehensive day-by-day learning roadmap covering <strong>JAXA Space Agency</strong>, <strong>Miraikan Robotics</strong>, <strong>Kawasaki Robostage</strong>, <strong>Mount Fuji Shinkansen</strong>, and <strong>Tokyo Disneyland</strong>.
+    </p>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: ONLY 8-DAY ITINERARY CARDS
+       ========================================================================== -->
+  <main class="itinerary-section-main" id="itinerary">
+    <div class="itinerary-grid-8">
+
+      <!-- DAY 1 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 01</div>
+        <div class="day-card-image">
+          <img src="assets/images/japan-hero.jpg" alt="Sensoji Temple and Akihabara" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Arrival in Tokyo &bull; Heritage &amp; Tech</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Sensoji Temple (Asakusa):</strong> Tokyo's oldest 7th-century temple and traditional Nakamise-dori shopping lane.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Akihabara Electronics City:</strong> The world-famous hub for micro-components, sensors, gadgets, and consumer robotics.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 2 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 02</div>
+        <div class="day-card-image">
+          <img src="assets/images/jaxa-space.jpg" alt="JAXA Space Agency Rocket" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Space &amp; Science Exploration</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>JAXA Space Agency:</strong> Tour Tsukuba Space Center, actual H-II launch vehicles, real satellites, and ISS KIBO astronaut module.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Tsukuba Science City:</strong> Interactive physics experiments and premier national research institutes shaping the future.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 3 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 03</div>
+        <div class="day-card-image">
+          <img src="assets/images/miraikan-robotics.jpg" alt="Miraikan Science Museum" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Innovation &amp; City Views</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Miraikan Science Museum:</strong> Interactive AI algorithms, humanoid robotics demonstrations, quantum computing exhibits, and Geo-Cosmos.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Tokyo Tower Observatory:</strong> Panoramic 360-degree views of Tokyo skyline and Tokyo Bay from the iconic 333m tower.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 4 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 04</div>
+        <div class="day-card-image">
+          <img src="assets/images/card-surgery.jpg" alt="Kawasaki Robot Museum" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Robotics &amp; Future Innovation</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Kawasaki Robot Museum:</strong> Hands-on encounters with duAro collaborative industrial, surgical, and automotive robots in action.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Haneda Innovation City:</strong> Cutting-edge smart mobility testbeds, AI research facilities, and immersive deep-tech incubators.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 5 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 05</div>
+        <div class="day-card-special-badge">🚄 Bullet Train Day</div>
+        <div class="day-card-image">
+          <img src="assets/images/about-hero-fuji.jpg" alt="Mount Fuji and Hakone Lake Ashi" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Mount Fuji &amp; Scenic Hakone</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Mount Fuji (3,776m):</strong> Explore UNESCO-listed Fuji Five Lakes and high-altitude volcanic geological marvels.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Lake Ashi Pirate Cruise:</strong> Scenic cruise aboard replica galleon followed by high-speed Shinkansen Bullet Train transit.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 6 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 06</div>
+        <div class="day-card-image">
+          <img src="assets/images/about-school.jpg" alt="Tokyo School Cultural Exchange" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">School Exchange &amp; Robot Tech</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Tokyo School Cultural Exchange:</strong> Interactive peer-to-peer STEM sessions with Japanese students, building global connections.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Robot Restaurant Experience:</strong> Dinner surrounded by futuristic robotic animatronics, laser choreography, and tech shows.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 7 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 07</div>
+        <div class="day-card-special-badge">🏰 Magic &amp; Tech</div>
+        <div class="day-card-image">
+          <img src="assets/images/tokyo-disneyland.jpg" alt="Tokyo Disneyland Castle Fireworks" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Tokyo Disneyland &mdash; Magic &amp; Engineering</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>1-Day Disneyland Passport:</strong> Experience world-renowned theme park physics, trackless animatronics, and ride engineering.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Electrical Night Parade:</strong> Advanced multimedia illumination, dynamic projection mapping, and pyrotechnic acoustics.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 8 -->
+      <article class="day-itinerary-card">
+        <div class="day-card-badge">DAY 08</div>
+        <div class="day-card-special-badge">✈️ Flight Home</div>
+        <div class="day-card-image">
+          <img src="assets/images/about-embassy.jpg" alt="Departure Back to India" loading="lazy">
+        </div>
+        <div class="day-card-body-content">
+          <h2 class="day-card-header-title">Departure Back to India</h2>
+          <div class="day-card-activities">
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Trip Outcomes:</strong> Hands-on robotics exposure, cross-cultural global mindset, and certified international STEM credentials.</div>
+            </div>
+            <div class="day-card-activity-item">
+              <span class="day-card-dot">&#9679;</span>
+              <div><strong>Airport Transfer:</strong> Souvenir shopping at Narita/Haneda airport and homeward flight back to India.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       BOTTOM NAVIGATION & CONTACT BAR
+       ========================================================================== -->
+  <footer class="tour-bottom-nav">
+    <div class="tour-bottom-nav-inner">
+      <a href="index.html" class="tour-back-btn">
+        <span>&larr; Back to Robotics Main Page</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+        <a href="tel:+919849278500" class="v2btn v2btn--gold" style="padding: 10px 22px; font-size: 13px; text-decoration: none;">
+          <span>Call: +91 9849278500</span>
+        </a>
+        <a href="https://wa.me/919849278500?text=Hello%20Leading%20Edge%20Vision,%20we%20are%20inquiring%20about%20the%208-Day%20Japan%20STEM%20Tour." target="_blank" class="tour-back-btn" style="background: rgba(34, 197, 94, 0.15); border-color: rgba(34, 197, 94, 0.4) !important; color: #4ADE80;">
+          <span>WhatsApp Inquiry &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="v2menu" id="v2menu">
+    <div class="v2menu__panel">
+      <button type="button" class="v2menu__close" aria-label="Close menu" id="menuCloseBtn">&times;</button>
+      <div class="v2menu__list">
+        <a href="index.html" class="nsrow"><span class="nsitem">Robotics Main Page</span></a>
+        <a href="tourdetails.html" class="nsrow"><span class="nsitem" style="color: #D8BF0B;">8-Day Schedule (Days 1 to 8)</span></a>
+        <a href="about.html" class="nsrow"><span class="nsitem">About Leading Edge Vision</span></a>
+      </div>
+      <div style="margin-top: auto; padding-top: 32px;">
+        <a href="tel:+919849278500" class="v2btn v2btn--gold" style="width: 100%; text-align: center;">
+          <span>Call: +91 9849278500</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

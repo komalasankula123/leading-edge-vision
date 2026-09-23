@@ -278,4 +278,161 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // =========================================================================
+  // 7. BACK TO TOP BUTTON
+  // =========================================================================
+  const backToTopBtns = document.querySelectorAll('.v2foot-back-top, #backToTopBtn');
+  backToTopBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+
+  // =========================================================================
+  // 8. 3D MAGNETIC PERSPECTIVE TILT ON 6 ACTION CARDS
+  // =========================================================================
+  const actionCards = document.querySelectorAll('.action-card');
+
+  actionCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -8;
+      const rotateY = ((x - centerX) / centerX) * 8;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale3d(1, 1, 1)';
+    });
+  });
+
+
+  // =========================================================================
+  // 9. SCROLL REVEAL STAGGER OBSERVER
+  // =========================================================================
+  const revealElements = document.querySelectorAll('.action-card, .point-item, .info-callout-box, .collab-left, .collab-middle, .tour-visual-wrapper, .tour-content, .fb-left, .fb-center, .fb-right');
+  
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('is-revealed');
+          }, index * 60);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => {
+      el.classList.add('reveal-on-scroll');
+      revealObserver.observe(el);
+    });
+  }
+
+
+  // =========================================================================
+  // 10. AMBIENT CYBER PARTICLE CANVAS (HERO TECH NODES)
+  // =========================================================================
+  const heroSection = document.getElementById('hero');
+  if (heroSection) {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'hero-cyber-canvas';
+    canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;opacity:0.6;';
+    heroSection.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = heroSection.offsetWidth;
+    let height = canvas.height = heroSection.offsetHeight;
+
+    window.addEventListener('resize', () => {
+      if (heroSection) {
+        width = canvas.width = heroSection.offsetWidth;
+        height = canvas.height = heroSection.offsetHeight;
+      }
+    });
+
+    const particles = [];
+    const particleCount = 24;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * (width * 0.42), // Focus on dark left tech zone
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        radius: Math.random() * 1.8 + 1,
+        alpha: Math.random() * 0.5 + 0.25
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw connecting circuit lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 85) {
+            ctx.strokeStyle = `rgba(56, 189, 248, ${(1 - dist / 85) * 0.2})`;
+            ctx.lineWidth = 0.7;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw node dots
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width * 0.42) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        ctx.fillStyle = `rgba(56, 189, 248, ${p.alpha})`;
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = '#00f0ff';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+  }
+
+
+  // =========================================================================
+  // 11. READING SCROLL PROGRESS BAR (TOP OF PAGE)
+  // =========================================================================
+  const progressBar = document.createElement('div');
+  progressBar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0284c7,#38bdf8,#ffd700);z-index:9999;width:0%;transition:width 0.1s ease;box-shadow:0 0 10px rgba(56,189,248,0.8);';
+  document.body.appendChild(progressBar);
+
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    progressBar.style.width = scrolled + '%';
+  }, { passive: true });
 });

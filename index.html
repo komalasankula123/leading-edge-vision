@@ -58,7 +58,7 @@
       <a href="#hero" class="is-active">Robotics</a>
       <a href="#robotics-action">Key Sectors</a>
       <a href="#augmented-intelligence">Augmented Intelligence</a>
-      <a href="#japan-experience">STEM Tour to Japan</a>
+      <a href="tourdetails.html">STEM Tour to Japan</a>
       <a href="#curious-minds">Future of STEM</a>
     </nav>
 
@@ -88,37 +88,62 @@
         <!-- Gradient Overlays for Smooth Navy-to-Scene Blend -->
         <div class="hero-backdrop-gradient" aria-hidden="true"></div>
 
+        <!-- Faint Constellation Network Overlay Matching Image 2 -->
+        <svg class="hero-constellation-overlay" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="120" cy="140" r="3" fill="#60A5FA" opacity="0.6"/>
+          <circle cx="280" cy="90" r="2.5" fill="#93C5FD" opacity="0.5"/>
+          <circle cx="360" cy="180" r="3.5" fill="#60A5FA" opacity="0.7"/>
+          <circle cx="190" cy="300" r="2" fill="#93C5FD" opacity="0.4"/>
+          <circle cx="430" cy="240" r="3" fill="#60A5FA" opacity="0.6"/>
+          <circle cx="150" cy="400" r="2.5" fill="#93C5FD" opacity="0.5"/>
+          <circle cx="370" cy="380" r="3" fill="#60A5FA" opacity="0.6"/>
+          <circle cx="490" cy="340" r="2.5" fill="#93C5FD" opacity="0.4"/>
+          <line x1="120" y1="140" x2="280" y2="90" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
+          <line x1="280" y1="90" x2="360" y2="180" stroke="#60A5FA" stroke-width="0.8" opacity="0.3"/>
+          <line x1="120" y1="140" x2="360" y2="180" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
+          <line x1="360" y1="180" x2="430" y2="240" stroke="#60A5FA" stroke-width="0.8" opacity="0.3"/>
+          <line x1="190" y1="300" x2="360" y2="180" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
+          <line x1="190" y1="300" x2="150" y2="400" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
+          <line x1="150" y1="400" x2="370" y2="380" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
+          <line x1="430" y1="240" x2="370" y2="380" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
+          <line x1="430" y1="240" x2="490" y2="340" stroke="#60A5FA" stroke-width="0.8" opacity="0.2"/>
+        </svg>
+
         <!-- Photographic Background (Robot + Japan Skyline + Mount Fuji + Pagoda + Sakura) -->
         <div class="hero-bg-media" aria-hidden="true">
           <img src="assets/images/hero-robot-japan.jpg" alt="Futuristic Humanoid Robot overlooking Mount Fuji and Tokyo" class="hero-bg-img" loading="eager" fetchpriority="high">
         </div>
 
-        <!-- Handwritten Statement (Top Right) - Logo Gold -->
+        <!-- Handwritten Statement (Top Right - Above Mount Fuji) -->
         <div class="hero-statement-callout">
-          <div class="hero-statement-text" style="color: #FFD700;">Innovation
+          <div class="hero-statement-text">Innovation
 Builds a
 Better Tomorrow</div>
           <!-- Red Brush Swoosh Accent -->
-          <svg class="hero-statement-swoosh" viewBox="0 0 140 18" fill="none" aria-hidden="true">
-            <path d="M4 14C35 4 95 3 136 12" stroke="#DC2626" stroke-width="4.5" stroke-linecap="round"/>
+          <svg class="hero-statement-swoosh" viewBox="0 0 160 20" fill="none" aria-hidden="true">
+            <path d="M6 16C45 4 110 3 154 14" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
           </svg>
         </div>
 
-        <!-- Left Hero Text Content (No Blue, Logo Colors) -->
+        <!-- Left Hero Text Content -->
         <div class="hero-grid">
           <div class="hero-content">
             <h1 class="hero-title-main">ROBOTICS</h1>
-            <div class="hero-subtitle-line1" style="color: #FFFFFF;">From Science Fiction to</div>
-            <span class="hero-subtitle-highlight" style="color: #FFD700;">Everyday Life</span>
+            <div class="hero-subtitle-line1">From Science Fiction to</div>
+            <span class="hero-subtitle-highlight">Everyday Life</span>
 
             <p class="hero-desc">
-              As we move further into the 21st century, <strong class="text-white">Robotics is no longer confined to science fiction or factory <span style="color: #FFD700; text-decoration: underline; text-decoration-color: #D8BF0B; text-underline-offset: 3px;">assembly lines</span>.</strong> It is becoming an integral part of our daily lives and is transforming society in ways that were once unimaginable.
+              As we move further into the 21st century,<br class="hidden sm:inline">
+              Robotics is no longer confined to science fiction<br class="hidden sm:inline">
+              or factory <span style="color: #D4E157; font-weight: 600;">assembly</span> <span style="color: #4ADE80; font-weight: 600;">lines</span>. It is becoming an integral<br class="hidden sm:inline">
+              <span style="color: #D4E157; font-weight: 600;">part</span> of our daily lives and is transforming society<br class="hidden sm:inline">
+              in ways that were once unimaginable.
             </p>
           </div>
         </div>
       </section>
       <!-- ====================================================================
-           PART 2: ROBOTICS IN ACTION (6 Cards Layout with Logo Color Badges)
+           PART 2: ROBOTICS IN ACTION (6 Cards Layout matching Reference Poster)
            ==================================================================== -->
       <section class="action-section" id="robotics-action">
         <!-- Section Header -->
@@ -126,7 +151,7 @@ Better Tomorrow</div>
           <h2 class="action-title">
             <span>Robotics in Action</span>
             <span class="action-title-sep">|</span>
-            <span class="action-title-sub" style="color: #D8BF0B;">Transforming Key Sectors</span>
+            <span class="action-title-sub" style="color: #0284C7;">Transforming Key Sectors</span>
           </h2>
           <p class="action-subtitle">
             We are already witnessing this transformation across multiple sectors:
@@ -136,12 +161,12 @@ Better Tomorrow</div>
         <!-- 6-Card Grid -->
         <div class="cards-grid-6">
 
-          <!-- CARD 1: Autonomous Mobility (Logo Gold) -->
+          <!-- CARD 1: Autonomous Mobility -->
           <article class="action-card card--mobility">
             <div class="card-media">
               <img src="assets/images/card-mobility.jpg" alt="Autonomous self-driving vehicle on city street" loading="lazy">
             </div>
-            <div class="card-icon-wrap" style="background: #D8BF0B;" title="Autonomous Mobility">
+            <div class="card-icon-wrap" style="background: #0284C7;" title="Autonomous Mobility">
               <!-- Car / Vehicle SVG Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 16h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2z"/>
@@ -151,19 +176,19 @@ Better Tomorrow</div>
               </svg>
             </div>
             <div class="card-body">
-              <h3 class="card-title" style="color: #D8BF0B;">Autonomous Mobility</h3>
+              <h3 class="card-title" style="color: #0284C7;">Autonomous Mobility</h3>
               <p class="card-text">
                 Self-driving vehicles are set to redefine urban mobility, reduce accidents and improve traffic efficiency.
               </p>
             </div>
           </article>
 
-          <!-- CARD 2: Medicine & Healthcare (Logo Gold) -->
+          <!-- CARD 2: Medicine & Healthcare -->
           <article class="action-card card--healthcare">
             <div class="card-media">
               <img src="assets/images/card-healthcare.jpg" alt="Robotic surgery and precision medical systems" loading="lazy">
             </div>
-            <div class="card-icon-wrap" style="background: #D8BF0B;" title="Medicine & Healthcare">
+            <div class="card-icon-wrap" style="background: #059669;" title="Medicine & Healthcare">
               <!-- Medical Cross in Rounded Box Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="4" y="4" width="16" height="16" rx="4"/>
@@ -171,19 +196,19 @@ Better Tomorrow</div>
               </svg>
             </div>
             <div class="card-body">
-              <h3 class="card-title" style="color: #D8BF0B;">Medicine &amp; Healthcare</h3>
+              <h3 class="card-title" style="color: #059669;">Medicine &amp; Healthcare</h3>
               <p class="card-text">
                 Robotic-assisted surgery is enhancing precision, reducing recovery times and expanding the capabilities of healthcare systems.
               </p>
             </div>
           </article>
 
-          <!-- CARD 3: The Future of Surgery (Logo Gold) -->
+          <!-- CARD 3: The Future of Surgery -->
           <article class="action-card card--surgery">
             <div class="card-media">
               <img src="assets/images/card-surgery.jpg" alt="Micro-surgical robotic arms for minimally invasive surgery" loading="lazy">
             </div>
-            <div class="card-icon-wrap" style="background: #D8BF0B;" title="The Future of Surgery">
+            <div class="card-icon-wrap" style="background: #7C3AED;" title="The Future of Surgery">
               <!-- Scalpel / Pen Tool SVG Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m18 15-6-6M14 6l4 4L7 21H3v-4L14 6z"/>
@@ -191,19 +216,19 @@ Better Tomorrow</div>
               </svg>
             </div>
             <div class="card-body">
-              <h3 class="card-title" style="color: #D8BF0B;">The Future of Surgery</h3>
+              <h3 class="card-title" style="color: #7C3AED;">The Future of Surgery</h3>
               <p class="card-text">
                 Surgeons now operate through tiny incisions with the help of robotic arms, offering minimally invasive procedures that were once impossible.
               </p>
             </div>
           </article>
 
-          <!-- CARD 4: Smart Agriculture (Logo Gold) -->
+          <!-- CARD 4: Smart Agriculture -->
           <article class="action-card card--agriculture">
             <div class="card-media">
               <img src="assets/images/card-agriculture.jpg" alt="Agricultural drone monitoring lush green farm crops" loading="lazy">
             </div>
-            <div class="card-icon-wrap" style="background: #D8BF0B;" title="Smart Agriculture">
+            <div class="card-icon-wrap" style="background: #EA580C;" title="Smart Agriculture">
               <!-- Seedling / Sensor SVG Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="8" r="5"/>
@@ -211,19 +236,19 @@ Better Tomorrow</div>
               </svg>
             </div>
             <div class="card-body">
-              <h3 class="card-title" style="color: #D8BF0B;">Smart Agriculture</h3>
+              <h3 class="card-title" style="color: #EA580C;">Smart Agriculture</h3>
               <p class="card-text">
                 Drones are optimizing crop monitoring, irrigation and spraying, leading to smarter and more sustainable food production.
               </p>
             </div>
           </article>
 
-          <!-- CARD 5: Logistics & Delivery (Logo Gold) -->
+          <!-- CARD 5: Logistics & Delivery -->
           <article class="action-card card--logistics">
             <div class="card-media">
               <img src="assets/images/card-logistics.jpg" alt="Autonomous aerial delivery drone carrying package" loading="lazy">
             </div>
-            <div class="card-icon-wrap" style="background: #D8BF0B;" title="Logistics & Delivery">
+            <div class="card-icon-wrap" style="background: #0891B2;" title="Logistics & Delivery">
               <!-- 3D Isometric Box SVG Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -232,26 +257,26 @@ Better Tomorrow</div>
               </svg>
             </div>
             <div class="card-body">
-              <h3 class="card-title" style="color: #D8BF0B;">Logistics &amp; Delivery</h3>
+              <h3 class="card-title" style="color: #0891B2;">Logistics &amp; Delivery</h3>
               <p class="card-text">
                 Drones are reshaping last-mile delivery, especially in remote or congested areas. Companies like Amazon, Zipline and DHL are exploring aerial logistics.
               </p>
             </div>
           </article>
 
-          <!-- CARD 6: Robotics in Warfare (Logo Gold) -->
+          <!-- CARD 6: Robotics in Warfare -->
           <article class="action-card card--warfare">
             <div class="card-media">
               <img src="assets/images/card-warfare.jpg" alt="Military UAV autonomous defense drone soaring at sunset" loading="lazy">
             </div>
-            <div class="card-icon-wrap" style="background: #D8BF0B;" title="Robotics in Warfare">
+            <div class="card-icon-wrap" style="background: #DC2626;" title="Robotics in Warfare">
               <!-- Shield SVG Icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
             </div>
             <div class="card-body">
-              <h3 class="card-title" style="color: #D8BF0B;">Robotics in Warfare</h3>
+              <h3 class="card-title" style="color: #DC2626;">Robotics in Warfare</h3>
               <p class="card-text">
                 Autonomous drones are redefining how conflicts are fought, raising serious ethical, legal and strategic questions about the role of machines in life-and-death decisions.
               </p>
@@ -304,21 +329,23 @@ Better Tomorrow</div>
 
           <!-- Left: Japan / Students / Mount Fuji / Pagoda / Cherry Blossoms -->
           <div class="tour-visual-wrapper">
-            <div class="tour-photo-box">
-              <img src="assets/images/stem-students.jpg" alt="School students with backpacks looking toward Mount Fuji, cherry blossoms and pagoda" class="tour-photo-img" loading="lazy">
-            </div>
+            <a href="tourdetails.html" style="display: block; text-decoration: none; cursor: pointer;" title="Click to view 8-Day Japan STEM Tour Details">
+              <div class="tour-photo-box">
+                <img src="assets/images/stem-students.jpg" alt="School students with backpacks looking toward Mount Fuji, cherry blossoms and pagoda" class="tour-photo-img" loading="lazy">
+              </div>
 
-            <!-- Red Circular Stamp Badge (Tilted) -->
-            <div class="stamp-badge" title="Official STEM Tour to Japan">
-              <span class="stamp-badge-stem">STEM</span>
-              <span class="stamp-badge-tour">Tour to</span>
-              <span class="stamp-badge-japan">Japan</span>
-            </div>
+              <!-- Red Circular Stamp Badge (Tilted) -->
+              <div class="stamp-badge" title="Official STEM Tour to Japan - Click for Details">
+                <span class="stamp-badge-stem">STEM</span>
+                <span class="stamp-badge-tour">Tour to</span>
+                <span class="stamp-badge-japan">Japan</span>
+              </div>
 
-            <!-- Japan Flag Sticker -->
-            <div class="flag-sticker" title="Japan">
-              <div class="flag-sun"></div>
-            </div>
+              <!-- Japan Flag Sticker -->
+              <div class="flag-sticker" title="Japan">
+                <div class="flag-sun"></div>
+              </div>
+            </a>
           </div>
 
           <!-- Right: Educational & Cultural Experience + 4 Icons + Info Box -->
@@ -333,9 +360,9 @@ Better Tomorrow</div>
             <!-- Four Experience Points with Vertical Dividers Matching Reference Design Exactly -->
             <div class="four-points-wrap">
 
-              <!-- Point 1: See Robotics in Action (Logo Gold Badge) -->
+              <!-- Point 1: See Robotics in Action -->
               <div class="point-item">
-                <div class="point-icon-circle bg-[#D8BF0B]" title="Robotics">
+                <div class="point-icon-circle" style="background: #0284C7;" title="Robotics">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="4" y="8" width="16" height="12" rx="3.5" fill="none"/>
                     <circle cx="9" cy="13" r="1.5" fill="currentColor"/>
@@ -349,9 +376,9 @@ Better Tomorrow</div>
                 <div class="point-label">Robotics in action</div>
               </div>
 
-              <!-- Point 2: Experience Cutting-Edge Innovation (Logo Gold Badge) -->
+              <!-- Point 2: Experience Cutting-Edge Innovation -->
               <div class="point-item">
-                <div class="point-icon-circle bg-[#D8BF0B]" title="Innovation">
+                <div class="point-icon-circle" style="background: #8B5CF6;" title="Innovation">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 3a6 6 0 0 0-6 6c0 2.22 1.2 4.15 3 5.19V17a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.81c1.8-1.04 3-2.97 3-5.19a6 6 0 0 0-6-6z"/>
                     <path d="M9 21h6"/>
@@ -362,9 +389,9 @@ Better Tomorrow</div>
                 <div class="point-label">cutting-edge innovation</div>
               </div>
 
-              <!-- Point 3: Explore a rich culture and heritage (Logo Gold Badge) -->
+              <!-- Point 3: Explore a rich culture and heritage -->
               <div class="point-item">
-                <div class="point-icon-circle bg-[#D8BF0B]" title="Culture">
+                <div class="point-icon-circle" style="background: #059669;" title="Culture">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M2 5.5c6-1.8 14-1.8 20 0M4 9.5h16M7 5.5v14M17 5.5v14M5 14h2M17 14h2"/>
                   </svg>
@@ -373,9 +400,9 @@ Better Tomorrow</div>
                 <div class="point-label">rich culture and heritage</div>
               </div>
 
-              <!-- Point 4: Get inspired to solve real-world problems (Logo Gold Badge) -->
+              <!-- Point 4: Get inspired to solve real-world problems -->
               <div class="point-item">
-                <div class="point-icon-circle bg-[#D8BF0B]" title="Real-World Tech">
+                <div class="point-icon-circle" style="background: #EA580C;" title="Real-World Tech">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"/>
                     <circle cx="12" cy="12" r="6"/>
@@ -389,9 +416,9 @@ Better Tomorrow</div>
 
             </div>
 
-            <!-- Bottom Information Box (Logo Theme Tint) -->
-            <div class="info-callout-box" style="background: #FEF9C3;">
-              <div class="info-icon-badge" style="background: #D8BF0B;" title="Student Mentorship">
+            <!-- Bottom Information Box (Soft Ice Blue Theme) -->
+            <div class="info-callout-box" style="background: #E0F2FE;">
+              <div class="info-icon-badge" style="background: #0284C7;" title="Student Mentorship">
                 <!-- Academic Graduation Cap Icon -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
@@ -401,6 +428,19 @@ Better Tomorrow</div>
               <p class="info-callout-text">
                 Early exposure sets them up <strong>not just to use tools, but to co-create with them.</strong> The ability to work alongside machines will become a foundational skill for their future careers &mdash; regardless of industry.
               </p>
+            </div>
+
+            <!-- Explore More Action Button -->
+            <div class="tour-btn-wrap" style="margin-top: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+              <a href="tourdetails.html" class="tour-explore-btn" id="exploreMoreBtn" title="Explore STEM Tour to Japan">
+                <span>Explore More Details</span>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="tel:+919849278500" class="tour-contact-link">
+                <span>Call Director: +91 9849278500</span>
+              </a>
             </div>
 
           </div>
@@ -432,7 +472,7 @@ Better Tomorrow</div>
           </div>
 
           <!-- Right: STEM + Japan = A Brighter Future -->
-          <div class="fb-right">
+          <a href="tourdetails.html" class="fb-right" style="text-decoration: none; color: inherit; cursor: pointer; transition: transform 0.2s;" title="View 8-Day Japan STEM Tour Details">
             <!-- Line Art Collaboration Icon (Logo Gold) -->
             <svg class="fb-right-icon" style="color: #FFD700;" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="14" cy="16" r="6"/>
@@ -445,13 +485,13 @@ Better Tomorrow</div>
             </svg>
             <div>
               <div class="fb-right-title">
-                STEM + Japan =<br>A Brighter Future
+                STEM + Japan =<br>A Brighter Future &rarr;
               </div>
               <div class="fb-right-sub">
-                Schools &bull; Colleges &bull; Educational Tours
+                Schools &bull; Colleges &bull; View 8-Day Tour
               </div>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
@@ -469,9 +509,9 @@ Better Tomorrow</div>
         <a href="#hero" class="nsrow"><span class="nsitem">Robotics Hero</span></a>
         <a href="#robotics-action" class="nsrow"><span class="nsitem">6 Key Sectors</span></a>
         <a href="#augmented-intelligence" class="nsrow"><span class="nsitem">Augmented Intelligence</span></a>
-        <a href="#japan-experience" class="nsrow"><span class="nsitem">STEM Tour to Japan</span></a>
+        <a href="tourdetails.html" class="nsrow"><span class="nsitem" style="color: #D8BF0B;">STEM Tour to Japan (Full Details)</span></a>
         <a href="about.html" class="nsrow"><span class="nsitem">About Leading Edge Vision</span></a>
-        <a href="#contact" class="nsrow"><span class="nsitem">Contact Us</span></a>
+        <a href="tel:+919849278500" class="nsrow"><span class="nsitem">Call Director</span></a>
       </div>
       <div style="margin-top: auto; padding-top: 32px;">
         <a href="tel:+919849278500" class="v2btn v2btn--gold" style="width: 100%; text-align: center;">

@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const zlib = require('zlib');
 
@@ -101,7 +102,7 @@ for (let i = 0; i < decoded.length; i += 4) {
   const b = decoded[i + 2];
   // Calculate brightness
   const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-  
+
   if (brightness < 45) {
     decoded[i + 3] = 0; // completely transparent!
   } else if (brightness < 80) {
