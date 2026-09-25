@@ -195,16 +195,93 @@
           </div>
         </div>
 
-        <!-- Right Column: Exact Showcase Banner Image -->
+        <!-- Right Column: Interactive Smooth Moving 3D Showcase (Clean White Background) -->
         <div class="wb-hero-visual-col">
-          <div class="wb-hero-exact-image-stage">
-            <a href="tourdetail.html" class="wb-exact-image-frame" title="Explore Leading Edge Vision Tours">
-              <img 
-                src="assets/images/hero-showcase-banner.jpg" 
-                alt="Leading Edge Vision - Explore, Learn, Grow: Japan, STEM Tours, Schools & Colleges, Explore Countries" 
-                class="wb-exact-image-img"
-              >
-            </a>
+          <div class="wb-hero-3d-stage">
+            
+            <div class="wb-3d-carousel-wrapper" id="hero-3d-wrapper">
+              
+              <!-- 3D Perspective Scene -->
+              <div class="wb-3d-carousel-scene">
+                
+                <!-- Center Hub (Clean Glowing Logo Disc) -->
+                <div class="wb-3d-center-hub">
+                  <div class="wb-hub-glow"></div>
+                  <div class="wb-hub-disc">
+                    <div class="wb-hub-logo-mark">
+                      <svg class="w-8 h-8 text-[#7A4B2A]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8H28L32 14L16 14L14 20H26L24 26H12L10 32H30L28 36H6L8 8Z" fill="#7A4B2A" />
+                        <path d="M22 6L34 12L28 18L26 14L20 14L22 6Z" fill="#C8863A" />
+                        <path d="M26 10L36 12L31 20" stroke="#DCA048" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="wb-hub-brand">LEADING EDGE</div>
+                    <div class="wb-hub-sub-brand">VISION</div>
+                    <div class="wb-hub-tagline">Explore &bull; Learn &bull; Grow</div>
+                  </div>
+                </div>
+
+                <!-- 3D Rotating Cylinder with 4 Floating Cards -->
+                <div class="wb-3d-carousel-cylinder" id="hero-3d-cylinder">
+                  
+                  <!-- Card 1: Schools & Colleges -->
+                  <div class="wb-3d-card" style="--card-index: 0;" onclick="window.location.href='tourdetail.html'">
+                    <img src="assets/images/stem-students.jpg" alt="Schools & Colleges Delegations">
+                    <div class="wb-3d-card-overlay"></div>
+                    <div class="wb-3d-card-body">
+                      <div class="wb-3d-card-header">
+                        <i data-lucide="graduation-cap" class="wb-3d-card-icon"></i>
+                        <h3 class="wb-3d-card-title">Schools &amp; Colleges</h3>
+                      </div>
+                      <p class="wb-3d-card-sub">Better Education &bull; Brighter Future</p>
+                    </div>
+                  </div>
+
+                  <!-- Card 2: Japan -->
+                  <div class="wb-3d-card" style="--card-index: 1;" onclick="window.location.href='tourdetail.html'">
+                    <img src="assets/images/japan-hero.jpg" alt="Japan STEM & Cultural Immersion">
+                    <div class="wb-3d-card-overlay"></div>
+                    <div class="wb-3d-card-body">
+                      <div class="wb-3d-card-header">
+                        <i data-lucide="map-pin" class="wb-3d-card-icon"></i>
+                        <h3 class="wb-3d-card-title">Japan</h3>
+                      </div>
+                      <p class="wb-3d-card-sub">Discover a World of Opportunities</p>
+                    </div>
+                  </div>
+
+                  <!-- Card 3: STEM Tours -->
+                  <div class="wb-3d-card" style="--card-index: 2;" onclick="window.location.href='tourdetail.html'">
+                    <img src="assets/images/miraikan-robotics.jpg" alt="STEM Tours & Advanced Robotics">
+                    <div class="wb-3d-card-overlay"></div>
+                    <div class="wb-3d-card-body">
+                      <div class="wb-3d-card-header">
+                        <i data-lucide="flask-conical" class="wb-3d-card-icon"></i>
+                        <h3 class="wb-3d-card-title">STEM Tours</h3>
+                      </div>
+                      <p class="wb-3d-card-sub">Inspire &bull; Innovate &bull; Build the Future</p>
+                    </div>
+                  </div>
+
+                  <!-- Card 4: Explore Countries -->
+                  <div class="wb-3d-card" style="--card-index: 3;" onclick="window.location.href='tourdetail.html'">
+                    <img src="assets/images/about-hero-fuji.jpg" alt="Explore Countries & International Exposure">
+                    <div class="wb-3d-card-overlay"></div>
+                    <div class="wb-3d-card-body">
+                      <div class="wb-3d-card-header">
+                        <i data-lucide="globe" class="wb-3d-card-icon"></i>
+                        <h3 class="wb-3d-card-title">Explore Countries</h3>
+                      </div>
+                      <p class="wb-3d-card-sub">New Places &bull; New Perspectives</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
         </div>
 
