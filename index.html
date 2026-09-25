@@ -934,7 +934,7 @@
     }
 
     // =========================================================================
-    // PREMIUM 3D CURVED / ELLIPTICAL ROTATING HERO CAROUSEL
+    // CONTINUOUS SMOOTH 3D CURVED / ELLIPTICAL HERO CAROUSEL
     // =========================================================================
     function init3DHeroCarousel() {
       const wrapper = document.getElementById('hero-3d-wrapper');
@@ -942,23 +942,14 @@
       if (!wrapper || cards.length === 0) return;
 
       const totalCards = cards.length;
-      let currentIndex = 0;
       let currentProgress = 0;
       let targetProgress = 0;
-      let isTransitioning = false;
-      let transitionStartTime = 0;
-      let transitionStartProgress = 0;
-      const transitionDuration = 1400; // 1.4s slow, elegant, premium movement
-      const pauseDuration = 2600;      // 2.6s pause when each card reaches center
       let isHovered = false;
-      let autoTimer = null;
-
-      // Smooth custom cubic-bezier easing
-      function easeInOutCubic(t) {
-        return t < 0.5
-          ? 4 * t * t * t
-          : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      }
+      let isDragging = false;
+      let startX = 0;
+      let startProgress = 0;
+      let lastTime = performance.now();
+      const continuousSpeed = 0.0032; // Smooth, slow, elegant continuous flow
 
       function updateCards(progress) {
         const isMobile = window.innerWidth < 768;
@@ -992,7 +983,7 @@
           // Subtle brightness depth
           const brightness = Math.max(0.7, (cosVal + 1.3) / 2.3);
 
-          const isCenter = Math.abs(diff) < 0.25;
+          const isCenter = Math.abs(diff) < 0.28;
           card.classList.toggle('is-center', isCenter);
 
           // Apply translate3d, rotateY, and scale
@@ -1004,66 +995,72 @@
         });
       }
 
-      function nextSlide() {
-        if (isTransitioning || isHovered) return;
-        goToSlide(currentIndex + 1);
-      }
-
-      function goToSlide(index) {
-        currentIndex = index;
-        targetProgress = index;
-        transitionStartTime = performance.now();
-        transitionStartProgress = currentProgress;
-        isTransitioning = true;
-      }
-
-      function scheduleNext() {
-        clearTimeout(autoTimer);
-        if (!isHovered) {
-          autoTimer = setTimeout(() => {
-            nextSlide();
-          }, pauseDuration);
-        }
-      }
-
       function renderLoop(time) {
-        if (isTransitioning) {
-          const elapsed = time - transitionStartTime;
-          const t = Math.min(1, elapsed / transitionDuration);
-          const eased = easeInOutCubic(t);
+        const delta = Math.min((time - lastTime) / 16.66, 2.5);
+        lastTime = time;
 
-          currentProgress = transitionStartProgress + (targetProgress - transitionStartProgress) * eased;
-
-          if (t >= 1) {
-            currentProgress = targetProgress;
-            isTransitioning = false;
-            scheduleNext();
+        if (!isDragging) {
+          if (!isHovered) {
+            targetProgress += continuousSpeed * delta;
           }
+          // Buttery smooth spring interpolation
+          currentProgress += (targetProgress - currentProgress) * 0.08;
         }
 
         updateCards(currentProgress);
         requestAnimationFrame(renderLoop);
       }
 
-      // Start initial render & automatic loop
-      updateCards(0);
-      scheduleNext();
+      // Start continuous animation loop
       requestAnimationFrame(renderLoop);
 
-      // On hover: pause carousel & add subtle depth focus
-      wrapper.addEventListener('mouseenter', () => {
-        isHovered = true;
-        clearTimeout(autoTimer);
+      // On hover: slow down smoothly
+      wrapper.addEventListener('mouseenter', () => { isHovered = true; });
+      wrapper.addEventListener('mouseleave', () => { isHovered = false; });
+
+      // Interactive mouse drag / swipe
+      wrapper.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        startProgress = currentProgress;
       });
 
-      wrapper.addEventListener('mouseleave', () => {
-        isHovered = false;
-        if (!isTransitioning) {
-          scheduleNext();
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const deltaX = e.clientX - startX;
+        currentProgress = startProgress - (deltaX / 280);
+        targetProgress = currentProgress;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDragging) {
+          isDragging = false;
         }
       });
 
-      // Click on side cards to bring them to center
+      // Mobile touch swipe
+      wrapper.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) {
+          isDragging = true;
+          startX = e.touches[0].clientX;
+          startProgress = currentProgress;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (!isDragging || e.touches.length === 0) return;
+        const deltaX = e.touches[0].clientX - startX;
+        currentProgress = startProgress - (deltaX / 280);
+        targetProgress = currentProgress;
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        if (isDragging) {
+          isDragging = false;
+        }
+      });
+
+      // Click on side cards to smoothly spin them to center
       cards.forEach((card, i) => {
         card.addEventListener('click', (e) => {
           let diff = ((i - currentProgress) % totalCards + totalCards) % totalCards;
@@ -1071,7 +1068,7 @@
 
           if (Math.abs(diff) > 0.3) {
             e.preventDefault();
-            goToSlide(currentIndex + Math.round(diff));
+            targetProgress = currentProgress + diff;
           }
         });
       });
