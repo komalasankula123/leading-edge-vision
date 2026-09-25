@@ -936,10 +936,13 @@
     // =========================================================================
     // CONTINUOUS SMOOTH 3D CURVED / ELLIPTICAL HERO CAROUSEL
     // =========================================================================
+    let heroCarouselInitialized = false;
     function init3DHeroCarousel() {
+      if (heroCarouselInitialized) return;
       const wrapper = document.getElementById('hero-3d-wrapper');
       const cards = document.querySelectorAll('.wb-3d-card');
       if (!wrapper || cards.length === 0) return;
+      heroCarouselInitialized = true;
 
       const totalCards = cards.length;
       let currentProgress = 0;
@@ -966,31 +969,20 @@
           const sinVal = Math.sin(angle);
           const cosVal = Math.cos(angle);     // 1 = Center, 0 = Side, -1 = Rear
 
-          // Curved 3D coordinates
+          // Completely smooth continuous 3D coordinates (zero edge jump)
           const posX = sinVal * radiusX;
-          const posZ = cosVal * radiusZ - (cosVal < 0 ? 35 : 0);
+          const posZ = cosVal * radiusZ;
           const rotY = -sinVal * maxTilt;
 
-          // Scale: Center card large (1.04), side cards smaller (0.84), rear card (0.70)
-          const scale = 0.74 + (cosVal + 1) * 0.155;
+          // Scale: Center card large (1.04), side cards smaller (0.84), rear card (0.74)
+          const scale = 0.74 + (cosVal + 1) * 0.15;
 
-          // Opacity: Center 1.0, sides 0.75, rear 0.15
-          const opacity = Math.max(0.12, Math.min(1.0, (cosVal + 1.2) / 2.2));
+          // Z-index: Front cards always stay in front of rear cards smoothly
+          const zIndex = Math.round((cosVal + 1) * 20) + 1;
 
-          // Z-index: Front center card always sits on top
-          const zIndex = Math.round((cosVal + 1) * 15) + 5;
-
-          // Subtle brightness depth
-          const brightness = Math.max(0.7, (cosVal + 1.3) / 2.3);
-
-          const isCenter = Math.abs(diff) < 0.28;
-          card.classList.toggle('is-center', isCenter);
-
-          // Apply translate3d, rotateY, and scale
+          // Apply pure GPU-accelerated 3D transform without modifying opacity/filter/layout
           card.style.transform = `translate3d(${posX.toFixed(1)}px, 0px, ${posZ.toFixed(1)}px) rotateY(${rotY.toFixed(1)}deg) scale(${scale.toFixed(3)})`;
-          card.style.opacity = opacity.toFixed(2);
           card.style.zIndex = zIndex;
-          card.style.filter = `brightness(${brightness.toFixed(2)})`;
           card.style.pointerEvents = (cosVal > -0.2) ? 'auto' : 'none';
         });
       }
