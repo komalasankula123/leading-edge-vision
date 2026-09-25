@@ -611,35 +611,75 @@ img {
 }
 
 /* ==========================================================================
-   HERO VISUAL STAGE (PREVIOUS IMAGE WITH FLOATING CARDS & STICKERS)
+   HERO VISUAL STAGE (SMOOTH MOVING EXACT SHOWCASE BANNER)
    ========================================================================== */
-.wb-hero-visual-col {
+.wb-hero-visual-col,
+.wb-hero-moving-banner-col {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 3.5rem 2.5rem 1.5rem;
+  padding: 2rem 3rem 2rem 1.5rem;
   width: 100%;
 }
 
-.wb-hero-visual-frame {
+.wb-hero-moving-banner-frame {
   position: relative;
   width: 100%;
-  max-width: 620px;
-  height: 480px;
+  max-width: 680px;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 25px 60px -15px rgba(36, 22, 14, 0.22);
-  border: 4px solid #FFFFFF;
-  background: #24160E;
+  box-shadow: 
+    0 24px 55px -12px rgba(36, 22, 14, 0.16),
+    0 0 0 1px rgba(232, 222, 210, 0.85);
+  background: #FFFFFF;
+  display: block;
+  text-decoration: none;
+  animation: wbHeroBannerFloat 6s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.wb-hero-stage-img {
+@keyframes wbHeroBannerFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.4deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.wb-hero-moving-banner-frame:hover {
+  box-shadow: 
+    0 32px 70px -15px rgba(36, 22, 14, 0.24),
+    0 0 0 2px rgba(220, 160, 72, 0.4);
+}
+
+.wb-hero-moving-banner-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-  transition: transform 0.6s ease;
+  object-fit: cover;
+  border-radius: 23px;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wb-hero-moving-banner-frame:hover .wb-hero-moving-banner-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .wb-hero-visual-col,
+  .wb-hero-moving-banner-col {
+    padding: 1.5rem;
+  }
+  .wb-hero-moving-banner-frame {
+    max-width: 100%;
+  }
 }
 
 .wb-hero-visual-frame:hover .wb-hero-stage-img {
@@ -788,42 +828,38 @@ img {
 }
 
 /* ==========================================================================
-   INTERACTIVE 3D ORBITING CAROUSEL SHOWCASE (HERO RIGHT STAGE)
+   INTERACTIVE 3D CURVED CAROUSEL SHOWCASE (HERO RIGHT STAGE)
    ========================================================================== */
 .wb-hero-3d-stage {
   position: relative;
-  overflow: hidden;
-  background: #FFFFFF;
+  overflow: visible;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 460px;
+  min-height: 480px;
   width: 100%;
 }
 
 .wb-3d-carousel-wrapper {
   position: relative;
   width: 100%;
+  max-width: 580px;
   height: 100%;
-  min-height: 440px;
+  min-height: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   user-select: none;
-  cursor: grab;
   padding: 0.5rem;
-}
-
-.wb-3d-carousel-wrapper:active {
-  cursor: grabbing;
 }
 
 .wb-3d-carousel-scene {
   position: relative;
   width: 100%;
-  height: 330px;
-  perspective: 1100px;
+  height: 360px;
+  perspective: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -831,29 +867,36 @@ img {
 }
 
 .wb-3d-carousel-cylinder {
-  position: absolute;
-  width: 195px;
-  height: 280px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform-style: preserve-3d;
-  will-change: transform;
 }
 
-/* 3D Orbiting Cards */
+/* 3D Curved Orbiting Cards */
 .wb-3d-card {
   position: absolute;
-  width: 195px;
-  height: 280px;
-  border-radius: 18px;
+  width: 220px;
+  height: 310px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 14px 30px rgba(36, 22, 14, 0.16);
+  box-shadow: 0 16px 36px rgba(36, 22, 14, 0.16);
   border: 2.5px solid #FFFFFF;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   background: #FFFFFF;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.4s ease, filter 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.wb-3d-card.is-center:hover {
+  box-shadow: 0 28px 60px -10px rgba(36, 22, 14, 0.28), 0 0 0 2px rgba(200, 134, 58, 0.5);
 }
 
 .wb-3d-card img {
@@ -863,14 +906,14 @@ img {
   transition: transform 0.6s ease;
 }
 
-.wb-3d-card:hover img {
-  transform: scale(1.06);
+.wb-3d-card.is-center:hover img {
+  transform: scale(1.05);
 }
 
 .wb-3d-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.6) 100%);
   pointer-events: none;
 }
 
@@ -880,7 +923,7 @@ img {
   left: 0;
   right: 0;
   z-index: 3;
-  padding: 0.75rem 0.85rem;
+  padding: 0.85rem 1rem;
   background: rgba(107, 63, 33, 0.96);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
@@ -889,74 +932,68 @@ img {
 .wb-3d-card-header {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-bottom: 0.15rem;
+  gap: 0.45rem;
+  margin-bottom: 0.2rem;
 }
 
 .wb-3d-card-icon {
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   color: #F6EEE3;
   flex-shrink: 0;
 }
 
 .wb-3d-card-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.02rem;
   font-weight: 800;
   line-height: 1.2;
   color: #FFFFFF;
 }
 
 .wb-3d-card-sub {
-  font-size: 0.64rem;
+  font-size: 0.68rem;
   color: #E6D8CC;
-  line-height: 1.25;
+  line-height: 1.3;
   font-weight: 500;
 }
 
-/* Card 3D Orbit Positions (4 Cards with snug 190px radius) */
-.wb-3d-card:nth-child(1) { transform: rotateY(0deg) translateZ(190px); }
-.wb-3d-card:nth-child(2) { transform: rotateY(90deg) translateZ(190px); }
-.wb-3d-card:nth-child(3) { transform: rotateY(180deg) translateZ(190px); }
-.wb-3d-card:nth-child(4) { transform: rotateY(270deg) translateZ(190px); }
-
-/* Center Hub / Glowing Logo Disc (Matching Reference Image) */
+/* Center Hub / Glowing Logo Disc */
 .wb-3d-center-hub {
   position: absolute;
-  z-index: 20;
+  z-index: 50;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 95px);
 }
 
 .wb-hub-glow {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(220, 160, 72, 0.25) 0%, rgba(220, 160, 72, 0.08) 50%, transparent 70%);
-  animation: wbPulseHub 3s infinite alternate ease-in-out;
+  background: radial-gradient(circle, rgba(220, 160, 72, 0.28) 0%, rgba(220, 160, 72, 0.08) 50%, transparent 70%);
+  animation: wbPulseHub 3.5s infinite alternate ease-in-out;
 }
 
 @keyframes wbPulseHub {
-  0% { transform: scale(0.92); opacity: 0.7; }
-  100% { transform: scale(1.08); opacity: 1; }
+  0% { transform: scale(0.94); opacity: 0.7; }
+  100% { transform: scale(1.06); opacity: 1; }
 }
 
 .wb-hub-disc {
   position: relative;
-  width: 145px;
-  height: 145px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   background: #FFFFFF;
   border: 4px solid #C8863A;
   box-shadow: 
-    0 12px 30px rgba(36, 22, 14, 0.14),
+    0 12px 28px rgba(36, 22, 14, 0.14),
     0 0 0 3px rgba(255, 255, 255, 0.95),
-    0 0 20px rgba(220, 160, 72, 0.3);
+    0 0 20px rgba(220, 160, 72, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
