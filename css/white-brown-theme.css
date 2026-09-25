@@ -611,51 +611,179 @@ img {
 }
 
 /* ==========================================================================
-   EXACT HERO SHOWCASE BANNER STAGE
+   HERO VISUAL STAGE (PREVIOUS IMAGE WITH FLOATING CARDS & STICKERS)
    ========================================================================== */
-.wb-hero-exact-image-stage {
+.wb-hero-visual-col {
   position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 1.5rem 1.5rem 0.5rem;
-  background: #FFFFFF;
+  padding: 2.5rem 3.5rem 2.5rem 1.5rem;
+  width: 100%;
 }
 
-.wb-exact-image-frame {
+.wb-hero-visual-frame {
   position: relative;
   width: 100%;
-  max-width: 780px;
-  border-radius: 20px;
+  max-width: 620px;
+  height: 480px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 45px -12px rgba(36, 22, 14, 0.12);
-  border: 1px solid rgba(232, 222, 210, 0.9);
-  background: #FFFFFF;
-  display: block;
-  text-decoration: none;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  box-shadow: 0 25px 60px -15px rgba(36, 22, 14, 0.22);
+  border: 4px solid #FFFFFF;
+  background: #24160E;
 }
 
-.wb-exact-image-frame:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 30px 60px -15px rgba(36, 22, 14, 0.18);
-}
-
-.wb-exact-image-img {
+.wb-hero-stage-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
-  border-radius: 19px;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.wb-hero-visual-frame:hover .wb-hero-stage-img {
+  transform: scale(1.03);
+}
+
+.wb-hero-stage-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(18, 12, 8, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* Top-Left Delegation Rating Pill */
+.wb-hero-float-pill-top {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(18, 12, 8, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 0.95rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Top-Right Handwritten Callout Note */
+.wb-hero-callout-sticker {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #FFFFFF;
+  padding: 0.85rem 1.15rem 0.75rem 1.15rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(232, 222, 210, 0.9);
+  transform: rotate(3deg);
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.wb-hero-callout-sticker:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+.wb-callout-sticker-text {
+  font-family: 'Playfair Display', 'Caveat', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #7A4B2A;
+  line-height: 1.25;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.wb-callout-sticker-swoosh {
+  width: 100%;
+  height: 8px;
+  margin-top: 3px;
+  display: block;
+}
+
+/* Floating Bottom-Left Experience Live Indicator */
+.wb-hero-float-badge-bottom {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.9rem 1.25rem;
+  border-radius: 16px;
+  border: 1px solid rgba(232, 222, 210, 0.9);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+}
+
+.wb-float-badge-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(220, 160, 72, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wb-float-badge-content {
+  flex: 1;
+}
+
+.wb-float-badge-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #24160E;
+  line-height: 1.2;
+}
+
+.wb-float-badge-subtitle {
+  font-size: 0.74rem;
+  color: #7A4B2A;
+  font-weight: 500;
+}
+
+.wb-float-badge-status {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.wb-live-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #059669;
+  box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
+  animation: wbPulse 1.8s infinite;
 }
 
 @media (max-width: 1024px) {
-  .wb-hero-exact-image-stage {
-    padding: 1.5rem 1.5rem 3rem 1.5rem;
-    min-height: auto;
+  .wb-hero-visual-col {
+    padding: 1.5rem;
+  }
+  .wb-hero-visual-frame {
+    height: 380px;
+    max-width: 100%;
   }
 }
 
