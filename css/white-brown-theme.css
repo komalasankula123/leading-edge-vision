@@ -610,6 +610,55 @@ img {
 }
 
 /* ==========================================================================
+   EXACT HERO SHOWCASE BANNER STAGE
+   ========================================================================== */
+.wb-hero-exact-image-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 1.5rem 0.5rem;
+  background: #FFFFFF;
+}
+
+.wb-exact-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -12px rgba(36, 22, 14, 0.12);
+  border: 1px solid rgba(232, 222, 210, 0.9);
+  background: #FFFFFF;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.wb-exact-image-frame:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 30px 60px -15px rgba(36, 22, 14, 0.18);
+}
+
+.wb-exact-image-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 19px;
+}
+
+@media (max-width: 1024px) {
+  .wb-hero-exact-image-stage {
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    min-height: auto;
+  }
+}
+
+/* ==========================================================================
    INTERACTIVE 3D ORBITING CAROUSEL SHOWCASE (HERO RIGHT STAGE)
    ========================================================================== */
 .wb-hero-3d-stage {
