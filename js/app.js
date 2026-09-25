@@ -436,3 +436,35 @@ document.addEventListener('DOMContentLoaded', () => {
     progressBar.style.width = scrolled + '%';
   }, { passive: true });
 });
+
+// =========================================================================
+// 12. KEY INNOVATIONS / SECTORS INTERACTIVE FILTER FUNCTION
+// =========================================================================
+function filterSectors(category, btnElement) {
+  // Update button active state
+  const filterBtns = document.querySelectorAll('.action-filter-btn');
+  filterBtns.forEach(btn => btn.classList.remove('active'));
+  if (btnElement) btnElement.classList.add('active');
+
+  const cards = document.querySelectorAll('#sectors-grid .action-card');
+  cards.forEach(card => {
+    const cardCat = card.getAttribute('data-category');
+    if (category === 'all' || cardCat === category) {
+      card.style.display = 'flex';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(16px)';
+      setTimeout(() => {
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 50);
+    } else {
+      card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        card.style.display = 'none';
+      }, 250);
+    }
+  });
+}

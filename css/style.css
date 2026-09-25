@@ -4198,8 +4198,8 @@ img {
 
 .v2robotics-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(48px, 6vw, 76px);
-  line-height: 0.95;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.05;
   color: #FFFFFF;
   text-transform: uppercase;
   margin-bottom: 8px;

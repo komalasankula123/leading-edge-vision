@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 110" fill="none">
+  <!-- Outer Cloud Arc (Caramel Ochre #C67D33) -->
+  <path d="M 38 68 
+           C 25 68, 16 58, 16 45 
+           C 16 33, 26 23, 38 23 
+           C 42 14, 52 8, 64 8 
+           C 78 8, 90 18, 94 31 
+           C 98 29, 103 28, 108 28 
+           C 120 28, 130 38, 130 50 
+           C 130 54, 129 57, 127 60" 
+        fill="none" 
+        stroke="#C67D33" 
+        stroke-width="3.5" 
+        stroke-linecap="round"/>
+
+  <!-- Inner Cloud Echo Line (Caramel Ochre #C67D33) -->
+  <path d="M 40 64 
+           C 30 64, 23 56, 23 46 
+           C 23 37, 30 29, 39 29 
+           C 43 20, 52 14, 63 14 
+           C 75 14, 85 22, 88 34 
+           C 92 33, 96 32, 100 32 
+           C 110 32, 118 40, 118 50" 
+        fill="none" 
+        stroke="#C67D33" 
+        stroke-width="1.8" 
+        stroke-linecap="round" 
+        opacity="0.85"/>
+
+  <!-- Bottom Flight Baseline extending to Airplane -->
+  <path d="M 38 68 L 180 68" 
+        stroke="#C67D33" 
+        stroke-width="3.5" 
+        stroke-linecap="round"/>
+
+  <!-- Airplane Silhouette (pointing right) at the baseline end -->
+  <g transform="translate(178, 54)">
+    <path d="M 0 14 
+             L 18 14 
+             L 10 24 
+             L 16 25 
+             L 28 14 
+             L 42 14 
+             C 45 14, 48 13, 49 11.5 
+             C 48 10, 45 9, 42 9 
+             L 28 9 
+             L 16 -2 
+             L 10 -1 
+             L 18 9 
+             L 0 9 
+             L -4 2 
+             L -8 2 
+             L -6 11.5 
+             L -8 21 
+             L -4 21 
+             Z" 
+          fill="#C67D33"/>
+  </g>
+
+  <!-- Typography matching exact screenshot in Solid Black #111111 -->
+  <text x="50" y="58" font-family="'Bebas Neue', 'Space Grotesk', 'Impact', sans-serif" font-size="34" font-weight="900" fill="#111111" letter-spacing="2">
+    LEADING EDGE
+  </text>
+  
+  <text x="50" y="80" font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#C67D33" letter-spacing="3">
+    VISION • STEM JAPAN
+  </text>
+</svg>
