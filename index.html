@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leading Edge Vision | Robotics &amp; STEM Tour to Japan</title>
+  <title>Leading Edge Vision | Robotics &amp; STEM Educational Tour to Japan</title>
   <meta name="description" content="Leading Edge Vision presents Educational STEM &amp; Robotics Tours for Schools and Colleges with Japan as a key destination. Robotics: From Science Fiction to Everyday Life.">
   <meta name="keywords" content="Robotics Tour Japan, STEM Education Tour, Leading Edge Vision, Autonomous Mobility, Surgical Robotics, Smart Agriculture, Tokyo Miraikan, JAXA Space">
 
@@ -16,75 +16,131 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/images/official-logo-transparent.png" type="image/png">
 
-  <!-- Exact 1:1 Reference Poster Stylesheet -->
-  <link rel="stylesheet" href="css/poster-exact.css">
+  <!-- Master Website Stylesheet -->
+  <link rel="stylesheet" href="css/website-master.css">
 </head>
 <body>
 
-  <div class="page-canvas">
+  <div class="site-wrapper">
 
-    <!-- Master Poster Frame -->
-    <main class="poster-artboard">
-
-      <!-- ====================================================================
-           TOP SUBTLE META / NAVIGATION BAR
-           ==================================================================== -->
-      <header class="poster-topbar">
-        <a href="index.html" class="poster-topbar-brand">
-          <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision Logo" class="poster-topbar-logo">
-          <span class="poster-topbar-title">Leading Edge Vision</span>
-        </a>
-        <div class="poster-topbar-pills">
-          <span class="poster-pill">🏫 Schools</span>
-          <span class="poster-pill">🎓 Colleges</span>
-          <span class="poster-pill">🇯🇵 Japan</span>
-          <a href="tourdetails.html" class="poster-pill active">8-Day Itinerary &rarr;</a>
+    <!-- ====================================================================
+         1. TOP ANNOUNCEMENT & CONTACT META BAR
+         ==================================================================== -->
+    <div class="top-meta-bar">
+      <div class="site-container flex items-center justify-between" style="display:flex; justify-content:space-between; align-items:center;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span>🇯🇵 <strong>Official STEM Delegation to Japan</strong> • 2025–2026 Academic Season</span>
+          <span style="opacity:0.4;">|</span>
+          <span class="audience-pill">🏫 Schools</span>
+          <span class="audience-pill">🎓 Colleges</span>
         </div>
-      </header>
-
-      <!-- ====================================================================
-           SECTION 1: HERO (ROBOTICS — From Science Fiction to Everyday Life)
-           ==================================================================== -->
-      <section class="hero-frame" id="hero">
-        
-        <!-- Right Image Visual (Humanoid Robot, Mount Fuji, Cherry Blossoms, Pagoda) -->
-        <div class="hero-media-wrap">
-          <img src="assets/images/hero-robot-japan.jpg" alt="Robotics: From Science Fiction to Everyday Life - Japan STEM Tour" loading="eager" fetchpriority="high">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <a href="tel:+919849278500">📞 India: +91 98492 78500</a>
+          <span style="opacity:0.4;">|</span>
+          <a href="tel:+819083085085">🇯🇵 Japan: +81 90830 85085</a>
+          <span style="opacity:0.4;">|</span>
+          <a href="mailto:info@leadingedgevision.com">✉️ info@leadingedgevision.com</a>
         </div>
+      </div>
+    </div>
 
-        <!-- Handwritten Callout (Top Right over Mount Fuji) -->
-        <div class="hero-script-callout">
-          <div class="hero-script-text">
-            Innovation<br>
-            Builds a<br>
-            Better Tomorrow
+
+    <!-- ====================================================================
+         2. STICKY GLOBAL NAVIGATION
+         ==================================================================== -->
+    <header class="site-header" id="navbar">
+      <div class="site-container">
+        <div class="nav-row">
+          
+          <!-- Logo & Brand -->
+          <a href="index.html" class="nav-brand">
+            <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision Logo" class="nav-logo-img">
+            <div class="nav-brand-text">
+              <span class="nav-brand-title">Leading Edge Vision</span>
+              <span class="nav-brand-sub">STEM &amp; Robotics Tours</span>
+            </div>
+          </a>
+
+          <!-- Navigation Links -->
+          <nav class="nav-links">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#robotics-action" class="nav-link">Robotics in Action</a>
+            <a href="#augmented-intelligence" class="nav-link">Augmented Intelligence</a>
+            <a href="#stem-tour-japan" class="nav-link">STEM Tour Japan</a>
+            <a href="#itinerary" class="nav-link">8-Day Itinerary</a>
+            <a href="tourdetails.html" class="nav-link">Tour Details</a>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="nav-actions">
+            <button type="button" onclick="openInquiryModal()" class="btn-header-cta">
+              <span>Book Delegation</span>
+              <span>&rarr;</span>
+            </button>
           </div>
-          <!-- Red Underline Swoosh -->
-          <svg class="hero-script-swoosh" viewBox="0 0 160 20" fill="none" aria-hidden="true">
-            <path d="M6 16C45 4 110 3 154 14" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
-          </svg>
+
         </div>
+      </div>
+    </header>
 
-        <!-- Left Text Content -->
-        <div class="hero-text-wrap">
-          <h1 class="hero-main-title">ROBOTICS</h1>
-          <div class="hero-sub-title-1">From Science Fiction to</div>
-          <div class="hero-sub-title-2">Everyday Life</div>
 
-          <p class="hero-description">
+    <!-- ====================================================================
+         3. HERO SECTION (FULL WIDTH CINEMATIC)
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Right Image Visual (Humanoid Robot, Mount Fuji, Cherry Blossoms, Pagoda) -->
+      <div class="hero-bg-media">
+        <img src="assets/images/hero-robot-japan.jpg" alt="Robotics: From Science Fiction to Everyday Life - Japan STEM Tour" fetchpriority="high">
+      </div>
+      <div class="hero-bg-gradient"></div>
+
+      <!-- Handwritten Callout (Top Right over Mount Fuji) -->
+      <div class="hero-statement-callout">
+        <div class="hero-statement-text">
+          Innovation<br>
+          Builds a<br>
+          Better Tomorrow
+        </div>
+        <!-- Red Underline Swoosh -->
+        <svg class="hero-statement-swoosh" viewBox="0 0 160 20" fill="none" aria-hidden="true">
+          <path d="M6 16C45 4 110 3 154 14" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Left Hero Content -->
+      <div class="site-container">
+        <div class="hero-content">
+          <h1 class="hero-title-main">ROBOTICS</h1>
+          <div class="hero-subtitle-line1">From Science Fiction to</div>
+          <span class="hero-subtitle-highlight">Everyday Life</span>
+
+          <p class="hero-desc">
             As we move further into the 21st century, Robotics is no longer confined to science fiction or factory <span class="hl-green">assembly lines.</span> It is becoming an integral <span class="hl-green">part</span> of our daily lives and is <span class="hl-yellow">transforming</span> society in ways that were once unimaginable.
           </p>
+
+          <div class="hero-btn-group">
+            <a href="#stem-tour-japan" class="btn-primary-gold">
+              <span>Explore STEM Tour</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="tourdetails.html" class="btn-outline-white">
+              <span>View 8-Day Itinerary</span>
+            </a>
+          </div>
         </div>
+      </div>
 
-      </section>
+    </section>
 
 
-      <!-- ====================================================================
-           SECTION 2: ROBOTICS IN ACTION | Transforming Key Sectors (6 Cards)
-           ==================================================================== -->
-      <section class="sectors-section" id="robotics-action">
+    <!-- ====================================================================
+         4. SECTION 2: ROBOTICS IN ACTION (6 SECTORS FULL-WIDTH GRID)
+         ==================================================================== -->
+    <section class="sectors-section" id="robotics-action">
+      <div class="site-container">
         
-        <!-- Section Header -->
+        <!-- Header -->
         <div class="sectors-header">
           <h2 class="sectors-title">
             <span>Robotics in Action</span>
@@ -105,7 +161,6 @@
               <img src="assets/images/card-mobility.jpg" alt="Autonomous self-driving vehicle" loading="lazy">
             </div>
             <div class="sector-icon-badge" title="Autonomous Mobility">
-              <!-- Car SVG -->
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17l-1 2h16l-1-2M7 11h2M15 11h2M8 7l1-3h6l1 3"/>
               </svg>
@@ -124,7 +179,6 @@
               <img src="assets/images/card-healthcare.jpg" alt="Robotic surgery system" loading="lazy">
             </div>
             <div class="sector-icon-badge" title="Medicine & Healthcare">
-              <!-- Medical Cross SVG -->
               <svg viewBox="0 0 24 24" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="4"/>
                 <path d="M12 8v8M8 12h8"/>
@@ -144,7 +198,6 @@
               <img src="assets/images/card-surgery.jpg" alt="Micro-surgical robotic needles" loading="lazy">
             </div>
             <div class="sector-icon-badge" title="The Future of Surgery">
-              <!-- Scalpel / Pen SVG -->
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m18 15-6-6M14 6l4 4L7 21H3v-4L14 6z"/>
                 <circle cx="18" cy="6" r="3"/>
@@ -164,7 +217,6 @@
               <img src="assets/images/card-agriculture.jpg" alt="Agricultural drone over crop fields" loading="lazy">
             </div>
             <div class="sector-icon-badge" title="Smart Agriculture">
-              <!-- Plant Leaf SVG -->
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22v-9M12 13a5 5 0 0 0 5-5c0-4-5-6-5-6s-5 2-5 6a5 5 0 0 0 5 5z"/>
                 <path d="M12 18a4 4 0 0 1 4-4"/>
@@ -184,7 +236,6 @@
               <img src="assets/images/card-logistics.jpg" alt="Delivery drone carrying package" loading="lazy">
             </div>
             <div class="sector-icon-badge" title="Logistics & Delivery">
-              <!-- Package Box SVG -->
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                 <polyline points="3.29 7 12 12.01 20.71 7"/>
@@ -205,7 +256,6 @@
               <img src="assets/images/card-warfare.jpg" alt="Autonomous defense drone at sunset" loading="lazy">
             </div>
             <div class="sector-icon-badge" title="Robotics in Warfare">
-              <!-- Shield SVG -->
               <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
@@ -220,45 +270,51 @@
 
         </div>
 
-      </section>
+      </div>
+    </section>
 
 
-      <!-- ====================================================================
-           SECTION 3: COLLABORATION BANNER (Augmented Intelligence)
-           ==================================================================== -->
-      <section class="collab-banner" id="augmented-intelligence">
-        
-        <!-- Left: Collaboration Statement -->
-        <div class="collab-left-col">
-          <p class="collab-eyebrow">The Future Trend is</p>
-          <div class="collab-title-yellow">Collaboration:</div>
-          <div class="collab-title-white">Humans + Machines<br>Working Together</div>
+    <!-- ====================================================================
+         5. SECTION 3: COLLABORATION / AUGMENTED INTELLIGENCE BANNER
+         ==================================================================== -->
+    <section class="collab-banner" id="augmented-intelligence">
+      <div class="site-container">
+        <div class="collab-row">
+          
+          <!-- Left: Collaboration Statement -->
+          <div class="collab-left-col">
+            <p class="collab-eyebrow">The Future Trend is</p>
+            <div class="collab-title-yellow">Collaboration:</div>
+            <div class="collab-title-white">Humans + Machines<br>Working Together</div>
+          </div>
+
+          <!-- Vertical Divider -->
+          <div class="collab-v-divider"></div>
+
+          <!-- Middle: Augmented Intelligence -->
+          <div class="collab-mid-col">
+            <p class="collab-intro-sm">This is called</p>
+            <div class="collab-ai-title">&ldquo;Augmented Intelligence&rdquo;</div>
+            <p class="collab-ai-desc">
+              Technology doesn't replace humans &mdash; it enhances our capabilities.
+            </p>
+          </div>
+
+          <!-- Right: Handshake Photo -->
+          <div class="collab-right-col">
+            <img src="assets/images/handshake-human-robot.jpg" alt="Human and Robot Handshake" loading="lazy">
+          </div>
+
         </div>
-
-        <!-- Vertical Divider -->
-        <div class="collab-v-divider"></div>
-
-        <!-- Middle: Augmented Intelligence -->
-        <div class="collab-mid-col">
-          <p class="collab-intro-sm">This is called</p>
-          <div class="collab-ai-title">&ldquo;Augmented Intelligence&rdquo;</div>
-          <p class="collab-ai-desc">
-            Technology doesn't replace humans &mdash; it enhances our capabilities.
-          </p>
-        </div>
-
-        <!-- Right: Handshake Media -->
-        <div class="collab-right-col">
-          <img src="assets/images/handshake-human-robot.jpg" alt="Human shaking robotic hand" loading="lazy">
-        </div>
-
-      </section>
+      </div>
+    </section>
 
 
-      <!-- ====================================================================
-           SECTION 4: STEM TOUR TO JAPAN (Photo + 4 Icons + Callout)
-           ==================================================================== -->
-      <section class="tour-stem-section" id="stem-tour-japan">
+    <!-- ====================================================================
+         6. SECTION 4: STEM TOUR TO JAPAN (Photo + 4 Icons + Callout)
+         ==================================================================== -->
+    <section class="tour-stem-section" id="stem-tour-japan">
+      <div class="site-container">
         
         <div class="tour-stem-grid">
 
@@ -359,63 +415,302 @@
 
         </div>
 
-      </section>
+      </div>
+    </section>
 
 
-      <!-- ====================================================================
-           SECTION 5: FOOTER BANNER (The Future Belongs to Curious Minds)
-           ==================================================================== -->
-      <footer class="footer-banner-frame" id="footer-banner">
+    <!-- ====================================================================
+         7. 8-DAY EXPEDITION ITINERARY HIGHLIGHTS
+         ==================================================================== -->
+    <section class="itinerary-section" id="itinerary">
+      <div class="site-container">
         
-        <!-- Left Column -->
-        <div class="footer-left-col">
-          <p class="footer-intro-txt">The Future Belongs to</p>
-          <div class="footer-curious-title">Curious Minds</div>
-        </div>
-
-        <!-- Vertical Divider -->
-        <div class="footer-v-divider"></div>
-
-        <!-- Middle Column -->
-        <div class="footer-mid-col">
-          <p class="footer-mid-desc">
-            Because tomorrow's essential skill may not simply be knowing how to use a machine. It may be knowing how to collaborate with one.
+        <div class="itinerary-header">
+          <span class="itinerary-badge">8 Days / 7 Nights Expedition</span>
+          <h2 class="itinerary-title">Immersive STEM &amp; Cultural Itinerary</h2>
+          <p style="color: #64748B; font-size: 15px;">
+            A meticulously curated educational journey covering space exploration, AI robotics, bullet train engineering, and timeless Japanese culture.
           </p>
-          <div class="footer-mid-quote">
-            And that future starts with what we expose our children to today.
+        </div>
+
+        <div class="itinerary-grid">
+
+          <!-- Day 1-2 -->
+          <div class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="assets/images/miraikan-robotics.jpg" alt="Miraikan Museum Tokyo" loading="lazy">
+              <span class="itinerary-day-tag">Day 1 &bull; Tokyo</span>
+            </div>
+            <div class="itinerary-card-body">
+              <h3 class="itinerary-card-title">Miraikan Museum &amp; Humanoid AI</h3>
+              <p class="itinerary-card-desc">
+                Interactive demonstrations with ASIMO, humanoid androids, and cutting-edge robotics at the National Museum of Emerging Science.
+              </p>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="assets/images/jaxa-space.jpg" alt="JAXA Tsukuba Space Center" loading="lazy">
+              <span class="itinerary-day-tag">Day 2 &bull; Tsukuba</span>
+            </div>
+            <div class="itinerary-card-body">
+              <h3 class="itinerary-card-title">JAXA Tsukuba Space Center</h3>
+              <p class="itinerary-card-desc">
+                Tour Japan’s aerospace headquarters, full-scale H-II rocket engines, astronaut training modules, and satellite tracking stations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Day 4-5 -->
+          <div class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="assets/images/rayeesi-mountain-bg.jpg" alt="Mount Fuji and Shinkansen" loading="lazy">
+              <span class="itinerary-day-tag">Day 4 &bull; Fuji &amp; Kyoto</span>
+            </div>
+            <div class="itinerary-card-body">
+              <h3 class="itinerary-card-title">Mount Fuji &amp; Shinkansen Bullet Train</h3>
+              <p class="itinerary-card-desc">
+                Experience high-speed 320 km/h Maglev/Shinkansen technology, UNESCO World Heritage temples, and traditional tea ceremony.
+              </p>
+            </div>
+          </div>
+
+          <!-- Day 6-7 -->
+          <div class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="assets/images/tokyo-disneyland.jpg" alt="Tokyo Disneyland" loading="lazy">
+              <span class="itinerary-day-tag">Day 6 &bull; Disney</span>
+            </div>
+            <div class="itinerary-card-body">
+              <h3 class="itinerary-card-title">Tokyo Disneyland &amp; Animatronics</h3>
+              <p class="itinerary-card-desc">
+                Study the physics, animatronics, crowd-flow engineering, and stage robotics powering world-class Disney entertainment.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <a href="tourdetails.html" class="btn-primary-gold">
+            <span>View Full Day-by-Day Itinerary &amp; Pricing</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         8. FOOTER BANNER (THE FUTURE BELONGS TO CURIOUS MINDS)
+         ==================================================================== -->
+    <footer class="footer-banner-frame" id="curious-minds">
+      <div class="site-container">
+        <div class="footer-banner-row">
+          
+          <!-- Left Column -->
+          <div class="fb-left-col">
+            <p class="fb-intro-txt">The Future Belongs to</p>
+            <div class="fb-curious-title">Curious Minds</div>
+          </div>
+
+          <!-- Vertical Divider -->
+          <div class="fb-v-divider"></div>
+
+          <!-- Middle Column -->
+          <div class="fb-mid-col">
+            <p class="fb-mid-desc">
+              Because tomorrow's essential skill may not simply be knowing how to use a machine. It may be knowing how to collaborate with one.
+            </p>
+            <div class="fb-mid-quote font-script">
+              And that future starts with what we expose our children to today.
+            </div>
+          </div>
+
+          <!-- Vertical Divider -->
+          <div class="fb-v-divider"></div>
+
+          <!-- Right Column -->
+          <div class="fb-right-col">
+            <!-- Line art icon -->
+            <svg class="fb-right-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="14" cy="16" r="6"/>
+              <path d="M6 34v-4a6 6 0 0 1 6-6h4"/>
+              <rect x="28" y="10" width="12" height="12" rx="3"/>
+              <circle cx="32" cy="15" r="1.5" fill="currentColor"/>
+              <circle cx="36" cy="15" r="1.5" fill="currentColor"/>
+              <path d="M30 34v-4a5 5 0 0 1 5-5h3"/>
+              <path d="M16 28h12M22 25l6 6"/>
+            </svg>
+            <div class="fb-right-title">
+              STEM + Japan =<br>A Brighter Future
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- ====================================================================
+         9. COMPREHENSIVE GLOBAL FOOTER
+         ==================================================================== -->
+    <footer class="global-footer">
+      <div class="site-container">
+        
+        <div class="footer-grid">
+          
+          <!-- Col 1: About & Logo -->
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+              <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision Logo" style="height:38px;">
+              <span class="footer-brand-title">Leading Edge Vision</span>
+            </div>
+            <p style="font-size:13px; line-height:1.6; color:#94A3B8; margin-bottom:16px;">
+              Empowering school &amp; college students across India with international educational expeditions to Japan. Focusing on Robotics, Artificial Intelligence, Aerospace Engineering, and Cultural Immersion.
+            </p>
+            <div style="font-size:12px; color:#64748B;">
+              &bull; Official Delegations Partner &bull; JNTO Accredited
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#robotics-action">Robotics in Action</a></li>
+              <li><a href="#augmented-intelligence">Augmented Intelligence</a></li>
+              <li><a href="#stem-tour-japan">STEM Tour Japan</a></li>
+              <li><a href="#itinerary">8-Day Itinerary</a></li>
+              <li><a href="tourdetails.html">Full Tour Details</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Key Sectors -->
+          <div>
+            <h4 class="footer-col-title">Key Sectors</h4>
+            <ul class="footer-links-list">
+              <li><a href="#robotics-action">Autonomous Mobility</a></li>
+              <li><a href="#robotics-action">Medicine &amp; Healthcare</a></li>
+              <li><a href="#robotics-action">The Future of Surgery</a></li>
+              <li><a href="#robotics-action">Smart Agriculture</a></li>
+              <li><a href="#robotics-action">Logistics &amp; Delivery</a></li>
+              <li><a href="#robotics-action">Robotics in Warfare</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact Offices -->
+          <div>
+            <h4 class="footer-col-title">Contact &amp; Offices</h4>
+            <div style="font-size:12.5px; line-height:1.6; color:#94A3B8;">
+              <p style="margin-bottom:8px;">
+                <strong style="color:#FFFFFF;">🇮🇳 India Headquarters:</strong><br>
+                Leading Edge Vision Pvt. Ltd.<br>
+                Tel: <a href="tel:+919849278500" style="color:#FFD700;">+91 98492 78500</a>
+              </p>
+              <p style="margin-bottom:8px;">
+                <strong style="color:#FFFFFF;">🇯🇵 Japan Coordination Office:</strong><br>
+                Tokyo Operations Desk<br>
+                Tel: <a href="tel:+819083085085" style="color:#FFD700;">+81 90830 85085</a>
+              </p>
+              <p>
+                Email: <a href="mailto:info@leadingedgevision.com" style="color:#FFD700;">info@leadingedgevision.com</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 LEADING EDGE VISION PRIVATE LIMITED. All rights reserved.</div>
+          <div style="display:flex; gap:16px;">
+            <a href="tourdetails.html" style="color:#94A3B8; text-decoration:none;">Terms &amp; Conditions</a>
+            <a href="tourdetails.html" style="color:#94A3B8; text-decoration:none;">Privacy Policy</a>
+            <a href="tourdetails.html" style="color:#94A3B8; text-decoration:none;">Safety Protocols</a>
           </div>
         </div>
 
-        <!-- Vertical Divider -->
-        <div class="footer-v-divider"></div>
-
-        <!-- Right Column -->
-        <div class="footer-right-col">
-          <!-- Handshake / Collaboration Line Icon -->
-          <svg class="footer-right-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="14" cy="16" r="6"/>
-            <path d="M6 34v-4a6 6 0 0 1 6-6h4"/>
-            <rect x="28" y="10" width="12" height="12" rx="3"/>
-            <circle cx="32" cy="15" r="1.5" fill="currentColor"/>
-            <circle cx="36" cy="15" r="1.5" fill="currentColor"/>
-            <path d="M30 34v-4a5 5 0 0 1 5-5h3"/>
-            <path d="M16 28h12M22 25l6 6"/>
-          </svg>
-          <div class="footer-right-title">
-            STEM + Japan =<br>A Brighter Future
-          </div>
-        </div>
-
-      </footer>
-
-    </main>
+      </div>
+    </footer>
 
   </div>
 
-  <!-- Floating Delegation Action Button -->
-  <a href="tourdetails.html" class="delegation-fab" title="View Full 8-Day Itinerary">
-    <span>View 8-Day Japan STEM Itinerary &rarr;</span>
-  </a>
+  <!-- Floating Action Button -->
+  <button type="button" onclick="openInquiryModal()" class="delegation-fab" title="Plan Your Delegation">
+    <span>📋 Plan School/College Delegation</span>
+  </button>
+
+  <!-- ====================================================================
+       INQUIRY MODAL
+       ==================================================================== -->
+  <div id="inquiryModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.8); backdrop-filter:blur(8px); align-items:center; justify-content:center; padding:16px;">
+    <div style="position:relative; width:100%; max-width:540px; background:#001A33; border:1px solid rgba(255,255,255,0.15); border-radius:18px; padding:32px; color:#FFFFFF; box-shadow:0 25px 60px rgba(0,0,0,0.6);">
+      <button type="button" onclick="closeInquiryModal()" style="position:absolute; top:16px; right:16px; background:transparent; border:none; color:#94A3B8; font-size:24px; cursor:pointer;">&times;</button>
+      
+      <span style="display:inline-block; background:rgba(255,215,0,0.15); color:#FFD700; font-size:11px; font-weight:800; padding:4px 12px; border-radius:999px; margin-bottom:10px;">
+        JAPAN STEM DELEGATION
+      </span>
+      <h3 style="font-size:22px; font-weight:900; margin-bottom:6px;">Request Delegation Itinerary</h3>
+      <p style="font-size:13px; color:#94A3B8; margin-bottom:20px;">
+        Bring your school or college students to experience Japan's robotics, AI, aerospace, and cultural heritage.
+      </p>
+
+      <form id="delegationForm" onsubmit="handleInquirySubmit(event)" style="display:flex; flex-direction:column; gap:14px; font-size:13px;">
+        <div>
+          <label style="display:block; margin-bottom:4px; font-weight:600; color:#E2E8F0;">Institution Type *</label>
+          <select name="type" required style="width:100%; background:#002B55; border:1px solid #004080; border-radius:8px; padding:10px; color:#FFFFFF;">
+            <option value="School">School (K-12)</option>
+            <option value="College">College / University</option>
+            <option value="Academy">Educational Academy</option>
+          </select>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div>
+            <label style="display:block; margin-bottom:4px; font-weight:600; color:#E2E8F0;">Your Name *</label>
+            <input type="text" name="name" required placeholder="Principal / Coordinator" style="width:100%; background:#002B55; border:1px solid #004080; border-radius:8px; padding:10px; color:#FFFFFF;">
+          </div>
+          <div>
+            <label style="display:block; margin-bottom:4px; font-weight:600; color:#E2E8F0;">Phone / WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="+91 98492 XXXXX" style="width:100%; background:#002B55; border:1px solid #004080; border-radius:8px; padding:10px; color:#FFFFFF;">
+          </div>
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:4px; font-weight:600; color:#E2E8F0;">Institution Name &amp; City *</label>
+          <input type="text" name="institution" required placeholder="e.g. DPS Hyderabad" style="width:100%; background:#002B55; border:1px solid #004080; border-radius:8px; padding:10px; color:#FFFFFF;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:4px; font-weight:600; color:#E2E8F0;">Official Email *</label>
+          <input type="email" name="email" required placeholder="name@school.edu" style="width:100%; background:#002B55; border:1px solid #004080; border-radius:8px; padding:10px; color:#FFFFFF;">
+        </div>
+        <button type="submit" class="btn-primary-gold" style="width:100%; justify-content:center; padding:12px; margin-top:8px; border:none; cursor:pointer;">
+          Submit Delegation Request
+        </button>
+      </form>
+      <div id="formSuccess" style="display:none; margin-top:16px; padding:14px; background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.4); border-radius:8px; color:#6EE7B7; text-align:center; font-weight:600;">
+        Thank you! Our tour director will contact your institution within 24 hours.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openInquiryModal() {
+      const modal = document.getElementById('inquiryModal');
+      modal.style.display = 'flex';
+    }
+    function closeInquiryModal() {
+      const modal = document.getElementById('inquiryModal');
+      modal.style.display = 'none';
+    }
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      document.getElementById('delegationForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
