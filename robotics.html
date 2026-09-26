@@ -3,428 +3,396 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leading Edge Vision | Educational STEM &amp; Robotics Tours to Japan</title>
-  <meta name="description" content="Leading Edge Vision presents Educational STEM &amp; Robotics Tours for Schools and Colleges, with Japan as a key destination. Explore technology, innovation, culture and global experiences.">
+  <title>Leading Edge Vision | Robotics &amp; STEM Tour to Japan</title>
+  <meta name="description" content="Leading Edge Vision presents Educational STEM &amp; Robotics Tours for Schools and Colleges with Japan as a key destination. Robotics: From Science Fiction to Everyday Life.">
   <meta name="keywords" content="Robotics Tour Japan, STEM Education Tour, Leading Edge Vision, Autonomous Mobility, Surgical Robotics, Smart Agriculture, Tokyo Miraikan, JAXA Space">
 
-  <!-- OpenGraph -->
-  <meta property="og:title" content="STEM &amp; Robotics Tours to Japan | Leading Edge Vision">
-  <meta property="og:description" content="From Innovation to Real-World Learning. Immersive educational robotics &amp; STEM expeditions for schools and colleges.">
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Robotics • From Science Fiction to Everyday Life | Leading Edge Vision">
+  <meta property="og:description" content="Innovation Builds a Better Tomorrow. STEM Educational Tours to Japan for Schools and Colleges.">
   <meta property="og:image" content="assets/images/hero-robot-japan.jpg">
+  <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/official-logo-transparent.png" type="image/png">
 
-  <!-- Tailwind CSS CDN for utility classes -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Master Stylesheet matching reference design 1:1 -->
-  <link rel="stylesheet" href="css/master-design.css">
-
-  <!-- GSAP & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Exact 1:1 Reference Poster Stylesheet -->
+  <link rel="stylesheet" href="css/poster-exact.css">
 </head>
-<body class="bg-[#050e18] text-slate-900 antialiased selection:bg-amber-400 selection:text-slate-950">
+<body>
 
-  <!-- ==========================================================================
-       TOP ANNOUNCEMENT / AUDIENCE META BAR
-       ========================================================================== -->
-  <header class="top-meta-bar max-w-[1240px] mx-auto flex flex-wrap items-center justify-between gap-3 px-6 py-2.5 bg-[#040c16] border-b border-white/10">
-    <div class="flex items-center gap-3">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision Logo" class="h-6 w-auto object-contain">
-        <span class="text-white font-bold text-xs tracking-wider uppercase font-sans">Leading Edge Vision</span>
-      </a>
-      <span class="text-slate-500 hidden sm:inline">|</span>
-      <span class="text-slate-300 text-xs hidden md:inline">Educational STEM &amp; Robotics Tours</span>
-    </div>
+  <div class="page-canvas">
 
-    <!-- Audience Chips -->
-    <div class="flex items-center gap-2 flex-wrap">
-      <span class="audience-pill">🏫 Schools</span>
-      <span class="audience-pill">🎓 Colleges</span>
-      <span class="audience-pill">✈️ Educational Tours</span>
-      <span class="audience-pill">🇯🇵 Japan</span>
-      <a href="tourdetails.html" class="audience-pill bg-amber-400/20 text-amber-300 hover:bg-amber-400 hover:text-slate-950 font-semibold border border-amber-400/30">
-        8-Day Full Itinerary &rarr;
-      </a>
-    </div>
-  </header>
+    <!-- Master Poster Frame -->
+    <main class="poster-artboard">
 
-  <!-- ==========================================================================
-       MAIN POSTER CONTAINER (Matching Reference Image 1:1)
-       ========================================================================== -->
-  <main class="poster-container">
+      <!-- ====================================================================
+           TOP SUBTLE META / NAVIGATION BAR
+           ==================================================================== -->
+      <header class="poster-topbar">
+        <a href="index.html" class="poster-topbar-brand">
+          <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision Logo" class="poster-topbar-logo">
+          <span class="poster-topbar-title">Leading Edge Vision</span>
+        </a>
+        <div class="poster-topbar-pills">
+          <span class="poster-pill">🏫 Schools</span>
+          <span class="poster-pill">🎓 Colleges</span>
+          <span class="poster-pill">🇯🇵 Japan</span>
+          <a href="tourdetails.html" class="poster-pill active">8-Day Itinerary &rarr;</a>
+        </div>
+      </header>
 
-    <!-- ========================================================================
-         SECTION 1: HERO (ROBOTICS — From Science Fiction to Everyday Life)
-         ======================================================================== -->
-    <section class="hero-section" id="hero">
-      <!-- Gradient Overlays for Smooth Navy-to-Scene Blend -->
-      <div class="hero-backdrop-gradient" aria-hidden="true"></div>
+      <!-- ====================================================================
+           SECTION 1: HERO (ROBOTICS — From Science Fiction to Everyday Life)
+           ==================================================================== -->
+      <section class="hero-frame" id="hero">
+        
+        <!-- Right Image Visual (Humanoid Robot, Mount Fuji, Cherry Blossoms, Pagoda) -->
+        <div class="hero-media-wrap">
+          <img src="assets/images/hero-robot-japan.jpg" alt="Robotics: From Science Fiction to Everyday Life - Japan STEM Tour" loading="eager" fetchpriority="high">
+        </div>
 
-      <!-- Faint Constellation Network Overlay Matching Image 2 -->
-      <svg class="hero-constellation-overlay" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="120" cy="140" r="3" fill="#60A5FA" opacity="0.6"/>
-        <circle cx="280" cy="90" r="2.5" fill="#93C5FD" opacity="0.5"/>
-        <circle cx="360" cy="180" r="3.5" fill="#60A5FA" opacity="0.7"/>
-        <circle cx="190" cy="300" r="2" fill="#93C5FD" opacity="0.4"/>
-        <circle cx="430" cy="240" r="3" fill="#60A5FA" opacity="0.6"/>
-        <circle cx="150" cy="400" r="2.5" fill="#93C5FD" opacity="0.5"/>
-        <circle cx="370" cy="380" r="3" fill="#60A5FA" opacity="0.6"/>
-        <circle cx="490" cy="340" r="2.5" fill="#93C5FD" opacity="0.4"/>
-        <line x1="120" y1="140" x2="280" y2="90" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
-        <line x1="280" y1="90" x2="360" y2="180" stroke="#60A5FA" stroke-width="0.8" opacity="0.3"/>
-        <line x1="120" y1="140" x2="360" y2="180" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
-        <line x1="360" y1="180" x2="430" y2="240" stroke="#60A5FA" stroke-width="0.8" opacity="0.3"/>
-        <line x1="190" y1="300" x2="360" y2="180" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
-        <line x1="190" y1="300" x2="150" y2="400" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
-        <line x1="150" y1="400" x2="370" y2="380" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
-        <line x1="430" y1="240" x2="370" y2="380" stroke="#60A5FA" stroke-width="0.8" opacity="0.25"/>
-        <line x1="430" y1="240" x2="490" y2="340" stroke="#60A5FA" stroke-width="0.8" opacity="0.2"/>
-      </svg>
-
-      <!-- Exact Master Reference Hero Visual -->
-      <div class="hero-bg-media">
-        <img src="assets/images/hero-robot-japan.jpg" alt="Robotics: From Science Fiction to Everyday Life - Japan STEM Tour" class="hero-bg-img" loading="eager" fetchpriority="high">
-      </div>
-
-        <!-- Handwritten Statement (Top Right - Above Mount Fuji) -->
-        <div class="hero-statement-callout">
-          <div class="hero-statement-text">Innovation
-Builds a
-Better Tomorrow</div>
-          <!-- Red Brush Swoosh Accent -->
-          <svg class="hero-statement-swoosh" viewBox="0 0 160 20" fill="none" aria-hidden="true">
+        <!-- Handwritten Callout (Top Right over Mount Fuji) -->
+        <div class="hero-script-callout">
+          <div class="hero-script-text">
+            Innovation<br>
+            Builds a<br>
+            Better Tomorrow
+          </div>
+          <!-- Red Underline Swoosh -->
+          <svg class="hero-script-swoosh" viewBox="0 0 160 20" fill="none" aria-hidden="true">
             <path d="M6 16C45 4 110 3 154 14" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
           </svg>
         </div>
 
-        <!-- Left Hero Text Content -->
-        <div class="hero-grid">
-          <div class="hero-content">
-            <h1 class="hero-title-main">ROBOTICS</h1>
-            <div class="hero-subtitle-line1">From Science<br>Fiction to</div>
-            <span class="hero-subtitle-highlight">Everyday Life</span>
+        <!-- Left Text Content -->
+        <div class="hero-text-wrap">
+          <h1 class="hero-main-title">ROBOTICS</h1>
+          <div class="hero-sub-title-1">From Science Fiction to</div>
+          <div class="hero-sub-title-2">Everyday Life</div>
 
-            <p class="hero-desc">
-              As we move further into the 21st century, Robotics is no longer confined to science fiction or factory <span class="hl-lime">assembly lines.</span> It is becoming an integral <span class="hl-green">part</span> of our daily lives and is <span class="hl-yellow">transforming</span> society in ways that were once unimaginable.
-            </p>
-          </div>
+          <p class="hero-description">
+            As we move further into the 21st century, Robotics is no longer confined to science fiction or factory <span class="hl-green">assembly lines.</span> It is becoming an integral <span class="hl-green">part</span> of our daily lives and is <span class="hl-yellow">transforming</span> society in ways that were once unimaginable.
+          </p>
         </div>
-    </section>
+
+      </section>
 
 
-    <!-- ========================================================================
-         SECTION 2: ROBOTICS IN ACTION (6 Cards Layout)
-         ======================================================================== -->
-    <section class="action-section" id="robotics-action">
-      <!-- Section Header -->
-      <div class="action-header">
-        <h2 class="action-title">
-          <span>Robotics in Action</span>
-          <span class="action-title-sep">|</span>
-          <span class="action-title-sub" style="color: #0284C7;">Transforming Key Sectors</span>
-        </h2>
-        <p class="action-subtitle">
-          We are already witnessing this transformation across multiple sectors:
-        </p>
-      </div>
+      <!-- ====================================================================
+           SECTION 2: ROBOTICS IN ACTION | Transforming Key Sectors (6 Cards)
+           ==================================================================== -->
+      <section class="sectors-section" id="robotics-action">
+        
+        <!-- Section Header -->
+        <div class="sectors-header">
+          <h2 class="sectors-title">
+            <span>Robotics in Action</span>
+            <span class="sectors-title-sep">|</span>
+            <span class="sectors-title-sub">Transforming Key Sectors</span>
+          </h2>
+          <p class="sectors-subtitle">
+            We are already witnessing this transformation across multiple sectors:
+          </p>
+        </div>
 
-      <!-- 6-Card Grid -->
-      <div class="cards-grid-6">
+        <!-- 6-Card Grid -->
+        <div class="sectors-grid">
 
-        <!-- CARD 1: Autonomous Mobility -->
-        <article class="action-card card--mobility" id="card-mobility">
-          <div class="card-media">
-            <img src="assets/images/card-mobility.jpg" alt="Autonomous self-driving vehicle on city street" loading="lazy">
-          </div>
-          <div class="card-icon-wrap" style="background: #0091FF;" title="Autonomous Mobility">
-            <!-- Car / Vehicle SVG Icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17l-1 2h16l-1-2M7 11h2M15 11h2M8 7l1-3h6l1 3"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" style="color: #0091FF;">Autonomous Mobility</h3>
-            <p class="card-text">
-              Self-driving vehicles are set to redefine urban mobility, reduce accidents and improve traffic efficiency.
-            </p>
-          </div>
-        </article>
+          <!-- CARD 1: Autonomous Mobility -->
+          <article class="sector-card card-mobility">
+            <div class="sector-img-box">
+              <img src="assets/images/card-mobility.jpg" alt="Autonomous self-driving vehicle" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Autonomous Mobility">
+              <!-- Car SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17l-1 2h16l-1-2M7 11h2M15 11h2M8 7l1-3h6l1 3"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Autonomous<br>Mobility</h3>
+              <p class="sector-desc">
+                Self-driving vehicles are set to redefine urban mobility, reduce accidents and improve traffic efficiency.
+              </p>
+            </div>
+          </article>
 
-        <!-- CARD 2: Medicine & Healthcare -->
-        <article class="action-card card--healthcare" id="card-healthcare">
-          <div class="card-media">
-            <img src="assets/images/card-healthcare.jpg" alt="Robotic surgery and precision medical systems" loading="lazy">
-          </div>
-          <div class="card-icon-wrap" style="background: #16A34A;" title="Medicine & Healthcare">
-            <!-- Medical Cross SVG Icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="4"/>
-              <path d="M12 8v8M8 12h8"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" style="color: #16A34A;">Medicine &amp; Healthcare</h3>
-            <p class="card-text">
-              Robotic-assisted surgery is enhancing precision, reducing recovery times and expanding the capabilities of healthcare systems.
-            </p>
-          </div>
-        </article>
+          <!-- CARD 2: Medicine & Healthcare -->
+          <article class="sector-card card-healthcare">
+            <div class="sector-img-box">
+              <img src="assets/images/card-healthcare.jpg" alt="Robotic surgery system" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Medicine & Healthcare">
+              <!-- Medical Cross SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="4"/>
+                <path d="M12 8v8M8 12h8"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Medicine &amp;<br>Healthcare</h3>
+              <p class="sector-desc">
+                Robotic-assisted surgery is enhancing precision, reducing recovery times and expanding the capabilities of healthcare systems.
+              </p>
+            </div>
+          </article>
 
-        <!-- CARD 3: The Future of Surgery -->
-        <article class="action-card card--surgery" id="card-surgery">
-          <div class="card-media">
-            <img src="assets/images/card-surgery.jpg" alt="Micro-surgical robotic arms for minimally invasive surgery" loading="lazy">
-          </div>
-          <div class="card-icon-wrap" style="background: #8B5CF6;" title="The Future of Surgery">
-            <!-- Scalpel / Precision Instrument SVG Icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m18 15-6-6M14 6l4 4L7 21H3v-4L14 6z"/>
-              <circle cx="18" cy="6" r="3"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" style="color: #8B5CF6;">The Future of Surgery</h3>
-            <p class="card-text">
-              Surgeons now operate through tiny incisions with the help of robotic arms, offering minimally invasive procedures that were once impossible.
-            </p>
-          </div>
-        </article>
+          <!-- CARD 3: The Future of Surgery -->
+          <article class="sector-card card-surgery">
+            <div class="sector-img-box">
+              <img src="assets/images/card-surgery.jpg" alt="Micro-surgical robotic needles" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="The Future of Surgery">
+              <!-- Scalpel / Pen SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6M14 6l4 4L7 21H3v-4L14 6z"/>
+                <circle cx="18" cy="6" r="3"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">The Future<br>of Surgery</h3>
+              <p class="sector-desc">
+                Surgeons now operate through tiny incisions with the help of robotic arms, offering minimally invasive procedures that were once impossible.
+              </p>
+            </div>
+          </article>
 
-        <!-- CARD 4: Smart Agriculture -->
-        <article class="action-card card--agriculture" id="card-agriculture">
-          <div class="card-media">
-            <img src="assets/images/card-agriculture.jpg" alt="Agricultural drone monitoring lush green farm crops" loading="lazy">
-          </div>
-          <div class="card-icon-wrap" style="background: #EA580C;" title="Smart Agriculture">
-            <!-- Plant Leaf / Sprout SVG Icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22v-9M12 13a5 5 0 0 0 5-5c0-4-5-6-5-6s-5 2-5 6a5 5 0 0 0 5 5z"/>
-              <path d="M12 18a4 4 0 0 1 4-4"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" style="color: #EA580C;">Smart Agriculture</h3>
-            <p class="card-text">
-              Drones are optimizing crop monitoring, irrigation and spraying, leading to smarter and more sustainable food production.
-            </p>
-          </div>
-        </article>
+          <!-- CARD 4: Smart Agriculture -->
+          <article class="sector-card card-agriculture">
+            <div class="sector-img-box">
+              <img src="assets/images/card-agriculture.jpg" alt="Agricultural drone over crop fields" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Smart Agriculture">
+              <!-- Plant Leaf SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-9M12 13a5 5 0 0 0 5-5c0-4-5-6-5-6s-5 2-5 6a5 5 0 0 0 5 5z"/>
+                <path d="M12 18a4 4 0 0 1 4-4"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Smart<br>Agriculture</h3>
+              <p class="sector-desc">
+                Drones are optimizing crop monitoring, irrigation and spraying, leading to smarter and more sustainable food production.
+              </p>
+            </div>
+          </article>
 
-        <!-- CARD 5: Logistics & Delivery -->
-        <article class="action-card card--logistics" id="card-logistics">
-          <div class="card-media">
-            <img src="assets/images/card-logistics.jpg" alt="Autonomous aerial delivery drone carrying package" loading="lazy">
-          </div>
-          <div class="card-icon-wrap" style="background: #0D9488;" title="Logistics & Delivery">
-            <!-- Box / Parcel SVG Icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.29 7 12 12.01 20.71 7"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" style="color: #0D9488;">Logistics &amp; Delivery</h3>
-            <p class="card-text">
-              Drones are reshaping last-mile delivery, especially in remote or congested areas. Companies like Amazon, Zipline and DHL are exploring aerial logistics.
-            </p>
-          </div>
-        </article>
+          <!-- CARD 5: Logistics & Delivery -->
+          <article class="sector-card card-logistics">
+            <div class="sector-img-box">
+              <img src="assets/images/card-logistics.jpg" alt="Delivery drone carrying package" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Logistics & Delivery">
+              <!-- Package Box SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.29 7 12 12.01 20.71 7"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Logistics &amp;<br>Delivery</h3>
+              <p class="sector-desc">
+                Drones are reshaping last-mile delivery, especially in remote or congested areas. Companies like Amazon, Zipline and DHL are exploring aerial logistics.
+              </p>
+            </div>
+          </article>
 
-        <!-- CARD 6: Robotics in Warfare -->
-        <article class="action-card card--warfare" id="card-warfare">
-          <div class="card-media">
-            <img src="assets/images/card-warfare.jpg" alt="Military UAV autonomous defense drone soaring at sunset" loading="lazy">
-          </div>
-          <div class="card-icon-wrap" style="background: #DC2626;" title="Robotics in Warfare">
-            <!-- Shield SVG Icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" style="color: #DC2626;">Robotics in Warfare</h3>
-            <p class="card-text">
-              Autonomous drones are redefining how conflicts are fought, raising serious ethical, legal and strategic questions about the role of machines in life-and-death decisions.
-            </p>
-          </div>
-        </article>
+          <!-- CARD 6: Robotics in Warfare -->
+          <article class="sector-card card-warfare">
+            <div class="sector-img-box">
+              <img src="assets/images/card-warfare.jpg" alt="Autonomous defense drone at sunset" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Robotics in Warfare">
+              <!-- Shield SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Robotics in<br>Warfare</h3>
+              <p class="sector-desc">
+                Autonomous drones are redefining how conflicts are fought, raising serious ethical, legal and strategic questions about the role of machines in life-and-death decisions.
+              </p>
+            </div>
+          </article>
 
-      </div>
-    </section>
+        </div>
+
+      </section>
 
 
-    <!-- ========================================================================
-         SECTION 3: HUMAN + TECHNOLOGY (Augmented Intelligence Banner)
-         ======================================================================== -->
-    <section class="collab-section" id="human-tech">
-      <div class="collab-bg-cyber" aria-hidden="true"></div>
-
-      <div class="collab-grid">
+      <!-- ====================================================================
+           SECTION 3: COLLABORATION BANNER (Augmented Intelligence)
+           ==================================================================== -->
+      <section class="collab-banner" id="augmented-intelligence">
+        
         <!-- Left: Collaboration Statement -->
-        <div class="collab-left">
+        <div class="collab-left-col">
           <p class="collab-eyebrow">The Future Trend is</p>
-          <div class="collab-headline-yellow">Collaboration:</div>
-          <div class="collab-headline-white">Humans + Machines<br>Working Together</div>
+          <div class="collab-title-yellow">Collaboration:</div>
+          <div class="collab-title-white">Humans + Machines<br>Working Together</div>
         </div>
 
-        <!-- Center: Handshake Visual -->
-        <div class="collab-center-media">
-          <img src="assets/images/handshake-human-robot.jpg" alt="Human hand in business suit shaking robotic hand with blue neural network" class="collab-handshake-img" loading="lazy">
-        </div>
+        <!-- Vertical Divider -->
+        <div class="collab-v-divider"></div>
 
-        <!-- Right: Augmented Intelligence -->
-        <div class="collab-right">
-          <p class="collab-right-intro">This is called</p>
-          <h3 class="collab-right-title">&ldquo;Augmented Intelligence&rdquo;</h3>
-          <p class="collab-right-desc">
+        <!-- Middle: Augmented Intelligence -->
+        <div class="collab-mid-col">
+          <p class="collab-intro-sm">This is called</p>
+          <div class="collab-ai-title">&ldquo;Augmented Intelligence&rdquo;</div>
+          <p class="collab-ai-desc">
             Technology doesn't replace humans &mdash; it enhances our capabilities.
           </p>
         </div>
-      </div>
-    </section>
 
-
-    <!-- ========================================================================
-         SECTION 4: MAIN TOUR CONNECTION (STEM Tour to Japan)
-         ======================================================================== -->
-    <section class="tour-section" id="japan-tour">
-      <div class="tour-grid">
-
-        <!-- Left: Japan / Students / Mount Fuji / Pagoda / Cherry Blossoms -->
-        <div class="tour-visual-wrapper">
-          <div class="tour-photo-box">
-            <img src="assets/images/stem-students.jpg" alt="School students with backpacks looking toward Mount Fuji, cherry blossoms and pagoda" class="tour-photo-img" loading="lazy">
-          </div>
-
-          <!-- Red Circular Stamp Badge (Tilted) -->
-          <div class="stamp-badge" title="Official STEM Tour to Japan">
-            <span class="stamp-badge-stem">STEM</span>
-            <span class="stamp-badge-tour">Tour to</span>
-            <span class="stamp-badge-japan">Japan</span>
-          </div>
-
-          <!-- Japan Flag Sticker -->
-          <div class="flag-sticker" title="Japan">
-            <div class="flag-sun"></div>
-          </div>
+        <!-- Right: Handshake Media -->
+        <div class="collab-right-col">
+          <img src="assets/images/handshake-human-robot.jpg" alt="Human shaking robotic hand" loading="lazy">
         </div>
 
-        <!-- Right: Educational & Cultural Experience + 4 Icons + Info Box -->
-        <div class="tour-content">
-          <h2 class="tour-heading">
-            An Extraordinary Educational<br>and Cultural Experience
-          </h2>
-          <p class="tour-desc">
-            Our STEM Tour to Japan &mdash; the epicentre for Technology and Innovation &mdash; can be an incredible experience for school kids.
-          </p>
+      </section>
 
-          <!-- Four Experience Points with Vertical Dividers -->
-          <div class="four-points-wrap">
 
-            <!-- Point 1: See Robotics in Action -->
-            <div class="point-item">
-              <div class="point-icon-circle bg-[#0284C7]" title="Robotics">
-                <!-- Eye / Robot Vision Icon -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                  <circle cx="12" cy="12" r="3"/>
-                </svg>
-              </div>
-              <div class="point-lead">See</div>
-              <div class="point-label">Robotics in action</div>
+      <!-- ====================================================================
+           SECTION 4: STEM TOUR TO JAPAN (Photo + 4 Icons + Callout)
+           ==================================================================== -->
+      <section class="tour-stem-section" id="stem-tour-japan">
+        
+        <div class="tour-stem-grid">
+
+          <!-- Left: Students + Mount Fuji Visual with Stamp & Flag -->
+          <div class="tour-photo-wrapper">
+            <div class="tour-photo-inner">
+              <img src="assets/images/stem-students.jpg" alt="Students looking at Mount Fuji and Pagoda" loading="lazy">
             </div>
 
-            <!-- Point 2: Experience Cutting-Edge Innovation -->
-            <div class="point-item">
-              <div class="point-icon-circle bg-[#9333EA]" title="Innovation">
-                <!-- Lightbulb / Spark Icon -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2a6 6 0 0 0-6 6c0 2.5 1.5 4.5 3 5.5v2.5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V13.5c1.5-1 3-3 3-5.5a6 6 0 0 0-6-6zM10 21h4"/>
-                </svg>
-              </div>
-              <div class="point-lead">Experience</div>
-              <div class="point-label">cutting-edge innovation</div>
+            <!-- Red Circular Stamp Badge -->
+            <div class="tour-stamp-badge" title="STEM Tour to Japan">
+              <span class="stamp-txt-stem">STEM</span>
+              <span class="stamp-txt-tour">Tour to</span>
+              <span class="stamp-txt-japan">Japan</span>
             </div>
 
-            <!-- Point 3: Explore a rich culture and heritage -->
-            <div class="point-item">
-              <div class="point-icon-circle bg-[#16A34A]" title="Culture">
-                <!-- Pagoda / Torii Gate Icon -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 21h16M6 17h12M8 13h8M10 9h4M12 3v4M2 17l2-4h16l2 4M3 13l3-4h12l3 4M5 9l3-4h8l3 4"/>
-                </svg>
-              </div>
-              <div class="point-lead">Explore a</div>
-              <div class="point-label">rich culture and heritage</div>
+            <!-- Japan Flag Sticker -->
+            <div class="tour-flag-sticker" title="Japan">
+              <div class="tour-flag-sun"></div>
             </div>
-
-            <!-- Point 4: Get inspired to solve real-world problems -->
-            <div class="point-item">
-              <div class="point-icon-circle bg-[#EA580C]" title="Real-World Tech">
-                <!-- Target / Compass / Tech Icon -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <circle cx="12" cy="12" r="6"/>
-                  <circle cx="12" cy="2" r="2"/>
-                </svg>
-              </div>
-              <div class="point-lead">Get inspired</div>
-              <div class="point-label">to solve real-world problems</div>
-            </div>
-
           </div>
 
-          <!-- Bottom Information Box -->
-          <div class="info-callout-box">
-            <div class="info-icon-badge" title="Student Mentorship">
-              <!-- Academic Graduation Cap Icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/>
-              </svg>
-            </div>
-            <p class="info-callout-text">
-              Early exposure sets them up <strong>not just to use tools, but to co-create with them.</strong> The ability to work alongside machines will become a foundational skill for their future careers &mdash; regardless of industry.
+          <!-- Right: Educational & Cultural Experience + 4 Icons -->
+          <div class="tour-content-col">
+            <h2 class="tour-main-heading">
+              An Extraordinary Educational<br>and Cultural Experience
+            </h2>
+            <p class="tour-main-desc">
+              Our STEM Tour to Japan &mdash; the epicentre for Technology and Innovation &mdash; can be an incredible experience for school kids.
             </p>
+
+            <!-- 4 Experience Icons with Dividers -->
+            <div class="tour-points-row">
+
+              <!-- Point 1 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #0284C7;" title="Robotics in action">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">See</div>
+                <div class="tour-point-sub">Robotics in<br>action</div>
+              </div>
+
+              <!-- Point 2 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #9333EA;" title="Cutting-edge innovation">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a6 6 0 0 0-6 6c0 2.5 1.5 4.5 3 5.5v2.5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V13.5c1.5-1 3-3 3-5.5a6 6 0 0 0-6-6zM10 21h4"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">Experience</div>
+                <div class="tour-point-sub">cutting-edge<br>innovation</div>
+              </div>
+
+              <!-- Point 3 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #16A34A;" title="Rich culture and heritage">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 21h16M6 17h12M8 13h8M10 9h4M12 3v4M2 17l2-4h16l2 4M3 13l3-4h12l3 4M5 9l3-4h8l3 4"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">Explore a</div>
+                <div class="tour-point-sub">rich culture<br>and heritage</div>
+              </div>
+
+              <!-- Point 4 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #EA580C;" title="Solve real-world problems">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="2" r="2"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">Get inspired</div>
+                <div class="tour-point-sub">to solve real-world<br>problems</div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Information Callout Box -->
+            <div class="tour-callout-box">
+              <div class="tour-callout-icon" title="Education & Mentorship">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/>
+                </svg>
+              </div>
+              <p class="tour-callout-text">
+                Early exposure sets them up <strong>not just to use tools, but to co-create with them.</strong> The ability to work alongside machines will become a foundational skill for their future careers &mdash; regardless of industry.
+              </p>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
-    </section>
+      </section>
 
 
-    <!-- ========================================================================
-         SECTION 5: SCHOOLS + COLLEGES + GLOBAL EXPOSURE (Footer Banner)
-         ======================================================================== -->
-    <footer class="footer-banner" id="global-exposure">
-      <div class="footer-banner-grid">
-
-        <!-- Left: The Future Belongs to Curious Minds -->
-        <div class="fb-left">
-          <p class="fb-left-intro">The Future Belongs to</p>
-          <h2 class="fb-left-title">Curious Minds</h2>
+      <!-- ====================================================================
+           SECTION 5: FOOTER BANNER (The Future Belongs to Curious Minds)
+           ==================================================================== -->
+      <footer class="footer-banner-frame" id="footer-banner">
+        
+        <!-- Left Column -->
+        <div class="footer-left-col">
+          <p class="footer-intro-txt">The Future Belongs to</p>
+          <div class="footer-curious-title">Curious Minds</div>
         </div>
 
-        <!-- Center: Essential Skills & Highlight Sentence -->
-        <div class="fb-center">
-          <p class="fb-center-desc">
+        <!-- Vertical Divider -->
+        <div class="footer-v-divider"></div>
+
+        <!-- Middle Column -->
+        <div class="footer-mid-col">
+          <p class="footer-mid-desc">
             Because tomorrow's essential skill may not simply be knowing how to use a machine. It may be knowing how to collaborate with one.
           </p>
-          <div class="fb-center-highlight font-script">
+          <div class="footer-mid-quote">
             And that future starts with what we expose our children to today.
           </div>
         </div>
 
-        <!-- Right: STEM + Global Exposure = A Brighter Future -->
-        <div class="fb-right">
-          <!-- Line Art Collaboration Icon -->
-          <svg class="fb-right-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <!-- Vertical Divider -->
+        <div class="footer-v-divider"></div>
+
+        <!-- Right Column -->
+        <div class="footer-right-col">
+          <!-- Handshake / Collaboration Line Icon -->
+          <svg class="footer-right-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="14" cy="16" r="6"/>
             <path d="M6 34v-4a6 6 0 0 1 6-6h4"/>
             <rect x="28" y="10" width="12" height="12" rx="3"/>
@@ -433,116 +401,21 @@ Better Tomorrow</div>
             <path d="M30 34v-4a5 5 0 0 1 5-5h3"/>
             <path d="M16 28h12M22 25l6 6"/>
           </svg>
-          <div>
-            <div class="fb-right-title">
-              STEM + Japan =<br>A Brighter Future
-            </div>
-            <div class="fb-right-sub">
-              Schools &bull; Colleges &bull; Educational Tours
-            </div>
+          <div class="footer-right-title">
+            STEM + Japan =<br>A Brighter Future
           </div>
         </div>
 
-      </div>
+      </footer>
 
-      <!-- Bottom Mini-Copyright Bar -->
-      <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[11px] text-slate-400">
-        <div>&copy; 2026 LEADING EDGE VISION PRIVATE LIMITED. Educational STEM Tours to Japan.</div>
-        <div class="flex items-center gap-4">
-          <a href="tel:+919849278500" class="hover:text-amber-300 transition-colors">India: +91 98492 78500</a>
-          <span class="text-slate-600">&bull;</span>
-          <a href="tel:+819083085085" class="hover:text-amber-300 transition-colors">Japan: +81 90830 85085</a>
-          <span class="text-slate-600">&bull;</span>
-          <a href="https://www.stemtourjapan.com" target="_blank" rel="noopener" class="text-amber-400 hover:underline">www.stemtourjapan.com</a>
-        </div>
-      </div>
-    </footer>
+    </main>
 
-  </main>
-
-  <!-- ==========================================================================
-       FLOATING ACTION BUTTON
-       ========================================================================== -->
-  <button type="button" onclick="openInquiryModal()" class="floating-contact-btn" aria-label="Inquire About Tour">
-    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    <span>Plan Your Delegation</span>
-  </button>
-
-  <!-- ==========================================================================
-       MODAL: SCHOOL & COLLEGE DELEGATION INQUIRY
-       ========================================================================== -->
-  <div id="inquiryModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
-    <div class="relative w-full max-w-lg bg-[#0A1C2A] border border-white/15 rounded-2xl shadow-2xl p-6 sm:p-8 text-white">
-      <button type="button" onclick="closeInquiryModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
-
-      <div class="mb-5">
-        <span class="inline-block px-3 py-1 bg-amber-400/20 text-amber-300 text-xs font-bold rounded-full mb-2">
-          JAPAN STEM DELEGATION
-        </span>
-        <h3 class="text-xl font-bold font-sans">Request Delegation Itinerary</h3>
-        <p class="text-xs text-slate-300 mt-1">
-          Bring your school or college students to experience Japan's robotics, AI, aerospace, and cultural heritage.
-        </p>
-      </div>
-
-      <form id="delegationForm" onsubmit="handleInquirySubmit(event)" class="space-y-3.5 text-xs">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-slate-300 mb-1 font-medium">Institution Type *</label>
-            <select name="institution_type" required class="w-full bg-[#061524] border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
-              <option value="School">School (K-12)</option>
-              <option value="College/University">College / University</option>
-              <option value="Educational Academy">Educational Academy</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1 font-medium">Your Name *</label>
-            <input type="text" name="full_name" required placeholder="Principal / Coordinator" class="w-full bg-[#061524] border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-slate-300 mb-1 font-medium">Institution Name &amp; City *</label>
-            <input type="text" name="school_name" required placeholder="e.g. DPS Hyderabad" class="w-full bg-[#061524] border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1 font-medium">Phone / WhatsApp *</label>
-            <input type="tel" name="phone" required placeholder="+91 98492 XXXXX" class="w-full bg-[#061524] border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-slate-300 mb-1 font-medium">Email Address *</label>
-          <input type="email" name="email" required placeholder="name@school.edu" class="w-full bg-[#061524] border border-slate-700 rounded-lg px-3 py-2 text-white focus:border-amber-400 focus:outline-none">
-        </div>
-
-        <button type="submit" class="w-full py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold rounded-lg tracking-wide uppercase shadow-lg shadow-amber-400/20 transition-all text-xs">
-          Submit Delegation Request
-        </button>
-      </form>
-      <div id="formSuccess" class="hidden mt-4 p-3 bg-emerald-500/20 border border-emerald-500/40 rounded-lg text-emerald-300 text-xs text-center font-medium">
-        Thank you! Our tour director will contact your institution within 24 hours.
-      </div>
-    </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="js/master-animations.js"></script>
-  <script>
-    function openInquiryModal() {
-      const modal = document.getElementById('inquiryModal');
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-    }
-    function closeInquiryModal() {
-      const modal = document.getElementById('inquiryModal');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-    }
-    function handleInquirySubmit(e) {
-      e.preventDefault();
-      document.getElementById('delegationForm').classList.add('hidden');
-      document.getElementById('formSuccess').classList.remove('hidden');
-    }
-  </script>
+  <!-- Floating Delegation Action Button -->
+  <a href="tourdetails.html" class="delegation-fab" title="View Full 8-Day Itinerary">
+    <span>View 8-Day Japan STEM Itinerary &rarr;</span>
+  </a>
+
 </body>
 </html>

@@ -3,1081 +3,419 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leading Edge Vision | Robotics &amp; STEM Educational Tour to Japan</title>
+  <title>Leading Edge Vision | Robotics &amp; STEM Tour to Japan</title>
   <meta name="description" content="Leading Edge Vision presents Educational STEM &amp; Robotics Tours for Schools and Colleges with Japan as a key destination. Robotics: From Science Fiction to Everyday Life.">
-  <meta name="keywords" content="Robotics Tour Japan, STEM Education Tour, Leading Edge Vision, Autonomous Mobility, Medicine &amp; Healthcare, The Future of Surgery, Smart Agriculture, Logistics &amp; Delivery, Robotics in Warfare, Tokyo Miraikan, JAXA Space">
+  <meta name="keywords" content="Robotics Tour Japan, STEM Education Tour, Leading Edge Vision, Autonomous Mobility, Surgical Robotics, Smart Agriculture, Tokyo Miraikan, JAXA Space">
 
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="Robotics • From Science Fiction to Everyday Life | Leading Edge Vision">
   <meta property="og:description" content="Innovation Builds a Better Tomorrow. STEM Educational Tours to Japan for Schools and Colleges.">
-  <meta property="og:image" content="assets/images/japan-hero.jpg">
+  <meta property="og:image" content="assets/images/hero-robot-japan.jpg">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/official-logo-transparent.png" type="image/png">
 
-  <!-- Tailwind CSS CDN for utility support -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts: Caveat + Space Grotesk + Plus Jakarta Sans + Bebas Neue -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Custom White & Brown Theme Stylesheet -->
-  <link rel="stylesheet" href="css/white-brown-theme.css">
-
-  <!-- GSAP & Lucide Icons CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Exact 1:1 Reference Poster Stylesheet -->
+  <link rel="stylesheet" href="css/poster-exact.css">
 </head>
-<body class="bg-[#FAF7F2] text-[#24160E] antialiased">
+<body>
 
-  <!-- ==========================================================================
-       TOP ANNOUNCEMENT BAR (Warm Espresso & Golden Amber)
-       ========================================================================== -->
-  <div class="wb-topbar">
-    <div class="wb-container flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#DCA048]/20 text-[#DCA048] text-xs">🇯🇵</span>
-        <span class="font-medium text-xs sm:text-sm">Official STEM &amp; Robotics Delegation to Japan &bull; 2025–2026 Academic Season</span>
-      </div>
-      <div class="flex items-center gap-4 text-xs font-semibold">
-        <a href="tel:+919876543210" class="flex items-center gap-1.5 hover:text-[#DCA048] transition-colors">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#DCA048]"></i>
-          <span>+91 98765 43210</span>
+  <div class="page-canvas">
+
+    <!-- Master Poster Frame -->
+    <main class="poster-artboard">
+
+      <!-- ====================================================================
+           TOP SUBTLE META / NAVIGATION BAR
+           ==================================================================== -->
+      <header class="poster-topbar">
+        <a href="index.html" class="poster-topbar-brand">
+          <img src="assets/images/official-logo-transparent.png" alt="Leading Edge Vision Logo" class="poster-topbar-logo">
+          <span class="poster-topbar-title">Leading Edge Vision</span>
         </a>
-        <span class="text-stone-600 hidden sm:inline">|</span>
-        <a href="mailto:info@leadingedgevision.com" class="hidden sm:flex items-center gap-1.5 hover:text-[#DCA048] transition-colors">
-          <i data-lucide="mail" class="w-3.5 h-3.5 text-[#DCA048]"></i>
-          <span>info@leadingedgevision.com</span>
-        </a>
-        <a href="tourdetails.html" class="bg-[#DCA048] text-[#24160E] px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider hover:bg-[#E8B466] transition-all">
-          Book Delegation
-        </a>
-      </div>
-    </div>
+        <div class="poster-topbar-pills">
+          <span class="poster-pill">🏫 Schools</span>
+          <span class="poster-pill">🎓 Colleges</span>
+          <span class="poster-pill">🇯🇵 Japan</span>
+          <a href="tourdetails.html" class="poster-pill active">8-Day Itinerary &rarr;</a>
+        </div>
+      </header>
+
+      <!-- ====================================================================
+           SECTION 1: HERO (ROBOTICS — From Science Fiction to Everyday Life)
+           ==================================================================== -->
+      <section class="hero-frame" id="hero">
+        
+        <!-- Right Image Visual (Humanoid Robot, Mount Fuji, Cherry Blossoms, Pagoda) -->
+        <div class="hero-media-wrap">
+          <img src="assets/images/hero-robot-japan.jpg" alt="Robotics: From Science Fiction to Everyday Life - Japan STEM Tour" loading="eager" fetchpriority="high">
+        </div>
+
+        <!-- Handwritten Callout (Top Right over Mount Fuji) -->
+        <div class="hero-script-callout">
+          <div class="hero-script-text">
+            Innovation<br>
+            Builds a<br>
+            Better Tomorrow
+          </div>
+          <!-- Red Underline Swoosh -->
+          <svg class="hero-script-swoosh" viewBox="0 0 160 20" fill="none" aria-hidden="true">
+            <path d="M6 16C45 4 110 3 154 14" stroke="#DC2626" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- Left Text Content -->
+        <div class="hero-text-wrap">
+          <h1 class="hero-main-title">ROBOTICS</h1>
+          <div class="hero-sub-title-1">From Science Fiction to</div>
+          <div class="hero-sub-title-2">Everyday Life</div>
+
+          <p class="hero-description">
+            As we move further into the 21st century, Robotics is no longer confined to science fiction or factory <span class="hl-green">assembly lines.</span> It is becoming an integral <span class="hl-green">part</span> of our daily lives and is <span class="hl-yellow">transforming</span> society in ways that were once unimaginable.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ====================================================================
+           SECTION 2: ROBOTICS IN ACTION | Transforming Key Sectors (6 Cards)
+           ==================================================================== -->
+      <section class="sectors-section" id="robotics-action">
+        
+        <!-- Section Header -->
+        <div class="sectors-header">
+          <h2 class="sectors-title">
+            <span>Robotics in Action</span>
+            <span class="sectors-title-sep">|</span>
+            <span class="sectors-title-sub">Transforming Key Sectors</span>
+          </h2>
+          <p class="sectors-subtitle">
+            We are already witnessing this transformation across multiple sectors:
+          </p>
+        </div>
+
+        <!-- 6-Card Grid -->
+        <div class="sectors-grid">
+
+          <!-- CARD 1: Autonomous Mobility -->
+          <article class="sector-card card-mobility">
+            <div class="sector-img-box">
+              <img src="assets/images/card-mobility.jpg" alt="Autonomous self-driving vehicle" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Autonomous Mobility">
+              <!-- Car SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17l-1 2h16l-1-2M7 11h2M15 11h2M8 7l1-3h6l1 3"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Autonomous<br>Mobility</h3>
+              <p class="sector-desc">
+                Self-driving vehicles are set to redefine urban mobility, reduce accidents and improve traffic efficiency.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 2: Medicine & Healthcare -->
+          <article class="sector-card card-healthcare">
+            <div class="sector-img-box">
+              <img src="assets/images/card-healthcare.jpg" alt="Robotic surgery system" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Medicine & Healthcare">
+              <!-- Medical Cross SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="4"/>
+                <path d="M12 8v8M8 12h8"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Medicine &amp;<br>Healthcare</h3>
+              <p class="sector-desc">
+                Robotic-assisted surgery is enhancing precision, reducing recovery times and expanding the capabilities of healthcare systems.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 3: The Future of Surgery -->
+          <article class="sector-card card-surgery">
+            <div class="sector-img-box">
+              <img src="assets/images/card-surgery.jpg" alt="Micro-surgical robotic needles" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="The Future of Surgery">
+              <!-- Scalpel / Pen SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6M14 6l4 4L7 21H3v-4L14 6z"/>
+                <circle cx="18" cy="6" r="3"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">The Future<br>of Surgery</h3>
+              <p class="sector-desc">
+                Surgeons now operate through tiny incisions with the help of robotic arms, offering minimally invasive procedures that were once impossible.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 4: Smart Agriculture -->
+          <article class="sector-card card-agriculture">
+            <div class="sector-img-box">
+              <img src="assets/images/card-agriculture.jpg" alt="Agricultural drone over crop fields" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Smart Agriculture">
+              <!-- Plant Leaf SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-9M12 13a5 5 0 0 0 5-5c0-4-5-6-5-6s-5 2-5 6a5 5 0 0 0 5 5z"/>
+                <path d="M12 18a4 4 0 0 1 4-4"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Smart<br>Agriculture</h3>
+              <p class="sector-desc">
+                Drones are optimizing crop monitoring, irrigation and spraying, leading to smarter and more sustainable food production.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 5: Logistics & Delivery -->
+          <article class="sector-card card-logistics">
+            <div class="sector-img-box">
+              <img src="assets/images/card-logistics.jpg" alt="Delivery drone carrying package" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Logistics & Delivery">
+              <!-- Package Box SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.29 7 12 12.01 20.71 7"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Logistics &amp;<br>Delivery</h3>
+              <p class="sector-desc">
+                Drones are reshaping last-mile delivery, especially in remote or congested areas. Companies like Amazon, Zipline and DHL are exploring aerial logistics.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 6: Robotics in Warfare -->
+          <article class="sector-card card-warfare">
+            <div class="sector-img-box">
+              <img src="assets/images/card-warfare.jpg" alt="Autonomous defense drone at sunset" loading="lazy">
+            </div>
+            <div class="sector-icon-badge" title="Robotics in Warfare">
+              <!-- Shield SVG -->
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="sector-body">
+              <h3 class="sector-name">Robotics in<br>Warfare</h3>
+              <p class="sector-desc">
+                Autonomous drones are redefining how conflicts are fought, raising serious ethical, legal and strategic questions about the role of machines in life-and-death decisions.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ====================================================================
+           SECTION 3: COLLABORATION BANNER (Augmented Intelligence)
+           ==================================================================== -->
+      <section class="collab-banner" id="augmented-intelligence">
+        
+        <!-- Left: Collaboration Statement -->
+        <div class="collab-left-col">
+          <p class="collab-eyebrow">The Future Trend is</p>
+          <div class="collab-title-yellow">Collaboration:</div>
+          <div class="collab-title-white">Humans + Machines<br>Working Together</div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="collab-v-divider"></div>
+
+        <!-- Middle: Augmented Intelligence -->
+        <div class="collab-mid-col">
+          <p class="collab-intro-sm">This is called</p>
+          <div class="collab-ai-title">&ldquo;Augmented Intelligence&rdquo;</div>
+          <p class="collab-ai-desc">
+            Technology doesn't replace humans &mdash; it enhances our capabilities.
+          </p>
+        </div>
+
+        <!-- Right: Handshake Media -->
+        <div class="collab-right-col">
+          <img src="assets/images/handshake-human-robot.jpg" alt="Human shaking robotic hand" loading="lazy">
+        </div>
+
+      </section>
+
+
+      <!-- ====================================================================
+           SECTION 4: STEM TOUR TO JAPAN (Photo + 4 Icons + Callout)
+           ==================================================================== -->
+      <section class="tour-stem-section" id="stem-tour-japan">
+        
+        <div class="tour-stem-grid">
+
+          <!-- Left: Students + Mount Fuji Visual with Stamp & Flag -->
+          <div class="tour-photo-wrapper">
+            <div class="tour-photo-inner">
+              <img src="assets/images/stem-students.jpg" alt="Students looking at Mount Fuji and Pagoda" loading="lazy">
+            </div>
+
+            <!-- Red Circular Stamp Badge -->
+            <div class="tour-stamp-badge" title="STEM Tour to Japan">
+              <span class="stamp-txt-stem">STEM</span>
+              <span class="stamp-txt-tour">Tour to</span>
+              <span class="stamp-txt-japan">Japan</span>
+            </div>
+
+            <!-- Japan Flag Sticker -->
+            <div class="tour-flag-sticker" title="Japan">
+              <div class="tour-flag-sun"></div>
+            </div>
+          </div>
+
+          <!-- Right: Educational & Cultural Experience + 4 Icons -->
+          <div class="tour-content-col">
+            <h2 class="tour-main-heading">
+              An Extraordinary Educational<br>and Cultural Experience
+            </h2>
+            <p class="tour-main-desc">
+              Our STEM Tour to Japan &mdash; the epicentre for Technology and Innovation &mdash; can be an incredible experience for school kids.
+            </p>
+
+            <!-- 4 Experience Icons with Dividers -->
+            <div class="tour-points-row">
+
+              <!-- Point 1 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #0284C7;" title="Robotics in action">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">See</div>
+                <div class="tour-point-sub">Robotics in<br>action</div>
+              </div>
+
+              <!-- Point 2 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #9333EA;" title="Cutting-edge innovation">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a6 6 0 0 0-6 6c0 2.5 1.5 4.5 3 5.5v2.5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V13.5c1.5-1 3-3 3-5.5a6 6 0 0 0-6-6zM10 21h4"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">Experience</div>
+                <div class="tour-point-sub">cutting-edge<br>innovation</div>
+              </div>
+
+              <!-- Point 3 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #16A34A;" title="Rich culture and heritage">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 21h16M6 17h12M8 13h8M10 9h4M12 3v4M2 17l2-4h16l2 4M3 13l3-4h12l3 4M5 9l3-4h8l3 4"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">Explore a</div>
+                <div class="tour-point-sub">rich culture<br>and heritage</div>
+              </div>
+
+              <!-- Point 4 -->
+              <div class="tour-point-col">
+                <div class="tour-point-icon" style="background: #EA580C;" title="Solve real-world problems">
+                  <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="2" r="2"/>
+                  </svg>
+                </div>
+                <div class="tour-point-lead">Get inspired</div>
+                <div class="tour-point-sub">to solve real-world<br>problems</div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Information Callout Box -->
+            <div class="tour-callout-box">
+              <div class="tour-callout-icon" title="Education & Mentorship">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/>
+                </svg>
+              </div>
+              <p class="tour-callout-text">
+                Early exposure sets them up <strong>not just to use tools, but to co-create with them.</strong> The ability to work alongside machines will become a foundational skill for their future careers &mdash; regardless of industry.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ====================================================================
+           SECTION 5: FOOTER BANNER (The Future Belongs to Curious Minds)
+           ==================================================================== -->
+      <footer class="footer-banner-frame" id="footer-banner">
+        
+        <!-- Left Column -->
+        <div class="footer-left-col">
+          <p class="footer-intro-txt">The Future Belongs to</p>
+          <div class="footer-curious-title">Curious Minds</div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="footer-v-divider"></div>
+
+        <!-- Middle Column -->
+        <div class="footer-mid-col">
+          <p class="footer-mid-desc">
+            Because tomorrow's essential skill may not simply be knowing how to use a machine. It may be knowing how to collaborate with one.
+          </p>
+          <div class="footer-mid-quote">
+            And that future starts with what we expose our children to today.
+          </div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="footer-v-divider"></div>
+
+        <!-- Right Column -->
+        <div class="footer-right-col">
+          <!-- Handshake / Collaboration Line Icon -->
+          <svg class="footer-right-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="14" cy="16" r="6"/>
+            <path d="M6 34v-4a6 6 0 0 1 6-6h4"/>
+            <rect x="28" y="10" width="12" height="12" rx="3"/>
+            <circle cx="32" cy="15" r="1.5" fill="currentColor"/>
+            <circle cx="36" cy="15" r="1.5" fill="currentColor"/>
+            <path d="M30 34v-4a5 5 0 0 1 5-5h3"/>
+            <path d="M16 28h12M22 25l6 6"/>
+          </svg>
+          <div class="footer-right-title">
+            STEM + Japan =<br>A Brighter Future
+          </div>
+        </div>
+
+      </footer>
+
+    </main>
+
   </div>
 
-  <!-- ==========================================================================
-       STICKY NAVIGATION HEADER (White, Warm Cream & Brown Accents)
-       ========================================================================== -->
-  <header class="wb-header" id="navbar">
-    <div class="wb-container py-3 flex items-center justify-between">
-      
-      <!-- Brand Name -->
-      <a href="index.html" class="flex flex-col group">
-        <span class="font-heading font-extrabold text-xl sm:text-2xl text-[#24160E] tracking-tight leading-tight group-hover:text-[#7A4B2A] transition-colors">
-          LEADING EDGE VISION
-        </span>
-        <span class="text-[10px] sm:text-[11px] font-bold text-[#7A4B2A] uppercase tracking-widest">
-          Robotics &amp; STEM Educational Tours
-        </span>
-      </a>
+  <!-- Floating Delegation Action Button -->
+  <a href="tourdetails.html" class="delegation-fab" title="View Full 8-Day Itinerary">
+    <span>View 8-Day Japan STEM Itinerary &rarr;</span>
+  </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="hidden lg:flex items-center gap-1">
-        <a href="#hero" class="wb-nav-link active">Home</a>
-        <a href="#robotics-action" class="wb-nav-link">Robotics in Action</a>
-        <a href="#augmented-intelligence" class="wb-nav-link">Augmented Intelligence</a>
-        <a href="#stem-japan" class="wb-nav-link">STEM Tour Japan</a>
-        <a href="#itinerary" class="wb-nav-link">8-Day Itinerary</a>
-      </nav>
-
-      <!-- Mobile Menu Toggle -->
-      <div class="flex items-center gap-2">
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-[#24160E] hover:bg-[#F5EFEB] focus:outline-none" aria-label="Toggle Navigation">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Navigation -->
-    <div id="mobile-nav" class="hidden lg:hidden bg-white border-t border-[#E8DED2] px-6 py-4 shadow-xl">
-      <div class="flex flex-col gap-3">
-        <a href="#hero" class="text-[#24160E] font-bold py-2 border-b border-stone-100 mobile-nav-link">Home</a>
-        <a href="#robotics-action" class="text-[#24160E] font-bold py-2 border-b border-stone-100 mobile-nav-link">Robotics in Action (6 Sectors)</a>
-        <a href="#augmented-intelligence" class="text-[#24160E] font-bold py-2 border-b border-stone-100 mobile-nav-link">Augmented Intelligence</a>
-        <a href="#stem-japan" class="text-[#24160E] font-bold py-2 border-b border-stone-100 mobile-nav-link">STEM Tour to Japan</a>
-        <a href="#itinerary" class="text-[#24160E] font-bold py-2 border-b border-stone-100 mobile-nav-link">8-Day Itinerary</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ==========================================================================
-       SECTION 1: HERO (ROBOTICS — FROM SCIENCE FICTION TO EVERYDAY LIFE) - FULL WIDTH
-       ========================================================================== -->
-  <section class="wb-hero wb-hero-fullwidth" id="hero">
-    
-    <!-- Modern Split Hero Showcase (Full-Width Edge-to-Edge Layout) -->
-    <div class="wb-hero-split-wrapper">
-      <div class="wb-hero-split-grid">
-        
-        <!-- Left Column: Typography, Narrative, CTAs & Quick Stats -->
-        <div class="wb-hero-content-col">
-          <div class="wb-hero-content-inner">
-            
-            <div class="wb-hero-pretitle">
-              <span class="wb-pulse-dot"></span>
-              <span>Leading Edge Vision Presents</span>
-              <span class="wb-kanji-tag">日本ロボット工学</span>
-            </div>
-
-            <h1 class="wb-hero-main-title">
-              ROBOTICS
-            </h1>
-
-            <div class="wb-hero-title-sub">
-              <span class="wb-hero-sub-lead">From Science Fiction to</span>
-              <span class="wb-hero-sub-accent">Everyday Life</span>
-            </div>
-
-            <p class="wb-hero-narrative">
-              As we move further into the 21st century, Robotics is no longer confined to science fiction or factory assembly lines. It is becoming an integral part of our daily lives and is transforming society in ways that were once unimaginable.
-            </p>
-
-            <!-- CTA Action Buttons -->
-            <div class="wb-hero-actions-group">
-              <a href="#robotics-action" class="wb-btn wb-btn-hero-main">
-                <span>Explore Key Sectors</span>
-                <i data-lucide="arrow-down-right" class="w-4 h-4 text-[#DCA048]"></i>
-              </a>
-              <a href="#stem-japan" class="wb-btn wb-btn-glass-hero">
-                <i data-lucide="plane-takeoff" class="w-4 h-4 text-[#A85D2C]"></i>
-                <span>STEM Tour to Japan</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive 3D Moving Cards Showcase (Clean White Background) -->
-        <div class="wb-hero-visual-col">
-          <div class="wb-hero-3d-stage">
-            
-            <div class="wb-3d-carousel-wrapper" id="hero-3d-wrapper">
-              
-              <!-- 3D Perspective Scene -->
-              <div class="wb-3d-carousel-scene">
-                
-                <!-- Center Hub (Clean White & Gold Logo Disc) -->
-                <div class="wb-3d-center-hub">
-                  <div class="wb-hub-glow"></div>
-                  <div class="wb-hub-disc">
-                    <div class="wb-hub-logo-mark">
-                      <svg class="w-7 h-7 text-[#7A4B2A]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 8H28L32 14L16 14L14 20H26L24 26H12L10 32H30L28 36H6L8 8Z" fill="#7A4B2A" />
-                        <path d="M22 6L34 12L28 18L26 14L20 14L22 6Z" fill="#C8863A" />
-                        <path d="M26 10L36 12L31 20" stroke="#DCA048" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    <div class="wb-hub-brand">LEADING EDGE</div>
-                    <div class="wb-hub-sub-brand">VISION</div>
-                    <div class="wb-hub-tagline">Explore &bull; Learn &bull; Grow</div>
-                  </div>
-                </div>
-
-                <!-- 3D Rotating Cylinder with 4 Floating Moving Cards -->
-                <div class="wb-3d-carousel-cylinder" id="hero-3d-cylinder">
-                  
-                  <!-- Card 1: Schools & Colleges -->
-                  <div class="wb-3d-card" style="--card-index: 0;" onclick="window.location.href='tourdetail.html'">
-                    <img src="assets/images/stem-students.jpg" alt="Schools & Colleges Delegations">
-                    <div class="wb-3d-card-overlay"></div>
-                    <div class="wb-3d-card-body">
-                      <div class="wb-3d-card-header">
-                        <i data-lucide="graduation-cap" class="wb-3d-card-icon"></i>
-                        <h3 class="wb-3d-card-title">Schools &amp; Colleges</h3>
-                      </div>
-                      <p class="wb-3d-card-sub">Better Education &bull; Brighter Future</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 2: Japan -->
-                  <div class="wb-3d-card" style="--card-index: 1;" onclick="window.location.href='tourdetail.html'">
-                    <img src="assets/images/japan-hero.jpg" alt="Japan STEM & Cultural Immersion">
-                    <div class="wb-3d-card-overlay"></div>
-                    <div class="wb-3d-card-body">
-                      <div class="wb-3d-card-header">
-                        <i data-lucide="map-pin" class="wb-3d-card-icon"></i>
-                        <h3 class="wb-3d-card-title">Japan</h3>
-                      </div>
-                      <p class="wb-3d-card-sub">Discover a World of Opportunities</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 3: STEM Tours -->
-                  <div class="wb-3d-card" style="--card-index: 2;" onclick="window.location.href='tourdetail.html'">
-                    <img src="assets/images/miraikan-robotics.jpg" alt="STEM Tours & Advanced Robotics">
-                    <div class="wb-3d-card-overlay"></div>
-                    <div class="wb-3d-card-body">
-                      <div class="wb-3d-card-header">
-                        <i data-lucide="flask-conical" class="wb-3d-card-icon"></i>
-                        <h3 class="wb-3d-card-title">STEM Tours</h3>
-                      </div>
-                      <p class="wb-3d-card-sub">Inspire &bull; Innovate &bull; Build the Future</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 4: Explore Countries -->
-                  <div class="wb-3d-card" style="--card-index: 3;" onclick="window.location.href='tourdetail.html'">
-                    <img src="assets/images/about-hero-fuji.jpg" alt="Explore Countries & International Exposure">
-                    <div class="wb-3d-card-overlay"></div>
-                    <div class="wb-3d-card-body">
-                      <div class="wb-3d-card-header">
-                        <i data-lucide="globe" class="wb-3d-card-icon"></i>
-                        <h3 class="wb-3d-card-title">Explore Countries</h3>
-                      </div>
-                      <p class="wb-3d-card-sub">New Places &bull; New Perspectives</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 2: ROBOTICS IN ACTION | TRANSFORMING KEY SECTORS (6 CARDS)
-       ========================================================================== -->
-  <section class="wb-section bg-[#FAF7F2]" id="robotics-action">
-    <div class="wb-container">
-      
-      <!-- Section Header Matching Infographic -->
-      <div class="wb-section-header">
-        <div class="wb-badge-sub">
-          <i data-lucide="cpu" class="w-4 h-4 text-[#7A4B2A]"></i>
-          <span>Core Technological Frontiers</span>
-        </div>
-        
-        <h2 class="wb-section-title">
-          Robotics in Action <span class="text-[#7A4B2A] font-light">|</span> <span class="text-[#A85D2C]">Transforming Key Sectors</span>
-        </h2>
-        
-        <p class="wb-section-desc">
-          We are already witnessing this transformation across multiple sectors:
-        </p>
-      </div>
-
-      <!-- 6 Key Sector Cards (Bento/Mosaic Grid Matching Reference Screenshot) -->
-      <div class="wb-sectors-grid">
-        
-        <!-- CARD 1: Autonomous Mobility (Warm Cream Theme) -->
-        <div class="wb-sector-card wb-sector-theme-cream">
-          <div class="wb-sector-thumb">
-            <div class="wb-sector-thumb-inner">
-              <img src="assets/images/card-mobility.jpg" alt="Autonomous Mobility self-driving car in city" loading="lazy">
-              <div class="wb-sector-thumb-overlay"></div>
-              <span class="wb-sector-index-tag">01</span>
-              <span class="wb-sector-category-tag">Mobility AI</span>
-            </div>
-          </div>
-          <div class="wb-sector-body">
-            <h3 class="wb-sector-title">Autonomous Mobility</h3>
-            <p class="wb-sector-desc">
-              Self-driving vehicles are set to redefine urban mobility, reduce accidents and improve traffic efficiency.
-            </p>
-            <ul class="wb-sector-features">
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#0284C7]"></i>
-                <span>LiDAR &amp; Vision-based Navigation</span>
-              </li>
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#0284C7]"></i>
-                <span>Urban Accident Reduction Systems</span>
-              </li>
-            </ul>
-            <div class="wb-sector-footer-action">
-              <a href="tourdetails.html" class="wb-bento-link">More Information &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 2: Medicine & Healthcare (Deep Dark Obsidian Theme) -->
-        <div class="wb-sector-card wb-sector-theme-dark">
-          <div class="wb-sector-thumb">
-            <div class="wb-sector-thumb-inner">
-              <img src="assets/images/card-healthcare.jpg" alt="Medicine and healthcare robotic precision equipment" loading="lazy">
-              <div class="wb-sector-thumb-overlay"></div>
-              <span class="wb-sector-index-tag">02</span>
-              <span class="wb-sector-category-tag">Healthcare</span>
-            </div>
-          </div>
-          <div class="wb-sector-body">
-            <h3 class="wb-sector-title">Medicine &amp; Healthcare</h3>
-            <p class="wb-sector-desc">
-              Robotic-assisted surgery is enhancing precision, reducing recovery times and expanding the capabilities of healthcare systems.
-            </p>
-            <ul class="wb-sector-features">
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#34D399]"></i>
-                <span>Robotic Rehabilitation Exoskeletons</span>
-              </li>
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#34D399]"></i>
-                <span>Automated Precision Patient Care</span>
-              </li>
-            </ul>
-            <div class="wb-sector-footer-action">
-              <a href="tourdetails.html" class="wb-bento-link">More Information &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 3: The Future of Surgery (Muted Slate Blue Theme) -->
-        <div class="wb-sector-card wb-sector-theme-slate">
-          <div class="wb-sector-thumb">
-            <div class="wb-sector-thumb-inner">
-              <img src="assets/images/card-surgery.jpg" alt="The Future of Surgery with robotic microneedles" loading="lazy">
-              <div class="wb-sector-thumb-overlay"></div>
-              <span class="wb-sector-index-tag">03</span>
-              <span class="wb-sector-category-tag">Microsurgery</span>
-            </div>
-          </div>
-          <div class="wb-sector-body">
-            <h3 class="wb-sector-title">The Future of Surgery</h3>
-            <p class="wb-sector-desc">
-              Surgeons now operate through tiny incisions with the help of robotic arms, offering minimally invasive procedures that were once impossible.
-            </p>
-            <ul class="wb-sector-features">
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#A78BFA]"></i>
-                <span>Sub-millimeter Micro Incisions</span>
-              </li>
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#A78BFA]"></i>
-                <span>3D HD Real-time Telesurgery</span>
-              </li>
-            </ul>
-            <div class="wb-sector-footer-action">
-              <a href="tourdetails.html" class="wb-bento-link">More Information &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 4: Smart Agriculture (Warm Latte Theme) -->
-        <div class="wb-sector-card wb-sector-theme-latte">
-          <div class="wb-sector-thumb">
-            <div class="wb-sector-thumb-inner">
-              <img src="assets/images/card-agriculture.jpg" alt="Smart agriculture drone over crop field" loading="lazy">
-              <div class="wb-sector-thumb-overlay"></div>
-              <span class="wb-sector-index-tag">04</span>
-              <span class="wb-sector-category-tag">Agri-Tech</span>
-            </div>
-          </div>
-          <div class="wb-sector-body">
-            <h3 class="wb-sector-title">Smart Agriculture</h3>
-            <p class="wb-sector-desc">
-              Drones are optimizing crop monitoring, irrigation and spraying, leading to smarter and more sustainable food production.
-            </p>
-            <ul class="wb-sector-features">
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#D97706]"></i>
-                <span>Multispectral Soil &amp; Crop Analysis</span>
-              </li>
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#D97706]"></i>
-                <span>Autonomous Precision Spraying</span>
-              </li>
-            </ul>
-            <div class="wb-sector-footer-action">
-              <a href="tourdetails.html" class="wb-bento-link">More Information &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 5: Logistics & Delivery (Deep Midnight Theme) -->
-        <div class="wb-sector-card wb-sector-theme-midnight">
-          <div class="wb-sector-thumb">
-            <div class="wb-sector-thumb-inner">
-              <img src="assets/images/card-logistics.jpg" alt="Logistics delivery drone flying with package" loading="lazy">
-              <div class="wb-sector-thumb-overlay"></div>
-              <span class="wb-sector-index-tag">05</span>
-              <span class="wb-sector-category-tag">Supply Chain</span>
-            </div>
-          </div>
-          <div class="wb-sector-body">
-            <h3 class="wb-sector-title">Logistics &amp; Delivery</h3>
-            <p class="wb-sector-desc">
-              Drones are reshaping last-mile delivery, especially in remote or congested areas. Companies like Amazon, Zipline and DHL are exploring aerial logistics.
-            </p>
-            <ul class="wb-sector-features">
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#38BDF8]"></i>
-                <span>Aerial Last-Mile Drone Delivery</span>
-              </li>
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#38BDF8]"></i>
-                <span>Automated Smart Warehouse Fleet</span>
-              </li>
-            </ul>
-            <div class="wb-sector-footer-action">
-              <a href="tourdetails.html" class="wb-bento-link">More Information &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 6: Robotics in Warfare (Pure White Porcelain Theme) -->
-        <div class="wb-sector-card wb-sector-theme-white">
-          <div class="wb-sector-thumb">
-            <div class="wb-sector-thumb-inner">
-              <img src="assets/images/card-warfare.jpg" alt="Robotics in warfare autonomous aerial drone at sunset" loading="lazy">
-              <div class="wb-sector-thumb-overlay"></div>
-              <span class="wb-sector-index-tag">06</span>
-              <span class="wb-sector-category-tag">Defense AI</span>
-            </div>
-          </div>
-          <div class="wb-sector-body">
-            <h3 class="wb-sector-title">Robotics in Warfare</h3>
-            <p class="wb-sector-desc">
-              Autonomous drones are redefining how conflicts are fought, raising serious ethical, legal and strategic questions about the role of machines in life-and-death decisions.
-            </p>
-            <ul class="wb-sector-features">
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#EF4444]"></i>
-                <span>Autonomous Aerial Surveillance</span>
-              </li>
-              <li class="wb-sector-feature-item">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#EF4444]"></i>
-                <span>Ethical &amp; Strategic AI Governance</span>
-              </li>
-            </ul>
-            <div class="wb-sector-footer-action">
-              <a href="tourdetails.html" class="wb-bento-link">More Information &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 3: COLLABORATION & AUGMENTED INTELLIGENCE (RICH ESPRESSO & CARAMEL)
-       ========================================================================== -->
-  <section class="wb-section py-8" id="augmented-intelligence">
-    <div class="wb-container">
-      
-      <div class="wb-collab-section">
-        <div class="wb-collab-glow"></div>
-        
-        <div class="wb-container">
-          <div class="wb-collab-grid">
-            
-            <!-- Left Block: Exact Future Trend Headline -->
-            <div class="text-left">
-              <div class="wb-collab-left-label font-bold uppercase tracking-wider">
-                The Future Trend is
-              </div>
-              <h2 class="wb-collab-left-title">
-                Collaboration:<br>
-                <span>Humans + Machines</span><br>
-                Working Together
-              </h2>
-            </div>
-
-            <!-- Right Block: Augmented Intelligence & Handshake Visual -->
-            <div class="flex flex-col justify-center text-left pl-0 lg:pl-6 border-l-0 lg:border-l border-stone-700/60">
-              <div class="wb-collab-right-tag font-bold uppercase tracking-wider">
-                This is called
-              </div>
-              <div class="wb-collab-right-title">
-                “Augmented Intelligence”
-              </div>
-              <p class="wb-collab-right-desc">
-                Technology doesn't replace humans — it enhances our capabilities.
-              </p>
-              
-              <div class="mt-4 flex items-center gap-3 text-xs text-[#DCA048] font-semibold">
-                <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-full border border-white/10">
-                  <i data-lucide="zap" class="w-3.5 h-3.5"></i> Co-Creation
-                </span>
-                <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-full border border-white/10">
-                  <i data-lucide="brain" class="w-3.5 h-3.5"></i> Human-in-the-Loop
-                </span>
-                <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-full border border-white/10">
-                  <i data-lucide="users" class="w-3.5 h-3.5"></i> Shared Dexterity
-                </span>
-              </div>
-            </div>
-
-            <!-- Cybernetic Handshake Visual Matching Reference -->
-            <div class="wb-collab-visual-box">
-              <img src="assets/images/handshake-human-robot.jpg" alt="Augmented Intelligence - Human Hand Shaking Robot Hand with Cybernetic Spark">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[11px] font-bold text-amber-300">
-                <span>Human Intuition</span>
-                <span>⚡</span>
-                <span>Robotic Precision</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 4: ACADEMIC & CULTURAL IMMERSION (MATCHING REFERENCE LAYOUT)
-       ========================================================================== -->
-  <section class="wb-section bg-[#FAF7F2]" id="stem-japan">
-    <div class="wb-container">
-      
-      <div class="wb-immersion-grid">
-        
-        <!-- Left Narrative Column (Matching Reference Headline, Desc & Dual Actions) -->
-        <div class="wb-immersion-left">
-          
-          <div class="wb-badge-sub mb-2">
-            <i data-lucide="compass" class="w-4 h-4 text-[#7A4B2A]"></i>
-            <span>Academic &amp; Cultural Immersion</span>
-          </div>
-          
-          <h2 class="wb-immersion-title">
-            An Extraordinary <br><span>Educational &amp; Cultural</span> Experience.
-          </h2>
-          
-          <p class="wb-immersion-desc">
-            Our STEM Tour to Japan — the epicentre for Technology and Innovation — can be an incredible experience for school kids. Early exposure sets them up not just to use tools, but to co-create with them alongside machines in future careers.
-          </p>
-
-          <div class="wb-immersion-actions">
-            <a href="tourdetails.html" class="wb-btn wb-btn-primary">
-              <span>Explore 8-Day Tour</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 text-[#DCA048]"></i>
-            </a>
-            <a href="#itinerary" class="wb-btn wb-btn-outline">
-              <i data-lucide="calendar" class="w-4 h-4"></i>
-              <span>View Itinerary</span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right Visual Showcase: 3 Tall Rounded Cards with Floating Icon Badges -->
-        <div class="wb-immersion-cards-row">
-          
-          <!-- Card 1: Robotics in Action -->
-          <div class="wb-immersion-card">
-            <img src="assets/images/about-stem-tokyo.jpg" alt="Robotics in Action Miraikan National Museum Tokyo" class="wb-immersion-card-img" loading="lazy">
-            <div class="wb-immersion-card-overlay"></div>
-            <div class="wb-immersion-card-content">
-              <div class="wb-immersion-icon-badge">
-                <i data-lucide="bot" class="w-5 h-5"></i>
-              </div>
-              <h3 class="wb-immersion-card-title">Robotics in Action</h3>
-              <p class="wb-immersion-card-desc">
-                Witness cutting-edge humanoid robots, ASIMO, android Alter &amp; Miraikan demonstrations.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2: Space & Cutting-Edge Innovation -->
-          <div class="wb-immersion-card">
-            <img src="assets/images/jaxa-space.jpg" alt="JAXA Tsukuba Space Center and Bullet Train" class="wb-immersion-card-img" loading="lazy">
-            <div class="wb-immersion-card-overlay"></div>
-            <div class="wb-immersion-card-content">
-              <div class="wb-immersion-icon-badge">
-                <i data-lucide="rocket" class="w-5 h-5"></i>
-              </div>
-              <h3 class="wb-immersion-card-title">Space &amp; AI Frontiers</h3>
-              <p class="wb-immersion-card-desc">
-                Tour JAXA Tsukuba Space Center, Shinkansen bullet trains &amp; Cyberdyne exoskeleton studios.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3: Rich Culture & Heritage -->
-          <div class="wb-immersion-card">
-            <img src="assets/images/stem-students.jpg" alt="Rich Culture and Heritage Mount Fuji and Asakusa" class="wb-immersion-card-img" loading="lazy">
-            <div class="wb-immersion-card-overlay"></div>
-            <div class="wb-immersion-card-content">
-              <div class="wb-immersion-icon-badge">
-                <i data-lucide="landmark" class="w-5 h-5"></i>
-              </div>
-              <h3 class="wb-immersion-card-title">Culture &amp; Heritage</h3>
-              <p class="wb-immersion-card-desc">
-                Discover historic Asakusa Senso-ji, Meiji Shrine, and panoramic views from Mount Fuji.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 5: 8-DAY CURATED JAPAN ITINERARY (INTERACTIVE TABS)
-       ========================================================================== -->
-  <section class="wb-section bg-[#F5EFEB]" id="itinerary">
-    <div class="wb-container">
-      
-      <div class="wb-section-header">
-        <div class="wb-badge-sub">
-          <i data-lucide="calendar" class="w-4 h-4 text-[#7A4B2A]"></i>
-          <span>Academic &amp; Cultural Journey</span>
-        </div>
-        <h2 class="wb-section-title">
-          Curated 8-Day Japan STEM Delegation
-        </h2>
-        <p class="wb-section-desc">
-          An immersive balance of world-leading robotics institutes, space science, and historic Japanese heritage.
-        </p>
-      </div>
-
-      <!-- Tab Buttons (Clean Centered Wrapping Pills with Zero Scrollbar) -->
-      <div class="wb-itinerary-tabs">
-        <button class="wb-tab-btn active" onclick="switchDay(1)">Day 1: Arrival</button>
-        <button class="wb-tab-btn" onclick="switchDay(2)">Day 2: Miraikan &amp; Odaiba</button>
-        <button class="wb-tab-btn" onclick="switchDay(3)">Day 3: JAXA &amp; Space</button>
-        <button class="wb-tab-btn" onclick="switchDay(4)">Day 4: AI &amp; Robotics Lab</button>
-        <button class="wb-tab-btn" onclick="switchDay(5)">Day 5: Mt. Fuji &amp; Culture</button>
-        <button class="wb-tab-btn" onclick="switchDay(6)">Day 6: Disneyland Physics</button>
-        <button class="wb-tab-btn" onclick="switchDay(7)">Day 7: Shibuya &amp; TeamLab</button>
-        <button class="wb-tab-btn" onclick="switchDay(8)">Day 8: Departure</button>
-      </div>
-
-      <!-- Day Details Card Display -->
-      <div class="wb-itinerary-card" id="itinerary-display">
-        
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-          <div class="w-full lg:w-1/2">
-            <div class="inline-block bg-[#DCA048]/20 text-[#7A4B2A] text-xs font-black uppercase px-3 py-1 rounded-full mb-3" id="itin-day-badge">
-              Day 01 &bull; Tokyo Entry
-            </div>
-            <h3 class="text-2xl font-black text-[#24160E] mb-3" id="itin-title">
-              Welcome to Tokyo &bull; Gateway to Future Robotics
-            </h3>
-            <p class="text-[#5C483D] mb-6 leading-relaxed" id="itin-desc">
-              Delegation arrives at Tokyo International Airport (Narita/Haneda). Board our private chartered luxury coach with English/Hindi tour directors. Check into our 4-star Tokyo hotel, followed by an official tour orientation and welcoming Japanese-Indian dinner.
-            </p>
-            
-            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-[#E8DED2]">
-              <div>
-                <span class="text-xs font-bold text-[#8C786D] uppercase">Key Visits</span>
-                <p class="font-bold text-[#24160E] text-sm" id="itin-visits">Tokyo Skyline &bull; Orientation Gala</p>
-              </div>
-              <div>
-                <span class="text-xs font-bold text-[#8C786D] uppercase">STEM Theme</span>
-                <p class="font-bold text-[#A85D2C] text-sm" id="itin-focus">Introduction to Japanese Tech Ecosystem</p>
-              </div>
-            </div>
-
-            <div class="mt-6 flex items-center gap-4">
-              <a href="tourdetails.html" class="wb-btn wb-btn-gold text-xs px-5 py-2.5">
-                <span>View Full Day Breakdown</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-lg border border-[#E8DED2]">
-            <img src="assets/images/miraikan-robotics.jpg" alt="Tokyo Robotics Tour Day View" class="w-full h-[280px] object-cover" id="itin-img">
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <!-- ==========================================================================
-       SECTION 7: THE FUTURE BELONGS TO CURIOUS MINDS (EXACT FOOTER BANNER)
-       ========================================================================== -->
-
-
-
-
-  <!-- ==========================================================================
-       FOOTER (Deep Espresso & Warm Caramel Accents)
-       ========================================================================== -->
-  <footer class="wb-footer">
-    <div class="wb-container">
-      
-      <div class="wb-footer-grid">
-        
-        <!-- Col 1: Brand & Mission -->
-        <div>
-          <div class="flex flex-col mb-4">
-            <span class="font-black text-xl text-white tracking-wider">LEADING EDGE VISION</span>
-            <span class="text-[11px] font-bold text-[#DCA048] uppercase tracking-wider">Educational STEM &amp; Robotics Tours</span>
-          </div>
-          <p class="text-xs text-[#A89587] leading-relaxed mb-4">
-            Empowering the next generation with immersive STEM, Robotics, and Cultural Expeditions to Japan. Inspiring innovators through hands-on science and technology.
-          </p>
-          <div class="text-xs text-[#DCA048] font-bold">
-            Joint Venture with RAJ Group Global
-          </div>
-        </div>
-
-        <!-- Col 2: Sectors -->
-        <div>
-          <h4 class="wb-footer-col-title">Robotics Sectors</h4>
-          <ul class="wb-footer-links">
-            <li><a href="#robotics-action" class="wb-footer-link">Autonomous Mobility</a></li>
-            <li><a href="#robotics-action" class="wb-footer-link">Medicine &amp; Healthcare</a></li>
-            <li><a href="#robotics-action" class="wb-footer-link">The Future of Surgery</a></li>
-            <li><a href="#robotics-action" class="wb-footer-link">Smart Agriculture</a></li>
-            <li><a href="#robotics-action" class="wb-footer-link">Logistics &amp; Delivery</a></li>
-            <li><a href="#robotics-action" class="wb-footer-link">Robotics in Warfare</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Tour Quick Links -->
-        <div>
-          <h4 class="wb-footer-col-title">Tour Program</h4>
-          <ul class="wb-footer-links">
-            <li><a href="#robotics-action" class="wb-footer-link">Robotics in Action</a></li>
-            <li><a href="#stem-japan" class="wb-footer-link">STEM Japan Experience</a></li>
-            <li><a href="#itinerary" class="wb-footer-link">8-Day Day-by-Day</a></li>
-            <li><a href="tourdetails.html" class="wb-footer-link">Full Tour Dossier</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Contact -->
-        <div>
-          <h4 class="wb-footer-col-title">Get in Touch</h4>
-          <div class="text-xs text-[#A89587] space-y-2.5">
-            <div class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-[#DCA048] shrink-0 mt-0.5"></i>
-              <span>Global Operations: Tokyo (Japan) &bull; Delhi NCR &bull; Hyderabad (India)</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-[#DCA048] shrink-0"></i>
-              <span>+91 98765 43210</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4 text-[#DCA048] shrink-0"></i>
-              <span>info@leadingedgevision.com</span>
-            </div>
-            <div class="flex items-center gap-2 pt-2">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCA048]/15 text-[#DCA048] font-bold text-[11px] border border-[#DCA048]/30">
-                🇯🇵 Trusted Educational Partner
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="wb-footer-bottom">
-        <div>
-          &copy; 2025–2026 Leading Edge Vision &amp; RAJ Group Global. All Rights Reserved.
-        </div>
-        <div class="flex items-center gap-4 text-xs text-[#8C786D]">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="#" class="hover:text-white transition-colors">Terms of Delegation</a>
-          <span>&bull;</span>
-          <a href="#" class="hover:text-white transition-colors">Safety Standards</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- ==========================================================================
-       SCRIPTS: LUCIDE ICONS, ITINERARY SWITCHER & INTERACTIVE LOGIC
-       ========================================================================== -->
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Mobile Navigation Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    if (mobileMenuBtn && mobileNav) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-      });
-
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileNav.classList.add('hidden');
-        });
-      });
-    }
-
-    // Sticky Header Effect
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('navbar');
-      if (header) {
-        if (window.scrollY > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }
-    });
-
-    // 8-Day Itinerary Data
-    const itineraryData = {
-      1: {
-        badge: "Day 01 • Tokyo Arrival",
-        title: "Welcome to Tokyo • Gateway to Future Robotics",
-        desc: "Delegation arrives at Tokyo International Airport (Narita/Haneda). Board our private chartered luxury coach with English/Hindi tour directors. Check into our 4-star Tokyo hotel, followed by an official tour orientation and welcoming Japanese-Indian dinner.",
-        visits: "Tokyo Skyline • Orientation Gala",
-        focus: "Introduction to Japanese Tech Ecosystem",
-        img: "assets/images/miraikan-robotics.jpg"
-      },
-      2: {
-        badge: "Day 02 • Odaiba & Miraikan",
-        title: "Miraikan National Museum & Odaiba Tech Hub",
-        desc: "Explore Miraikan (National Museum of Emerging Science and Innovation). Experience live demonstrations of ASIMO humanoid robot, android Alter, and the Geo-Cosmos digital globe. Afternoon visit to the life-size Unicorn Gundam transforming robot in Odaiba.",
-        visits: "Miraikan Museum • Life-Size Gundam Statue",
-        focus: "Humanoid Robotics & AI Interaction",
-        img: "assets/images/hero-robot-japan.jpg"
-      },
-      3: {
-        badge: "Day 03 • Tsukuba Space City",
-        title: "JAXA Tsukuba Space Center & Cyberdyne Studio",
-        desc: "Full-day excursion to Tsukuba Science City. Private guided tour of JAXA Tsukuba Space Center (KIBO ISS module testing, rocket engine testing). Afternoon hands-on experience at Cyberdyne Studio testing HAL medical robotic exoskeletons.",
-        visits: "JAXA Space Center • Cyberdyne Studio",
-        focus: "Aerospace Robotics & Medical Exoskeletons",
-        img: "assets/images/jaxa-space.jpg"
-      },
-      4: {
-        badge: "Day 04 • University Labs & Akihabara",
-        title: "University Robotics Workshop & Electric Town",
-        desc: "Morning exclusive STEM workshop led by Japanese robotic engineers and university professors. Afternoon exploration of Akihabara Electric Town — the world's epicenter for microelectronics, sensors, and DIY robotic components.",
-        visits: "Robotics University Lab • Akihabara Tech Hub",
-        focus: "Hands-on Microcontrollers & Sensor Coding",
-        img: "assets/images/about-stem-tokyo.jpg"
-      },
-      5: {
-        badge: "Day 05 • Heritage & Mt. Fuji",
-        title: "Mount Fuji 5th Station & Lake Kawaguchiko",
-        desc: "Ascend to Mount Fuji 5th Station for breath-taking panoramic vistas. Cruise Lake Kawaguchiko on a solar-assisted hybrid vessel, followed by traditional Japanese matcha tea ceremony and cultural heritage immersion.",
-        visits: "Mt. Fuji 5th Station • Lake Kawaguchiko",
-        focus: "Sustainable Eco-Tech & Cultural Harmony",
-        img: "assets/images/stem-students.jpg"
-      },
-      6: {
-        badge: "Day 06 • Tokyo Disneyland STEM",
-        title: "Tokyo Disneyland / DisneySea Animatronics",
-        desc: "A full day studying the engineering behind world-class theme park robotics. Experience advanced audio-animatronics, magnetic trackless ride physics, and computer-orchestrated multi-sensory projections.",
-        visits: "Tokyo Disneyland / DisneySea Resort",
-        focus: "Theme Park Animatronics & Dynamic Physics",
-        img: "assets/images/tokyo-disneyland.jpg"
-      },
-      7: {
-        badge: "Day 07 • Historic Asakusa & TeamLab",
-        title: "Senso-ji Asakusa & TeamLab Borderless Digital Art",
-        desc: "Morning cultural walk through Tokyo's oldest temple, Senso-ji in Asakusa. Afternoon visit to TeamLab Borderless in Azabudai Hills — exploring light algorithms, laser acoustics, and interactive spatial computation.",
-        visits: "Senso-ji Temple • TeamLab Borderless",
-        focus: "Spatial Computing, Light AI & Historic Tokyo",
-        img: "assets/images/robotics-spatial.jpg"
-      },
-      8: {
-        badge: "Day 08 • Innovation Gala & Flight Home",
-        title: "Student Project Gala, Certification & Departure",
-        desc: "Morning student project presentation and official certificate distribution by Japanese STEM facilitators. Final souvenir shopping at Ginza / Tokyo Station before transfer to the airport for return flight home.",
-        visits: "Certificate Ceremony • Ginza • Airport",
-        focus: "STEM Portfolio Completion & Global Fellowship",
-        img: "assets/images/japanese-welcome-kimono.jpg"
-      }
-    };
-
-    function switchDay(dayNum) {
-      const data = itineraryData[dayNum];
-      if (!data) return;
-
-      // Update active tab buttons
-      document.querySelectorAll('.wb-tab-btn').forEach((btn, idx) => {
-        if (idx + 1 === dayNum) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-
-      // Update card content
-      document.getElementById('itin-day-badge').innerText = data.badge;
-      document.getElementById('itin-title').innerText = data.title;
-      document.getElementById('itin-desc').innerText = data.desc;
-      document.getElementById('itin-visits').innerText = data.visits;
-      document.getElementById('itin-focus').innerText = data.focus;
-      document.getElementById('itin-img').src = data.img;
-    }
-
-    // Form submission handler
-    function handleInquirySubmit(e) {
-      e.preventDefault();
-      const successMsg = document.getElementById('form-success-msg');
-      if (successMsg) {
-        successMsg.classList.remove('hidden');
-        e.target.reset();
-        setTimeout(() => {
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
-      }
-    }
-
-    // =========================================================================
-    // CONTINUOUS SMOOTH 3D CURVED / ELLIPTICAL HERO CAROUSEL
-    // =========================================================================
-    let heroCarouselInitialized = false;
-    function init3DHeroCarousel() {
-      if (heroCarouselInitialized) return;
-      const wrapper = document.getElementById('hero-3d-wrapper');
-      const cards = document.querySelectorAll('.wb-3d-card');
-      if (!wrapper || cards.length === 0) return;
-      heroCarouselInitialized = true;
-
-      const totalCards = cards.length;
-      let currentProgress = 0;
-      let targetProgress = 0;
-      let isHovered = false;
-      let isDragging = false;
-      let startX = 0;
-      let startProgress = 0;
-      let lastTime = performance.now();
-      const continuousSpeed = 0.0032; // Smooth, slow, elegant continuous flow
-
-      function updateCards(progress) {
-        const isMobile = window.innerWidth < 768;
-        const radiusX = isMobile ? 125 : 215; // Elliptical curve width
-        const radiusZ = isMobile ? 55 : 90;   // 3D Depth
-        const maxTilt = isMobile ? 16 : 26;   // rotateY tilt angle
-
-        cards.forEach((card, i) => {
-          // Relative slot index normalized to range [-2, 2]
-          let diff = ((i - progress) % totalCards + totalCards) % totalCards;
-          if (diff > totalCards / 2) diff -= totalCards;
-
-          const angle = diff * (Math.PI / 2); // 90 degree spacing
-          const sinVal = Math.sin(angle);
-          const cosVal = Math.cos(angle);     // 1 = Center, 0 = Side, -1 = Rear
-
-          // Completely smooth continuous 3D coordinates (zero edge jump)
-          const posX = sinVal * radiusX;
-          const posZ = cosVal * radiusZ;
-          const rotY = -sinVal * maxTilt;
-
-          // Scale: Center card large (1.04), side cards smaller (0.84), rear card (0.74)
-          const scale = 0.74 + (cosVal + 1) * 0.15;
-
-          // Z-index: Front cards always stay in front of rear cards smoothly
-          const zIndex = Math.round((cosVal + 1) * 20) + 1;
-
-          // Apply pure GPU-accelerated 3D transform without modifying opacity/filter/layout
-          card.style.transform = `translate3d(${posX.toFixed(1)}px, 0px, ${posZ.toFixed(1)}px) rotateY(${rotY.toFixed(1)}deg) scale(${scale.toFixed(3)})`;
-          card.style.zIndex = zIndex;
-          card.style.pointerEvents = (cosVal > -0.2) ? 'auto' : 'none';
-        });
-      }
-
-      function renderLoop(time) {
-        const delta = Math.min((time - lastTime) / 16.66, 2.5);
-        lastTime = time;
-
-        if (!isDragging) {
-          if (!isHovered) {
-            targetProgress += continuousSpeed * delta;
-          }
-          // Buttery smooth spring interpolation
-          currentProgress += (targetProgress - currentProgress) * 0.08;
-        }
-
-        updateCards(currentProgress);
-        requestAnimationFrame(renderLoop);
-      }
-
-      // Start continuous animation loop
-      requestAnimationFrame(renderLoop);
-
-      // On hover: slow down smoothly
-      wrapper.addEventListener('mouseenter', () => { isHovered = true; });
-      wrapper.addEventListener('mouseleave', () => { isHovered = false; });
-
-      // Interactive mouse drag / swipe
-      wrapper.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        startProgress = currentProgress;
-      });
-
-      window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const deltaX = e.clientX - startX;
-        currentProgress = startProgress - (deltaX / 280);
-        targetProgress = currentProgress;
-      });
-
-      window.addEventListener('mouseup', () => {
-        if (isDragging) {
-          isDragging = false;
-        }
-      });
-
-      // Mobile touch swipe
-      wrapper.addEventListener('touchstart', (e) => {
-        if (e.touches.length > 0) {
-          isDragging = true;
-          startX = e.touches[0].clientX;
-          startProgress = currentProgress;
-        }
-      }, { passive: true });
-
-      window.addEventListener('touchmove', (e) => {
-        if (!isDragging || e.touches.length === 0) return;
-        const deltaX = e.touches[0].clientX - startX;
-        currentProgress = startProgress - (deltaX / 280);
-        targetProgress = currentProgress;
-      }, { passive: true });
-
-      window.addEventListener('touchend', () => {
-        if (isDragging) {
-          isDragging = false;
-        }
-      });
-
-      // Click on side cards to smoothly spin them to center
-      cards.forEach((card, i) => {
-        card.addEventListener('click', (e) => {
-          let diff = ((i - currentProgress) % totalCards + totalCards) % totalCards;
-          if (diff > totalCards / 2) diff -= totalCards;
-
-          if (Math.abs(diff) > 0.3) {
-            e.preventDefault();
-            targetProgress = currentProgress + diff;
-          }
-        });
-      });
-
-      // Window resize listener
-      window.addEventListener('resize', () => {
-        updateCards(currentProgress);
-      });
-    }
-
-    // Initialize on DOM ready
-    document.addEventListener('DOMContentLoaded', () => {
-      init3DHeroCarousel();
-    });
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-      init3DHeroCarousel();
-    }
-  </script>
 </body>
 </html>

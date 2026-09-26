@@ -1,0 +1,890 @@
+/* ==========================================================================
+   EXACT 1:1 VISUAL REPLICA STYLESHEET FOR LEADING EDGE VISION POSTER
+   Matches Reference Poster Layout, Typography, Proportions, Colors & Shadows
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-script: 'Caveat', cursive, sans-serif;
+
+  --c-navy-deep: #002244;
+  --c-navy-primary: #003366;
+  --c-navy-dark: #0A192F;
+  --c-yellow-accent: #FDC700;
+  --c-yellow-bright: #FFE500;
+  --c-red-accent: #DC2626;
+  --c-text-dark: #1E293B;
+  --c-text-muted: #64748B;
+  --c-card-bg: #F0F7FC;
+  --c-ice-blue: #E1F0FA;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0A1420;
+  color: var(--c-text-dark);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Outer Wrapper for Poster Presentation */
+.page-canvas {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 10px 40px 10px;
+  background: radial-gradient(circle at 50% 20%, #112233 0%, #060E18 100%);
+}
+
+/* Master Poster Frame - Exact Proportions matching reference */
+.poster-artboard {
+  width: 100%;
+  max-width: 820px;
+  background: #FFFFFF;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Subtle Navigation / Meta Bar */
+.poster-topbar {
+  background: #001A33;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.poster-topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.poster-topbar-logo {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+}
+
+.poster-topbar-title {
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.poster-topbar-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.poster-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #E2E8F0;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.poster-pill.active {
+  background: var(--c-yellow-accent);
+  color: #001A33;
+}
+
+/* ==========================================================================
+   SECTION 1: HERO (ROBOTICS — From Science Fiction to Everyday Life)
+   ========================================================================== */
+.hero-frame {
+  position: relative;
+  background: linear-gradient(135deg, #001A35 0%, #002D5A 45%, #003A70 100%);
+  min-height: 270px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Background Image of Robot + Fuji + Pagoda on Right */
+.hero-media-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right top;
+  display: block;
+}
+
+/* Gradient Mask smoothly fading the photo into the navy left background */
+.hero-media-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #001A35 0%, rgba(0, 26, 53, 0.85) 18%, rgba(0, 26, 53, 0.3) 45%, transparent 75%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Handwritten Callout on Top Right */
+.hero-script-callout {
+  position: absolute;
+  top: 14px;
+  right: 28px;
+  z-index: 10;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.hero-script-text {
+  font-family: var(--font-script);
+  font-size: 21px;
+  font-weight: 700;
+  color: #002244;
+  line-height: 1.05;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.9);
+  transform: rotate(-3deg);
+}
+
+.hero-script-swoosh {
+  width: 110px;
+  height: 14px;
+  margin-top: -2px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+/* Left Hero Content */
+.hero-text-wrap {
+  position: relative;
+  z-index: 5;
+  width: 54%;
+  padding: 24px 18px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-main-title {
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  margin-bottom: 3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-sub-title-1 {
+  font-family: var(--font-sans);
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.hero-sub-title-2 {
+  font-family: var(--font-sans);
+  font-size: 27px;
+  font-weight: 900;
+  color: #FFE500;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  text-shadow: 0 0 15px rgba(255, 229, 0, 0.45);
+}
+
+.hero-description {
+  font-size: 11px;
+  color: #E2E8F0;
+  line-height: 1.45;
+  max-width: 320px;
+  font-weight: 400;
+}
+
+.hero-description strong, .hero-description span.hl-green {
+  color: #4ADE80;
+  font-weight: 600;
+}
+.hero-description span.hl-yellow {
+  color: #FDE047;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   SECTION 2: ROBOTICS IN ACTION (6 Cards Row)
+   ========================================================================== */
+.sectors-section {
+  background: #FFFFFF;
+  padding: 16px 20px 20px 20px;
+}
+
+.sectors-header {
+  margin-bottom: 14px;
+}
+
+.sectors-title {
+  font-size: 19px;
+  font-weight: 900;
+  color: #002244;
+  line-height: 1.2;
+}
+
+.sectors-title-sep {
+  color: #CBD5E1;
+  font-weight: 300;
+  margin: 0 6px;
+}
+
+.sectors-title-sub {
+  color: #0284C7;
+  font-weight: 800;
+}
+
+.sectors-subtitle {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #002244;
+  margin-top: 3px;
+}
+
+/* 6 Column Flex/Grid matching Reference proportions */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.sector-card {
+  background: var(--c-card-bg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding-bottom: 8px;
+}
+
+.sector-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.sector-img-box {
+  width: 100%;
+  height: 95px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  position: relative;
+  background: #001A35;
+}
+
+.sector-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Colored Circular Icon Badge overlapping image bottom */
+.sector-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -16px auto 6px auto;
+  position: relative;
+  z-index: 3;
+  color: #FFFFFF;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FFFFFF;
+}
+
+.sector-icon-badge svg {
+  width: 16px;
+  height: 16px;
+  stroke: #FFFFFF;
+  fill: none;
+}
+
+.sector-body {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sector-name {
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 5px;
+  min-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sector-desc {
+  font-size: 9.5px;
+  color: #334155;
+  line-height: 1.32;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Card Specific Theme Colors */
+.card-mobility .sector-icon-badge { background: #0284C7; }
+.card-mobility .sector-name { color: #0284C7; }
+
+.card-healthcare .sector-icon-badge { background: #16A34A; }
+.card-healthcare .sector-name { color: #16A34A; }
+
+.card-surgery .sector-icon-badge { background: #9333EA; }
+.card-surgery .sector-name { color: #9333EA; }
+
+.card-agriculture .sector-icon-badge { background: #EA580C; }
+.card-agriculture .sector-name { color: #EA580C; }
+
+.card-logistics .sector-icon-badge { background: #0D9488; }
+.card-logistics .sector-name { color: #0D9488; }
+
+.card-warfare .sector-icon-badge { background: #DC2626; }
+.card-warfare .sector-name { color: #DC2626; }
+
+
+/* ==========================================================================
+   SECTION 3: COLLABORATION / AUGMENTED INTELLIGENCE BANNER
+   ========================================================================== */
+.collab-banner {
+  background: linear-gradient(90deg, #002244 0%, #003366 50%, #002B55 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 16px 22px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collab-left-col {
+  width: 32%;
+  z-index: 5;
+}
+
+.collab-eyebrow {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.collab-title-yellow {
+  font-size: 20px;
+  font-weight: 900;
+  color: #FFE500;
+  line-height: 1.1;
+  text-shadow: 0 0 12px rgba(255, 229, 0, 0.4);
+}
+
+.collab-title-white {
+  font-size: 17px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.15;
+}
+
+/* Vertical divider line */
+.collab-v-divider {
+  width: 1px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 5;
+  margin: 0 12px;
+}
+
+.collab-mid-col {
+  width: 28%;
+  z-index: 5;
+}
+
+.collab-intro-sm {
+  font-size: 10.5px;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.collab-ai-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #FFE500;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.collab-ai-desc {
+  font-size: 10.5px;
+  color: #E2E8F0;
+  line-height: 1.35;
+}
+
+/* Handshake Image positioned on right */
+.collab-right-col {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 44%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.collab-right-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.collab-right-col::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #003366 0%, rgba(0, 51, 102, 0.5) 20%, transparent 60%);
+  z-index: 3;
+}
+
+
+/* ==========================================================================
+   SECTION 4: STEM TOUR TO JAPAN (Photo + 4 Icons + Callout)
+   ========================================================================== */
+.tour-stem-section {
+  background: #FFFFFF;
+  padding: 18px 20px 16px 20px;
+}
+
+.tour-stem-grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Left Photo Visual with Stamp & Flag */
+.tour-photo-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.tour-photo-inner {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.tour-photo-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* Circular Red Stamp Badge */
+.tour-stamp-badge {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #EF4444, #B91C1C 85%);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-10deg);
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.45);
+  z-index: 10;
+}
+
+.stamp-txt-stem {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.stamp-txt-tour {
+  font-family: var(--font-script);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stamp-txt-japan {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+/* Japan Flag Sticker */
+.tour-flag-sticker {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  width: 38px;
+  height: 25px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transform: rotate(4deg);
+}
+
+.tour-flag-sun {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #DC2626;
+}
+
+/* Right Content */
+.tour-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-main-heading {
+  font-size: 17px;
+  font-weight: 900;
+  color: #002244;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.tour-main-desc {
+  font-size: 10.5px;
+  color: #334155;
+  line-height: 1.38;
+  margin-bottom: 12px;
+}
+
+/* 4 Points Grid with Dividers */
+.tour-points-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.tour-point-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 3px;
+}
+
+.tour-point-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: #E2E8F0;
+}
+
+.tour-point-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.tour-point-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #FFFFFF;
+  fill: none;
+}
+
+.tour-point-lead {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #002244;
+  line-height: 1.2;
+}
+
+.tour-point-sub {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #475569;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+/* Bottom Callout Box */
+.tour-callout-box {
+  background: var(--c-ice-blue);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tour-callout-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.tour-callout-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: #FFFFFF;
+}
+
+.tour-callout-text {
+  font-size: 9px;
+  color: #0F172A;
+  line-height: 1.35;
+}
+
+.tour-callout-text strong {
+  font-weight: 800;
+  color: #002244;
+}
+
+
+/* ==========================================================================
+   SECTION 5: FOOTER BANNER (The Future Belongs to Curious Minds)
+   ========================================================================== */
+.footer-banner-frame {
+  background: linear-gradient(90deg, #001A33 0%, #002D55 40%, #003366 100%);
+  padding: 14px 22px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-left-col {
+  width: 30%;
+}
+
+.footer-intro-txt {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.footer-curious-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #FFE500;
+  line-height: 1.1;
+  text-shadow: 0 0 12px rgba(255, 229, 0, 0.35);
+}
+
+.footer-v-divider {
+  width: 1px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0 10px;
+}
+
+.footer-mid-col {
+  width: 40%;
+}
+
+.footer-mid-desc {
+  font-size: 9.5px;
+  color: #E2E8F0;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.footer-mid-quote {
+  font-family: var(--font-script);
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFE500;
+  line-height: 1.1;
+}
+
+.footer-right-col {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-right-icon {
+  width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.footer-right-title {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+/* Floating Delegation Action Button */
+.delegation-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #FFE500;
+  color: #001A33;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.delegation-fab:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: #FFD700;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .poster-artboard {
+    max-width: 100%;
+  }
+  .hero-frame {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .hero-text-wrap {
+    width: 100%;
+    padding: 20px;
+  }
+  .hero-media-wrap {
+    position: relative;
+    width: 100%;
+    height: 180px;
+  }
+  .hero-media-wrap::before {
+    background: linear-gradient(to top, #001A35 0%, transparent 60%);
+  }
+  .sectors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .collab-banner {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .collab-left-col, .collab-mid-col {
+    width: 100%;
+  }
+  .collab-v-divider {
+    display: none;
+  }
+  .collab-right-col {
+    position: relative;
+    width: 100%;
+    height: 120px;
+  }
+  .tour-stem-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .footer-banner-frame {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-left-col, .footer-mid-col, .footer-right-col {
+    width: 100%;
+  }
+  .footer-v-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
